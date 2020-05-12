@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="科技点,OI,平衡树,替罪羊树," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="P3369 【模板】普通平衡树 替罪羊树虽然从科技树上来看这个比 $Splay, Treap$ 之流要高端，不过华华觉得这其实不仅比这两个好理解，也更好敲。 1.何为替罪羊树？ 作为一颗合格的平衡二叉搜索树，最重要的就是维护他的平衡，以保证 $O(logN)$ 的复杂度。 为了维护树的平衡，其他的二叉搜索树都有一些奇淫技巧，不过大多数比如 $Splay, Treap, AVL, Red_Black">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&lt;科技点&gt; 替罪羊树">
+<meta property="og:url" content="http://yoursite.com/2019/11/23/%E6%9B%BF%E7%BD%AA%E7%BE%8A%E6%A0%91/index.html">
+<meta property="og:site_name" content="HH❤Hexo">
+<meta property="og:description" content="P3369 【模板】普通平衡树 替罪羊树虽然从科技树上来看这个比 $Splay, Treap$ 之流要高端，不过华华觉得这其实不仅比这两个好理解，也更好敲。 1.何为替罪羊树？ 作为一颗合格的平衡二叉搜索树，最重要的就是维护他的平衡，以保证 $O(logN)$ 的复杂度。 为了维护树的平衡，其他的二叉搜索树都有一些奇淫技巧，不过大多数比如 $Splay, Treap, AVL, Red_Black">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-22T17:13:14.000Z">
+<meta property="article:modified_time" content="2020-05-12T05:32:08.801Z">
+<meta property="article:author" content="HH">
+<meta property="article:tag" content="科技点">
+<meta property="article:tag" content="OI">
+<meta property="article:tag" content="平衡树">
+<meta property="article:tag" content="替罪羊树">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/11/23/替罪羊树/"/>
+
+
+
+
+
+  <title><科技点> 替罪羊树 | HH❤Hexo</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HH❤Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/23/%E6%9B%BF%E7%BD%AA%E7%BE%8A%E6%A0%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HH">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/hh.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HH❤Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"><科技点> 替罪羊树</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-23T01:13:14+08:00">
+                2019-11-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/" itemprop="url" rel="index">
+                    <span itemprop="name">OI</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E7%A7%91%E6%8A%80%E7%82%B9/" itemprop="url" rel="index">
+                    <span itemprop="name">科技点</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://www.luogu.com.cn/problem/P3369" target="_blank" rel="noopener">P3369 【模板】普通平衡树</a></p>
+<h1 id="替罪羊树"><a href="#替罪羊树" class="headerlink" title="替罪羊树"></a>替罪羊树</h1><p>虽然从科技树上来看这个比 $Splay, Treap$ 之流要高端，不过华华觉得这其实不仅比这两个好理解，也更好敲。</p>
+<p>1.何为替罪羊树？</p>
+<p>作为一颗合格的平衡二叉搜索树，最重要的就是维护他的平衡，以保证 $O(logN)$ 的复杂度。</p>
+<p>为了维护树的平衡，其他的二叉搜索树都有一些奇淫技巧，不过大多数比如 $Splay, Treap, AVL, Red_Black_Tree$ 都是通过旋转来维护的，不过是旋转的一些细节有所不同。</p>
+<p>但是替罪羊树比较牛逼，它通过判断两颗子树平不平衡，如果不平衡超过了某一个限度，就直接将这颗包含自己在内的子树拍扁了重构，形成一个接近完美的二叉树结构。</p>
+<p>2.操作</p>
+<p><strong>节点及信息：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> ch[<span class="number">2</span>], val, size, tsize, real;</span><br><span class="line">&#125; e[MAXN];</span><br></pre></td></tr></table></figure>
+<p>记录了两个儿子、值、子树大小、真实子树大小、存在与否。</p>
+<p>这里有两个 $size$ 其中带 $t$ 的那个 $t(rue) \ size$ 是因为替罪羊树不像是别的树，可以轻松的删除节点，只能通过标记来在重构的时候删除，所以 $tsize$ 记录真实存在的节点的大小，$size$ 则是把真实节点、删掉的节点都记了进来，用于判子树中存在太多的已删除节点时，要不要重构。</p>
+<p>(size 和 tsize 好长的说，如果不是板子其实只要用一个 v 一个 w 就行了，反正结构体里的变量不会冲突)</p>
+<p><strong>判断平衡：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isbad</span><span class="params">(<span class="keyword">int</span> u)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="number">1.0</span> * e[u].tsize * alpha &lt; <span class="number">1.0</span> * e[e[u].ch[<span class="number">0</span>]].tsize ||</span><br><span class="line">		<span class="number">1.0</span> * e[u].tsize * alpha &lt; <span class="number">1.0</span> * e[e[u].ch[<span class="number">1</span>]].tsize) </span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里 $alpha$ 是自己定义的一个值，一般来说 $0.7 \sim 0.8$ 比较合适，因为如果限制的太严格了重构次数会太多，如果太不严格了会造成失衡，所以前辈们试出来（也可能是算出来）的这个值，用就是了。</p>
+<p>然后就是如果一个树的一个儿子的子树超过了树的多少，就判断为是不平衡的。然后返厂重构。</p>
+<p><strong>插入：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> &amp;u, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!u) &#123;</span><br><span class="line">		u = ++tot;</span><br><span class="line">		e[u].val = val;</span><br><span class="line">		e[u].real = e[u].size = e[u].tsize = <span class="number">1</span>;</span><br><span class="line">		e[u].ch[<span class="number">0</span>] = e[u].ch[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	e[u].size++, e[u].tsize++;</span><br><span class="line">	<span class="keyword">if</span> (e[u].val &gt;= val) insert(e[u].ch[<span class="number">0</span>], val);</span><br><span class="line">	<span class="keyword">else</span> insert(e[u].ch[<span class="number">1</span>], val);</span><br><span class="line">	<span class="keyword">if</span> (isbad(u)) rebuild(u);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这一个应该比较好理解吧。如果遇到一个空节点，就新建一个，然后初始的两个 $size$ 都是 $1$ ，要不然就是把路径上经过的所有节点记录的 $size++$ ，然后找到那一个可以安置节点的位置。如果不平衡了就重构一下。</p>
+<p>在实际代码中有一点细节不一样，这是因为一次插入中只要找到子树根最浅的那一颗不平衡子树重构，就不会重复重构子树，防止退化到 $log^2N$ 。</p>
+<p><strong>弹出：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pop_rk</span><span class="params">(<span class="keyword">int</span> &amp;u, <span class="keyword">int</span> rk)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (e[u].real &amp;&amp; e[e[u].ch[<span class="number">0</span>]].tsize + <span class="number">1</span> == rk) &#123;</span><br><span class="line">		e[u].real = <span class="number">0</span>;</span><br><span class="line">		e[u].tsize--;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	e[u].tsize--;</span><br><span class="line">	<span class="keyword">if</span> (e[e[u].ch[<span class="number">0</span>]].tsize + e[u].real &gt;= rk)</span><br><span class="line">		pop_rk(e[u].ch[<span class="number">0</span>], rk);</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">		pop_rk(e[u].ch[<span class="number">1</span>], rk - e[e[u].ch[<span class="number">0</span>]].tsize - e[u].real);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">	pop_rk(root, rank(val));</span><br><span class="line">	<span class="keyword">if</span> (<span class="number">1.0</span> * e[root].size * alpha &gt; e[root].tsize)</span><br><span class="line">		rebuild(root);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>核心也就是把路径上记录的 $tsize—$ 就行了，如果无用的节点太多了就重构一下。</p>
+<p><strong>重构操作：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!u) <span class="keyword">return</span> ;</span><br><span class="line">	dfs(e[u].ch[<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">if</span> (e[u].real) cur[++cp] = u;</span><br><span class="line">	dfs(e[u].ch[<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> &amp;u)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	u = cur[mid];</span><br><span class="line">	<span class="keyword">if</span> (l == r) &#123;</span><br><span class="line">		e[u].ch[<span class="number">0</span>] = e[u].ch[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">		e[u].size = e[u].tsize = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (l &lt; mid) build(l, mid - <span class="number">1</span>, e[u].ch[<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">else</span> e[u].ch[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	build(mid + <span class="number">1</span>, r, e[u].ch[<span class="number">1</span>]);</span><br><span class="line">	e[u].size = e[e[u].ch[<span class="number">0</span>]].size + e[e[u].ch[<span class="number">1</span>]].size + <span class="number">1</span>;</span><br><span class="line">	e[u].tsize = e[e[u].ch[<span class="number">0</span>]].tsize + e[e[u].ch[<span class="number">1</span>]].tsize + e[u].real;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rebuild</span><span class="params">(<span class="keyword">int</span> &amp;u)</span> </span>&#123;</span><br><span class="line">	cp = <span class="number">0</span>;</span><br><span class="line">	dfs(u);</span><br><span class="line">	<span class="keyword">if</span> (cp) build(<span class="number">1</span>, cp, u);</span><br><span class="line">	<span class="keyword">else</span> u = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>先说 $DFS$ ，由于二叉搜索树性质，中序遍历递增，所以就把这一个子树中序遍历一遍，就完成了拍扁操作。</p>
+<p>然后看看 $build$，其实和线段树的方法差不多，这样就可以获得一颗尽量平衡的二叉树了，要注意要判 $l = mid$ 的情况，因为 $l != r$ 时把 $mid$ 作为父节点后可能会出现 $mid$ 左边序列为空的情况，这和线段树有一丢丢不同。</p>
+<p><strong>询问：</strong></p>
+<p>略，这些和基本的二叉查找树没什么差别，结合代码看看就行。</p>
+<p>$p.s.$其实这一份代码还有一些不完备的地方，比如没有内存池重复使用内存，比如没有使用指针，不过怎么说这都是一份完整的替罪羊了。</p>
+<p><a href="https://www.luogu.org/problem/P3369" target="_blank" rel="noopener">P3369 【模板】普通平衡树</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Scapegoat Tree</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> alpha = <span class="number">0.7</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 2000001</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">0</span>, f = <span class="number">0</span>; <span class="keyword">char</span> c = getchar();</span><br><span class="line">	<span class="keyword">for</span> (; c &lt; <span class="string">'0'</span>; c = getchar()) <span class="keyword">if</span> (c == <span class="string">'-'</span>) f = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (; c &gt; <span class="string">'.'</span>; c = getchar()) x = (x &lt;&lt; <span class="number">3</span>) + (x &lt;&lt; <span class="number">1</span>) + (c ^ <span class="number">48</span>);</span><br><span class="line">	<span class="keyword">return</span> f ? -x : x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> ScapegoatTree &#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">		<span class="keyword">int</span> ch[<span class="number">2</span>], val, size, tsize, real, fa;</span><br><span class="line">	&#125; e[MAXN];</span><br><span class="line">	<span class="keyword">int</span> cur[MAXN];</span><br><span class="line">	<span class="keyword">int</span> root, tot, cp, cnt, rb;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">id</span><span class="params">(<span class="keyword">int</span> u)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> e[e[u].fa].ch[<span class="number">1</span>] == u;	</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">isbad</span><span class="params">(<span class="keyword">int</span> u)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="number">1.0</span> * e[u].tsize * alpha + <span class="number">5</span> &lt; <span class="number">1.0</span> * e[e[u].ch[<span class="number">0</span>]].tsize ||</span><br><span class="line">			<span class="number">1.0</span> * e[u].tsize * alpha + <span class="number">5</span> &lt; <span class="number">1.0</span> * e[e[u].ch[<span class="number">1</span>]].tsize) </span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">else</span> </span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (!u) <span class="keyword">return</span> ;</span><br><span class="line">		dfs(e[u].ch[<span class="number">0</span>]);</span><br><span class="line">		<span class="keyword">if</span> (e[u].real) cur[++cp] = u;</span><br><span class="line">		dfs(e[u].ch[<span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> &amp;u, <span class="keyword">int</span> fa = <span class="number">0</span>)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">		u = cur[mid];</span><br><span class="line">		e[u].fa = fa;</span><br><span class="line">		<span class="keyword">if</span> (l == r) &#123;</span><br><span class="line">			e[u].ch[<span class="number">0</span>] = e[u].ch[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">			e[u].size = e[u].tsize = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">return</span> ;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (l &lt; mid) build(l, mid - <span class="number">1</span>, e[u].ch[<span class="number">0</span>], u);</span><br><span class="line">		<span class="keyword">else</span> e[u].ch[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">		build(mid + <span class="number">1</span>, r, e[u].ch[<span class="number">1</span>], u);</span><br><span class="line">		e[u].size = e[e[u].ch[<span class="number">0</span>]].size + e[e[u].ch[<span class="number">1</span>]].size + <span class="number">1</span>;</span><br><span class="line">		e[u].tsize = e[e[u].ch[<span class="number">0</span>]].tsize + e[e[u].ch[<span class="number">1</span>]].tsize + e[u].real;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">rebuild</span><span class="params">(<span class="keyword">int</span> &amp;u)</span> </span>&#123;</span><br><span class="line">		cp = <span class="number">0</span>;</span><br><span class="line">		dfs(u);</span><br><span class="line">		<span class="keyword">if</span> (cp) build(<span class="number">1</span>, cp, u);</span><br><span class="line">		<span class="keyword">else</span> u = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> &amp;u, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (!u) &#123;</span><br><span class="line">			u = ++tot;</span><br><span class="line">			e[u].val = val;</span><br><span class="line">			e[u].real = e[u].size = e[u].tsize = <span class="number">1</span>;</span><br><span class="line">			e[u].ch[<span class="number">0</span>] = e[u].ch[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">return</span> ;</span><br><span class="line">		&#125;</span><br><span class="line">		e[u].size++, e[u].tsize++;</span><br><span class="line">		<span class="keyword">if</span> (e[u].val &gt;= val) insert(e[u].ch[<span class="number">0</span>], val);</span><br><span class="line">		<span class="keyword">else</span> insert(e[u].ch[<span class="number">1</span>], val);</span><br><span class="line">		<span class="keyword">if</span> (isbad(u)) rb = u;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">kth</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> u = root; u; ) &#123;</span><br><span class="line">			<span class="keyword">if</span> (e[u].real &amp;&amp; e[e[u].ch[<span class="number">0</span>]].tsize + <span class="number">1</span> == k)</span><br><span class="line">				<span class="keyword">return</span> e[u].val;</span><br><span class="line">			<span class="keyword">if</span> (e[e[u].ch[<span class="number">0</span>]].tsize &gt;= k)</span><br><span class="line">				u = e[u].ch[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">else</span> </span><br><span class="line">				k -= e[e[u].ch[<span class="number">0</span>]].tsize + e[u].real,</span><br><span class="line">				u = e[u].ch[<span class="number">1</span>];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">rank</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> ans = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> u = root; u; ) &#123;</span><br><span class="line">			<span class="keyword">if</span> (e[u].val &gt;= val)</span><br><span class="line">				u = e[u].ch[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">else</span> </span><br><span class="line">				ans += e[e[u].ch[<span class="number">0</span>]].tsize + e[u].real,</span><br><span class="line">				u = e[u].ch[<span class="number">1</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">pop_rk</span><span class="params">(<span class="keyword">int</span> &amp;u, <span class="keyword">int</span> rk)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (e[u].real &amp;&amp; e[e[u].ch[<span class="number">0</span>]].tsize + <span class="number">1</span> == rk) &#123;</span><br><span class="line">			e[u].real = <span class="number">0</span>;</span><br><span class="line">			e[u].tsize--;</span><br><span class="line">			<span class="keyword">return</span> ;</span><br><span class="line">		&#125;</span><br><span class="line">		e[u].tsize--;</span><br><span class="line">		<span class="keyword">if</span> (e[e[u].ch[<span class="number">0</span>]].tsize + e[u].real &gt;= rk)</span><br><span class="line">			pop_rk(e[u].ch[<span class="number">0</span>], rk);</span><br><span class="line">		<span class="keyword">else</span> </span><br><span class="line">			pop_rk(e[u].ch[<span class="number">1</span>], rk - e[e[u].ch[<span class="number">0</span>]].tsize - e[u].real);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">		pop_rk(root, rank(val));</span><br><span class="line">		<span class="keyword">if</span> (<span class="number">1.0</span> * e[root].size * alpha &gt; e[root].tsize)</span><br><span class="line">			rebuild(root);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> ScapegoatTree;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> opt, x, Q;</span><br><span class="line">	Q = read();</span><br><span class="line">	<span class="keyword">while</span> (Q--) &#123;</span><br><span class="line">		opt = read(); x = read();</span><br><span class="line">		<span class="keyword">switch</span>(opt) &#123;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">1</span>: </span><br><span class="line">				insert(root, x); </span><br><span class="line">				<span class="keyword">if</span> (rb) &#123;</span><br><span class="line">					rebuild(rb == root ? root : e[e[rb].fa].ch[id(rb)]);</span><br><span class="line">					rb = <span class="number">0</span>;	</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">2</span>: pop(x); <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">3</span>: <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, rank(x)); <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">4</span>: <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, kth(x)); <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">5</span>: <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, kth(rank(x) - <span class="number">1</span>)); <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">6</span>: <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, kth(rank(x + <span class="number">1</span>))); <span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E7%A7%91%E6%8A%80%E7%82%B9/" rel="tag"># 科技点</a>
+          
+            <a href="/tags/OI/" rel="tag"># OI</a>
+          
+            <a href="/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/" rel="tag"># 平衡树</a>
+          
+            <a href="/tags/%E6%9B%BF%E7%BD%AA%E7%BE%8A%E6%A0%91/" rel="tag"># 替罪羊树</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/15/P2387/" rel="next" title="<题解> P2387 魔法森林">
+                <i class="fa fa-chevron-left"></i> <题解> P2387 魔法森林
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/11/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/hh.jpg"
+                alt="HH" />
+            
+              <p class="site-author-name" itemprop="name">HH</p>
+              <p class="site-description motion-element" itemprop="description">今日も可愛い！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#替罪羊树"><span class="nav-number">1.</span> <span class="nav-text">替罪羊树</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HH</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

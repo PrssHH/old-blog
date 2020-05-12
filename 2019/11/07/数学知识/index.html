@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="科技点,OI,数学," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1.质数Eratosthenes 筛法 123456789bool v[maxn];void primes(int n) &amp;#123;    memset(v, 0, sizeof(v));    for (int i &#x3D; 2; i &lt;&#x3D; n; ++i) &amp;#123;        if (v[i]) continue;        cout &lt;&lt; i &lt;&lt; end">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&lt;科技点&gt; 数学知识">
+<meta property="og:url" content="http://yoursite.com/2019/11/07/%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:site_name" content="HH❤Hexo">
+<meta property="og:description" content="1.质数Eratosthenes 筛法 123456789bool v[maxn];void primes(int n) &amp;#123;    memset(v, 0, sizeof(v));    for (int i &#x3D; 2; i &lt;&#x3D; n; ++i) &amp;#123;        if (v[i]) continue;        cout &lt;&lt; i &lt;&lt; end">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-07T01:06:59.000Z">
+<meta property="article:modified_time" content="2020-05-12T05:23:28.147Z">
+<meta property="article:author" content="HH">
+<meta property="article:tag" content="科技点">
+<meta property="article:tag" content="OI">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/11/07/数学知识/"/>
+
+
+
+
+
+  <title><科技点> 数学知识 | HH❤Hexo</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HH❤Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/07/%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HH">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/hh.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HH❤Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"><科技点> 数学知识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-07T09:06:59+08:00">
+                2019-11-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/" itemprop="url" rel="index">
+                    <span itemprop="name">OI</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E7%A7%91%E6%8A%80%E7%82%B9/" itemprop="url" rel="index">
+                    <span itemprop="name">科技点</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-质数"><a href="#1-质数" class="headerlink" title="1.质数"></a>1.质数</h2><p><strong>Eratosthenes 筛法</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> v[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">primes</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(v, <span class="number">0</span>, <span class="keyword">sizeof</span>(v));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (v[i]) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt;= n / i; ++i) v[i * j] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Eratosthenes 筛法的时间复杂度为<br>$O(\sum _{p \leq N }\frac {N}{p} ) = O(N \log\log N) $<br>该算法实现简单，效率已经非常接近于线性，是算法竞赛中最常用的质数筛法。</p>
+<p><strong>线性筛法</strong></p>
+<blockquote>
+<p>即使在优化后（从$x ^ {2}$开始），Eratosthenes 筛法仍然会重复标记合数。</p>
+</blockquote>
+<p>线性筛法通过“从小到大累计质因子”的方式标记每个合数，实现每个合数只会被它的最小质因子$p$筛一次，时间复杂度为$O(N)$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> v[maxn], prime[maxn], m;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Euler</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(v, <span class="number">0</span>, <span class="keyword">sizeof</span>(v));</span><br><span class="line">    m = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (v[i] == <span class="number">0</span>) &#123; v[i] = i; prime[++m] = i; &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; ++j) &#123;</span><br><span class="line">            <span class="keyword">if</span> (prime[j] &gt; v[i] || prime[j] &gt; n / i) <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// i 有比 prime[j] 更小的质因子, 停止循环</span></span><br><span class="line">            v[i * prime[j]] = prime[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-质因数的分解"><a href="#2-质因数的分解" class="headerlink" title="2.质因数的分解"></a>2.质因数的分解</h2><p><strong>试除法</strong></p>
+<p>时间复杂度$O(\sqrt {N})$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> m, p[maxn], c[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">divide</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    m = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(x); ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (x % i == <span class="number">0</span>) &#123;</span><br><span class="line">            p[++m] = i, c[m] = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (x % i == <span class="number">0</span>) x /= i, c[m]++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (x &gt; <span class="number">1</span>) p[++m] = x, c[m] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后一句曾经困扰着黑猫酱，不明白是为什么，最近才明白对于 $x$ ，大于$\sqrt{x}$ 的质因数最多只有一个，易知如果有两个或以上的大于$\sqrt{x}$的质因数，乘起来就会比 $x$ 大，所以在 $i &gt; \sqrt{x}$ 时可以保证最多只剩下一个质因子，我们不用再去试除它，如果 $x$ 出了循环还是大于 $1$ 剩下的就是那唯一一个大于 $\sqrt{x}$ 的质因子，记下来就好。</p>
+<h2 id="3-约数"><a href="#3-约数" class="headerlink" title="3.约数"></a>3.约数</h2><p><strong>定义</strong></p>
+<p>若整数 $n$ 除以整数 $d$ 的余数为 $0$，即 $d$ 能整除 $n$，则称 $d$ 是 $n$ 的约数，$n$ 是 $d$ 的倍数，记为 $d \mid n$ 。(废话）</p>
+<p><strong>算术基本定理的推论</strong></p>
+<p>在算术基本定理中，若正整数 $N$ 被唯一分解为 $N = p_1^{c_1}p_2^{c_2} \cdots p_m^{c_m}$ ，其中 $c_i$ 都是正整数，$p_i$ 都是质数，而且满足 $p_1 &lt; p_2 &lt; \cdots &lt; p_m$ ，则 $N$ 的正约数集合可写作：</p>
+<script type="math/tex; mode=display">\lbrace p_1^{b_1}p_2^{b_2} \cdots p_m^{b_m} \rbrace \quad (0 \leq b_i \leq c_i)</script><p>$N$ 的正约数个数为：</p>
+<script type="math/tex; mode=display">(1 + p_1 + p_1^ 2 + \cdots + p1^{c_1})* \cdot \cdot\prod_{i = 1}^{m} \left( \sum_{j=0}^{c_i} (p_i)^{j} \right)</script><p>(黑猫酱也搞不明白，反正记下来就对了）</p>
+<p><strong>求 $N$ 的正约数集合 —— 试除法</strong></p>
+<p>若 $d \geq \sqrt{N}$ 是 $N$ 的约数，则 $N / d \leq \sqrt{N} $<br> 也是 $N$ 的约数。换言之，约数总是成对出现的（对于完全平方数, $\sqrt{N}$ 单独出现）。</p>
+<p>因此，只需要扫描 $d = 1 \sim \sqrt{N}$ 尝试 $d$ 能否整除 $N$，若能整除，则 $N/d$ 也是 $N$ 的约数。时间复杂度为 $O(\sqrt{N})$ 。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> p[maxn], m = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i * i &lt;= n; ++i) </span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>) &#123;</span><br><span class="line">            p[++m] = i;</span><br><span class="line">            <span class="keyword">if</span> (i != n / i) p[++m] = n / i;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>试除法的推论</strong></p>
+<p>一个整数 $N$ 的约数个数上界为 $2\sqrt{N}$。</p>
+<p><strong>求 $1 \sim N$ 每个数的正约数集合——倍数法</strong></p>
+<p>若用“试除法”分别求出 $1 \sim N$ 每个数的正约数集合，时间复杂度为 $O(N\sqrt{N})$ 。可以反过来考虑，用“倍数法”求出  $1 \sim N$ 每个数的正约数集合：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; p[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n / i; ++j)</span><br><span class="line">            p[i * j].push_back(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度为 $O(N + N/2 + N/3 + \cdots +  N/N ) = O(N log N)$<br><strong>倍数法推论</strong></p>
+<p>$1 \sim N$ 每个数的约数个数总和大约为 $NlogN$。</p>
+<p><strong>*整除分块</strong></p>
+<p>$\forall i \in [1 , N]$，$\lfloor N / i \rfloor$ 由不超过  $2\sqrt{N}$ 段组成，每一段 $i \in [x, \lfloor N / \lfloor N / x \rfloor \rfloor ]$ 中 $\lfloor N / i \rfloor $ 都等于 $\lfloor N / x \rfloor$ 。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">1</span>, r; l &lt;= n; l = r + <span class="number">1</span>) &#123;</span><br><span class="line">    r = n / (n / l);</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>虽然复杂度看起来很玄学，不过是 $O(\sqrt{N})$ 的。</p>
+<p><strong>最大公约数</strong></p>
+<ul>
+<li>欧几里得算法</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b ? gcd(b, a % b) : a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>据说递归写法没有下面的那一种快，不过好记。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    <span class="keyword">while</span> (b) &#123;</span><br><span class="line">    c = b;</span><br><span class="line">    b = a % b;</span><br><span class="line">    a = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其实还有一种牛逼的写法（或者说调用方法）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="built_in">std</span>::__gcd(x, y);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>欧拉函数</li>
+</ul>
+<p>$1 \sim N$ 中与 $N$ 互质的数的个数被称为欧拉函数，记为 $\varphi (N)$ ，（读作phi）。</p>
+<p>若在算术基本定理中，$N = p_1^{c_1}p_2^{c_2} \cdots p_m^{c_m}$ ，则：</p>
+<script type="math/tex; mode=display">\varphi (N) = N * \frac{p_1 - 1}{p_1}* \frac{p_2 - 1}{p_2} * \cdots * \frac{p_m - 1}{p_m} = N * \prod_{p \mid N} \left( 1 - \frac{1}{p} \right)</script><p>证明略（不会）</p>
+<p>根据欧拉函数的计算式，我们只需要分解质因数，即可顺便求出欧拉函数.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">phi</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans = n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(n); ++i) </span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>) &#123;</span><br><span class="line">            ans = ans / i * (i - <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">while</span> (n % i == <span class="number">0</span>) n /= i;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">if</span> (n &gt; <span class="number">1</span>) ans = ans / n * (n - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>性质</strong></p>
+<ol>
+<li><p>$1 \sim n$ 中与 $n$ 互质的数的和为 $n * \varphi (n) / 2$ 。</p>
+</li>
+<li><p>若 $a, b$ 互质，则 $\varphi (ab) = \varphi (a) \varphi (b) $ 。</p>
+</li>
+</ol>
+<p>证明略（还是不会）</p>
+<p><strong>积性函数</strong></p>
+<p>如果当 $a, b$ 互质时，有 $f(ab) = f(a)*f(b)$ 那么称函数 $f$ 为积性函数。</p>
+<p><strong>性质</strong></p>
+<p>3.若 $f$ 是积性函数，且在算术基本定理中， $n = \prod_{i = 1}^{m} p_i^{c_i}$ ，则 $f(n)=\prod_{i = 1}^{m} f(p_i^{c_i})$。</p>
+<p>4.设 $p$ 为质数，若 $p|n$ 且 $p^2 \mid n$，则 $\varphi(n) = \varphi (n / p) * p $ 。</p>
+<p>5.设 $p$ 为质数，若 $p \mid n$ 但 $p^2 \nmid n$，则 $\varphi (n) = \varphi (n / p) * (p - 1) $。</p>
+<ol>
+<li>$\sum_{d \mid n} \varphi (d) = n$</li>
+</ol>
+<p><strong>代码实现</strong></p>
+<p>1.Eratosthenes 筛法，时间复杂度 $O(N log N)$ 。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> phi[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">euler</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) phi[i] = i;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i)</span><br><span class="line">        <span class="keyword">if</span> (phi[i] == i)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt;= n; j += i)</span><br><span class="line">                phi[j] = phi[j] / i * (i - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.线性筛，利用性质 $4$ 和性质 $5$, 可以从 $\varphi (n / p) $ 递推到 $\varphi (n)$， 时间复杂度 $O(N)$。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> v[maxn], prime[maxn], phi[maxn], m;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">euler</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(v, <span class="number">0</span>, <span class="keyword">sizeof</span>(v));</span><br><span class="line">    m = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (v[i] == <span class="number">0</span>) &#123;</span><br><span class="line">            v[i] = i; prime[++m] = i;</span><br><span class="line">            phi[i] = i - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; ++j) &#123;</span><br><span class="line">            <span class="keyword">if</span> (prime[j] &gt; v[i] || prime[j] &gt; n / i) <span class="keyword">break</span>;</span><br><span class="line">            v[i * prime[j]] = prime[j];</span><br><span class="line">            phi[i * prime[j]] = phi[i] * (i % prime[j] ? prime[j] - <span class="number">1</span> : prime[j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>能背下来就背吧。</p>
+<h2 id="4-同余"><a href="#4-同余" class="headerlink" title="4.同余"></a>4.同余</h2><p><strong>费马小定理</strong></p>
+<p>若 $p$ 是质数，则对于任意整数 $a$ 有 $a^{p} \equiv a \ (mod \ p)$。</p>
+<p><strong>欧拉定理</strong></p>
+<p>若正整数 $a,n$ 互质，则 $a^{\varphi (n)} \equiv 1 \ (mod \ p)$。</p>
+<p><strong>拓展欧拉定理</strong></p>
+<p>若正整数 $a,n$ 互质，则对于任意正整数 $b$，有 $a^b \equiv a^{b \ mod \ \varphi(n) } \ (mod \ n)$。</p>
+<p>当 $a,n$ 不一定互质且 $b &gt; \varphi (n)$ 时，有 $a^b \equiv a^{b \ mod \ \varphi(n) +\varphi (n)} \ (mod \ n)$。</p>
+<ul>
+<li>拓展欧几里得</li>
+</ul>
+<p><strong>Bezout 裴蜀定理</strong></p>
+<p>对于任意整数 $a,b$，存在一对正整数 $x,y$, 满足 $ax + by = gcd(a,b) $。</p>
+<p>计算：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> &amp;x, <span class="keyword">int</span> &amp;y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>) &#123; x = <span class="number">1</span>, y = <span class="number">0</span>; <span class="keyword">return</span> a; &#125;</span><br><span class="line">    <span class="keyword">int</span> d = exgcd(b, a % b, x, y);</span><br><span class="line">    <span class="keyword">int</span> z = x; x = y; y = z - y * (a / b);</span><br><span class="line">    <span class="keyword">return</span> d;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>推导：</p>
+<p>对于 $gcd(a, b) = gcd(b, a \ mod \ b)$</p>
+<p>有 $ax + by = bx’+ (a \  mod \  b)y’$<br>$= bx’ + (a - \lfloor a / b\rfloor * b) y’$</p>
+<p>$=ay’ + b(x ‘- \lfloor a/b \rfloor * y’)$</p>
+<p>对齐 $a, b$ 系数可得 $exgcd$ 的算法</p>
+<p>方程 $ax+by=c$ 有解当且仅当 $d \mid c $ 。<br>先求出 $ax+by=d$ 的一组特解 $x_0, y_0$ ，同时乘上 $c/d$ ,就得到了 $ax+by=c$ 的一组特解 $(c/d)x_0, (c/d)y_0 $。</p>
+<p>方程的通解可以表示为</p>
+<script type="math/tex; mode=display">x = \frac{c}{d}x_0 + k \frac{b}{d}, \ \ \ \ y = \frac{c}{d}y_0 - k \frac{a}{d} \ \ (d = gcd(a, b),\  k \in \mathbb Z)</script><p><strong>乘法逆元</strong></p>
+<p>若整数 $b,m$ 互质，且 $b \mid a$ ，则存在一个整数 $x$，使得 $a/b \equiv a*x \ (mod \ m)$</p>
+<p>当模数为质数时，根据费马小定理，有 $a^{p - 2} \equiv 1/a \ (mod \ p) $。</p>
+<ul>
+<li>线性同余方程</li>
+</ul>
+<p>给定整数 $a, b, m$ 求一个整数 $x$ 满足 $a*x \equiv b \ (mod \ m) $， 或给出无解。</p>
+<p>解：设 $a<em>x-b=-ym$，则方程改写成 $a</em>x+m*y=b$，根据裴楚定理求解，过程略。</p>
+<p><strong>中国剩余定理</strong></p>
+<p>设 $m_1,m_2, \cdots m_n$ 是两两互质的整数，$m=\prod_{i = 1}^{n}m_i, M_i=m/m_i, t_i$ 是线性方程 $M_i t_i \equiv 1 \ (mod \ m_i) $ 的一个解，（用人话讲就是 $M_i$ 在模 $m_i$ 意义下的乘法逆元）。对于任意的 $n$ 个整数 $a_1, a_2, \cdots ,a_n$ ，方程组：</p>
+<script type="math/tex; mode=display">\begin{cases} x \equiv a_1 (mod \ m_1) \\ x \equiv a_2 (mod \ m_2) \\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \vdots \\ x \equiv  a_n (mod \ m_n)\end{cases}</script><p>有整数解，解为 $x = \sum_{i=1}^{n}a_i M_i t_i$。</p>
+<h2 id="5-矩阵乘法"><a href="#5-矩阵乘法" class="headerlink" title="5.矩阵乘法"></a>5.矩阵乘法</h2><script type="math/tex; mode=display">C_{i,j}=\sum_{k = 1}^{m} A_{i,k} * B_{k,j}</script><p>可以用矩阵快速幂加速递推，此类题目特点：</p>
+<p>1.可以抽象出一个长度为 $n$ 的以为向量，该向量在每个单位时间发生一次变化</p>
+<p>2.变化的形式是一个线性递推</p>
+<p>3.该递推式在每个时间可能作用于不同的数据上，但本身保持不变</p>
+<p>4.向量变化时间（即递推的轮数）很长，但向量长度 $n$ 不大。</p>
+<h2 id="6-高斯消元"><a href="#6-高斯消元" class="headerlink" title="6.高斯消元"></a>6.高斯消元</h2><p><a href="https://www.luogu.org/blog/yuno/knowledge-gauss" target="_blank" rel="noopener">传送门</a></p>
+<h2 id="7-组合计数"><a href="#7-组合计数" class="headerlink" title="7.组合计数"></a>7.组合计数</h2><p><strong>二项式定理</strong></p>
+<script type="math/tex; mode=display">(a + b) ^ n = \sum_{k = 0} ^ {n} C_n^k a^k b^ {n - k}</script><p><strong>Lucas 定理</strong></p>
+<p> 若 $p$ 是质数，则对于任意整数 $1 \leq m \leq n $，有：</p>
+<script type="math/tex; mode=display">C_n^m \equiv C_{n \ mod \ p} ^ {m \ mod \ p} * C_{n / p} ^ {m / p} (mod \ p)</script> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">C</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (a &gt; b) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1l</span>l * fac[b] * inv(fac[a]) % p * inv(fac[b - a]) % p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Lucas</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1l</span>l * C(a % p, b % p) * Lucas(a / p, b / p) % p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> <strong>Catalan 数列</strong></p>
+<script type="math/tex; mode=display">Cat_n = \frac {C_{2n} ^ n} {n + 1}</script><h2 id="8-容斥原理与Mobius函数"><a href="#8-容斥原理与Mobius函数" class="headerlink" title="8.容斥原理与Mobius函数"></a>8.容斥原理与Mobius函数</h2><p> 容斥原理略，现推就行</p>
+<p> <strong>Mobius函数</strong></p>
+<p> 设正整数 $N$ 按照算术基本定理分解质因数为 $N = p_1^{c_1} p_2^{c_2} \cdots  p_m^{c_m} $，定义函数</p>
+<script type="math/tex; mode=display">\mu (N) = \begin{cases} 0 \quad \quad \quad \quad  \quad \exists i \in [1, m], c_i > 1 \\ 1 \quad \ \ \ m \equiv 0 \ (mod \ 2), \forall i \in [1,m], c_i = 1 \\ -1 \quad m \equiv 1 \ (mod \ 2), \forall i \in [1,m], c_i = 1 \end{cases}</script><p> 称 $\mu(N)$ 为 $Mobius$ 函数。</p>
+<p> 当 $N$ 包含相等的质因子时， $\mu(N) = 0$。当 $N$ 所有的质因子各不相等时，若 $N$ 有偶数个质因子，$\mu(N) = 1$，若 $N$ 有奇数个质因子，$\mu(N) = -1$。</p>
+<p>利用埃筛，把所有 $\mu$ 值初始化为 $1$。接下来，对于晒出的每个质数 $p$，令 $\mu(p) = -1$，并扫描 $p$ 的倍数 $x = 2p, 3p, \cdots, \lfloor n / p \rfloor * p$，检查 $x$ 能否被 $p^2$ 整除。若能，则令 $\mu(x) = 0$，否则令 $\mu (x) = - \mu (x)$。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) miu[i] = <span class="number">1</span>, v[i] = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; ++i) &#123;</span><br><span class="line">	<span class="keyword">if</span> (v[i]) <span class="keyword">continue</span>;</span><br><span class="line">	miu[i] = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">2</span> * i; j &lt;= n; j += i) &#123;</span><br><span class="line">		v[j] = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> ((j / i) % i == <span class="number">0</span>) miu[j] = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">else</span> miu[j] *= <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="9-概率与数学期望"><a href="#9-概率与数学期望" class="headerlink" title="9.概率与数学期望"></a>9.概率与数学期望</h2><p>略，这点看脸了，难的不会，简单的没有复习的意义</p>
+<h2 id="10-0-1分数规划"><a href="#10-0-1分数规划" class="headerlink" title="10.0/1分数规划"></a>10.0/1分数规划</h2><p>二分答案，验证式子</p>
+<script type="math/tex; mode=display">\sum_{i = 1}^{n}(a_i - mid * b) * x_i \geq 0 \ (or \leq 0)</script><p>相应的改变 $mid$ </p>
+<h2 id="11-博弈论"><a href="#11-博弈论" class="headerlink" title="11.博弈论"></a>11.博弈论</h2><p><strong>NIM 游戏</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E7%A7%91%E6%8A%80%E7%82%B9/" rel="tag"># 科技点</a>
+          
+            <a href="/tags/OI/" rel="tag"># OI</a>
+          
+            <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/08/P1357/" rel="prev" title="<题解> P1357 花园">
+                <题解> P1357 花园 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/hh.jpg"
+                alt="HH" />
+            
+              <p class="site-author-name" itemprop="name">HH</p>
+              <p class="site-description motion-element" itemprop="description">今日も可愛い！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-质数"><span class="nav-number">1.</span> <span class="nav-text">1.质数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-质因数的分解"><span class="nav-number">2.</span> <span class="nav-text">2.质因数的分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-约数"><span class="nav-number">3.</span> <span class="nav-text">3.约数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-同余"><span class="nav-number">4.</span> <span class="nav-text">4.同余</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-矩阵乘法"><span class="nav-number">5.</span> <span class="nav-text">5.矩阵乘法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-高斯消元"><span class="nav-number">6.</span> <span class="nav-text">6.高斯消元</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-组合计数"><span class="nav-number">7.</span> <span class="nav-text">7.组合计数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-容斥原理与Mobius函数"><span class="nav-number">8.</span> <span class="nav-text">8.容斥原理与Mobius函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-概率与数学期望"><span class="nav-number">9.</span> <span class="nav-text">9.概率与数学期望</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-0-1分数规划"><span class="nav-number">10.</span> <span class="nav-text">10.0&#x2F;1分数规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-博弈论"><span class="nav-number">11.</span> <span class="nav-text">11.博弈论</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HH</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
