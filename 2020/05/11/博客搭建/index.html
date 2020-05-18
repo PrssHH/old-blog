@@ -87,7 +87,7 @@
 <meta property="og:description" content="此文章非教程，是华华用来防止自己忘记怎么弄做写给自己看的。  前期工作GitHub 创建以 username.github.io 为名的 Repository安装 Git绑定 Git 与 GitHub 账号，获得 ssh 密钥123git config --global user.name &quot;username&quot;git config --global user.email &amp;q">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-11T15:16:46.000Z">
-<meta property="article:modified_time" content="2020-05-12T10:25:36.382Z">
+<meta property="article:modified_time" content="2020-05-18T05:13:40.618Z">
 <meta property="article:author" content="HH">
 <meta property="article:tag" content="操作指南">
 <meta property="article:tag" content="博客">
@@ -192,6 +192,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
@@ -275,6 +285,9 @@
         
 
         <div class="post-meta">
+          
+          
+          
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -357,8 +370,10 @@
 <h4 id="附"><a href="#附" class="headerlink" title="附"></a>附</h4><h5 id="只显示文章预览："><a href="#只显示文章预览：" class="headerlink" title="只显示文章预览："></a>只显示文章预览：</h5><p><strong>主题配置文件</strong>中<code>auto_excerpt</code>部分：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: false</span><br><span class="line">  length: 150</span><br></pre></td></tr></table></figure>
 <p><code>false</code>改成<code>true</code></p>
-<h5 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h5><p><a href="https://i-m.dev/posts/20190304-210101.html" target="_blank" rel="noopener">link</a></p>
-<p><strong>站点配置文件</strong>中：</p>
+<h5 id="置顶"><a href="#置顶" class="headerlink" title="置顶"></a>置顶</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+<p><code>/blog/themes/next/layout/_macro</code>下<code>post.swig</code>里，<code>&lt;div class=&quot;post-meta&quot;&gt;</code>加上如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">  &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">  &lt;font color&#x3D;9999FF&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">  &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>置顶文章<code>Front-matter</code>加上<code>top: true</code>就行了</p>
 <p>到此为止安装工作就算做好了</p>
 <h3 id="使用-hexo"><a href="#使用-hexo" class="headerlink" title="使用 hexo"></a>使用 hexo</h3><h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p>新建文章<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br><span class="line">$ hexo n [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure></p>
 <p>生成网页文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo g</span><br></pre></td></tr></table></figure></p>
@@ -548,7 +563,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前期工作"><span class="nav-number">1.</span> <span class="nav-text">前期工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub-创建以-username-github-io-为名的-Repository"><span class="nav-number">1.1.</span> <span class="nav-text">GitHub 创建以 username.github.io 为名的 Repository</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Git"><span class="nav-number">1.2.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Node-js"><span class="nav-number">1.3.</span> <span class="nav-text">安装 Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">1.4.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推送网站"><span class="nav-number">1.5.</span> <span class="nav-text">推送网站</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Git-部署插件"><span class="nav-number">1.6.</span> <span class="nav-text">安装 Git 部署插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Next-主题"><span class="nav-number">1.7.</span> <span class="nav-text">安装 Next 主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附"><span class="nav-number">1.8.</span> <span class="nav-text">附</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#只显示文章预览："><span class="nav-number">1.8.1.</span> <span class="nav-text">只显示文章预览：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#LaTeX"><span class="nav-number">1.8.2.</span> <span class="nav-text">LaTeX</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-hexo"><span class="nav-number">2.</span> <span class="nav-text">使用 hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用命令"><span class="nav-number">2.1.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写文章"><span class="nav-number">3.</span> <span class="nav-text">写文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传文章"><span class="nav-number">4.</span> <span class="nav-text">上传文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考链接"><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前期工作"><span class="nav-number">1.</span> <span class="nav-text">前期工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub-创建以-username-github-io-为名的-Repository"><span class="nav-number">1.1.</span> <span class="nav-text">GitHub 创建以 username.github.io 为名的 Repository</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Git"><span class="nav-number">1.2.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Node-js"><span class="nav-number">1.3.</span> <span class="nav-text">安装 Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">1.4.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推送网站"><span class="nav-number">1.5.</span> <span class="nav-text">推送网站</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Git-部署插件"><span class="nav-number">1.6.</span> <span class="nav-text">安装 Git 部署插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Next-主题"><span class="nav-number">1.7.</span> <span class="nav-text">安装 Next 主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附"><span class="nav-number">1.8.</span> <span class="nav-text">附</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#只显示文章预览："><span class="nav-number">1.8.1.</span> <span class="nav-text">只显示文章预览：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#置顶"><span class="nav-number">1.8.2.</span> <span class="nav-text">置顶</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-hexo"><span class="nav-number">2.</span> <span class="nav-text">使用 hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用命令"><span class="nav-number">2.1.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写文章"><span class="nav-number">3.</span> <span class="nav-text">写文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传文章"><span class="nav-number">4.</span> <span class="nav-text">上传文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考链接"><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>

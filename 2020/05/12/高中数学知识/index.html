@@ -87,7 +87,7 @@
 <meta property="og:description" content="导数公式及运算法则基本初等函数的导数公式f(x) &#x3D; c, f&#39;(x) &#x3D; 0f(x) &#x3D; x^a, f&#39;(x) &#x3D; ax^{a - 1}f(x) &#x3D; sin \ x, f&#39;(x) &#x3D; cos \ xf(x) &#x3D; cos \ x, f&#39;(x) &#x3D; sin \ xf(x) &#x3D; a^x, f&#39;(x) &#x3D; a^xln \ af(x) &#x3D; e^x, f&#39;(x) &#x3D; e^xf(x) &#x3D; log_ax, f&#39;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-12T11:10:28.000Z">
-<meta property="article:modified_time" content="2020-05-12T13:34:53.444Z">
+<meta property="article:modified_time" content="2020-05-18T13:36:49.854Z">
 <meta property="article:author" content="HH">
 <meta property="article:tag" content="导数">
 <meta property="article:tag" content="微积分">
@@ -194,6 +194,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
@@ -277,6 +287,9 @@
         
 
         <div class="post-meta">
+          
+          
+          
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -366,6 +379,28 @@
 </ol>
 <p>首先要检查是否满足 $\frac{0}{0}, \frac{\infty}{\infty}$ 型</p>
 <p>洛必达法则可连续多次使用</p>
+<h3 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h3><h4 id="定理："><a href="#定理：" class="headerlink" title="定理："></a>定理：</h4><p>设函数 $f(x)$ 在点$x_0$处的某邻域内具有 $n+1$ 阶导数，则对该邻域内异于 $x_0$ 的任意点 $x$，在 $x_0$ 与 $x$ 之间至少存在一点 $\xi$ ，使得：</p>
+<script type="math/tex; mode=display">f(x) = f(x_0) + \frac{f'(x_0)}{1!}(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n + R_n</script><p>其中 $R_n(x) = \frac{f^{(n+1)(\xi)}}{(n + 1)!}$ 称为余项，上式称为 $n$ 阶泰勒公式。</p>
+<p><strong>若 $x_0 = 0$ ，则上述泰勒展开式称为麦克劳林公式：</strong></p>
+<script type="math/tex; mode=display">f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \cdots + \frac{f^{(n)}(0)}{n!}(x)^n + o(x^n)</script><p><strong>若函数 $f(x)$ 在 $x=a$ 处无穷阶可导，则</strong></p>
+<script type="math/tex; mode=display">f(x) = f(a) + \frac{f'(a)}{1!}(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \cdots + \frac{f^{(n)(a)}}{n!}(x - a)^n + o((x-a)^n)</script><h4 id="e-x-的泰勒展开式"><a href="#e-x-的泰勒展开式" class="headerlink" title="$e^x$ 的泰勒展开式"></a>$e^x$ 的泰勒展开式</h4><script type="math/tex; mode=display">e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \cdots +　\frac{x^n}{n!} + \cdots</script><ul>
+<li><script type="math/tex; mode=display">e^x \geq 1 + x</script></li>
+</ul>
+<h4 id="frac-1-1-x-的泰勒展开式"><a href="#frac-1-1-x-的泰勒展开式" class="headerlink" title="$\frac{1}{1-x}$ 的泰勒展开式"></a>$\frac{1}{1-x}$ 的泰勒展开式</h4><script type="math/tex; mode=display">\frac{1}{1-x} = 1 + x + x^2 + \cdots + x^n + o(x^n)</script><h4 id="ln-1-x-的泰勒展开式"><a href="#ln-1-x-的泰勒展开式" class="headerlink" title="$ln(1 + x)$ 的泰勒展开式"></a>$ln(1 + x)$ 的泰勒展开式</h4><script type="math/tex; mode=display">ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots + (-1)^{n - 1}\frac{x^n}{n} + \cdots</script><ul>
+<li><script type="math/tex; mode=display">ln(1 + x) < x</script></li>
+</ul>
+<h4 id="sin-x-的泰勒展开式"><a href="#sin-x-的泰勒展开式" class="headerlink" title="$sin \ x$ 的泰勒展开式"></a>$sin \ x$ 的泰勒展开式</h4><script type="math/tex; mode=display">sin \ x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots + (-1)^n\frac{x^{2n+1}}{(2n+1)!} + 0(x^{2n+2})</script><h4 id="cos-x-的泰勒展开式"><a href="#cos-x-的泰勒展开式" class="headerlink" title="$cos \ x$ 的泰勒展开式"></a>$cos \ x$ 的泰勒展开式</h4><script type="math/tex; mode=display">cos \ x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots + (-1)^n \frac{x^{2n}}{(2n)!}</script><blockquote>
+<p>泰勒公式是贯穿于高等数学中一个非常重要的内容，它将一些复杂超越函数近似地表示为简单的多项式函数，这种化繁为简的功能，使它成为分析和研究其他数学问题的最重要杠杆。泰勒公式的重点是使用一个 $n$ 次多项式，去“逼近”一个已知的函数 $f(x)$ ，$n$ 阶“逼近”，对不等式进行分析、构造、转化、放缩，它是解决不等式证明问题的常用方法和基本思想。</p>
+</blockquote>
+<h4 id="不等式举例"><a href="#不等式举例" class="headerlink" title="不等式举例"></a>不等式举例</h4><ol>
+<li><script type="math/tex; mode=display">e^x \geq 1 + x \ ; \ e^x \geq 1 + x + \frac{x^2}{2}</script></li>
+<li><script type="math/tex; mode=display">x - \frac{x^2}{2} \leq ln(1 + x) \leq x \\ 
+\ \ \ x - \frac{x^2}{2} + \frac{x^3}{3} \leq ln(1 + x)</script></li>
+<li><script type="math/tex; mode=display">x - \frac{x^3}{6} \leq sin \ x \leq x</script></li>
+<li><script type="math/tex; mode=display">1 - \frac{x^2}{2} \leq cos \ x \leq 1 - \frac{x^2}{2} + \frac{x^4}{24}</script></li>
+<li><strong>对数均值不等式 $(0 &lt; x_1 &lt; x_2)$</strong> <script type="math/tex">\\ \frac{2}{\frac{1}{x_1} + \frac{1}{x_2}} \leq \sqrt{x_1x_2} \leq \frac{x_2 - x_1}{ln \ x_2 - ln \ x_1} \leq \frac{x_1 + x_2}{2} \leq \sqrt{\frac{x_1^2 + x_2^2}{2}}</script></li>
+<li><script type="math/tex; mode=display">e^x-e^{-x} \geq 2x \Longleftrightarrow x - \frac{1}{x} \geq 2ln \ x</script></li>
+</ol>
 
       
     </div>
@@ -546,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#导数公式及运算法则"><span class="nav-number">1.</span> <span class="nav-text">导数公式及运算法则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本初等函数的导数公式"><span class="nav-number">1.1.</span> <span class="nav-text">基本初等函数的导数公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导数运算法则"><span class="nav-number">1.2.</span> <span class="nav-text">导数运算法则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定积分"><span class="nav-number">2.</span> <span class="nav-text">定积分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#牛顿-莱布尼茨公式（微积分基本定理）"><span class="nav-number">2.1.</span> <span class="nav-text">牛顿-莱布尼茨公式（微积分基本定理）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛必达法则"><span class="nav-number">3.</span> <span class="nav-text">洛必达法则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#0-0型"><span class="nav-number">3.1.</span> <span class="nav-text">0:0型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#infty-infty-型"><span class="nav-number">3.2.</span> <span class="nav-text">$\infty$:$\infty$型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#导数公式及运算法则"><span class="nav-number">1.</span> <span class="nav-text">导数公式及运算法则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本初等函数的导数公式"><span class="nav-number">1.1.</span> <span class="nav-text">基本初等函数的导数公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导数运算法则"><span class="nav-number">1.2.</span> <span class="nav-text">导数运算法则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定积分"><span class="nav-number">2.</span> <span class="nav-text">定积分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#牛顿-莱布尼茨公式（微积分基本定理）"><span class="nav-number">2.1.</span> <span class="nav-text">牛顿-莱布尼茨公式（微积分基本定理）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#洛必达法则"><span class="nav-number">3.</span> <span class="nav-text">洛必达法则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#0-0型"><span class="nav-number">3.1.</span> <span class="nav-text">0:0型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#infty-infty-型"><span class="nav-number">3.2.</span> <span class="nav-text">$\infty$:$\infty$型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泰勒公式"><span class="nav-number">4.</span> <span class="nav-text">泰勒公式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定理："><span class="nav-number">4.1.</span> <span class="nav-text">定理：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#e-x-的泰勒展开式"><span class="nav-number">4.2.</span> <span class="nav-text">$e^x$ 的泰勒展开式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#frac-1-1-x-的泰勒展开式"><span class="nav-number">4.3.</span> <span class="nav-text">$\frac{1}{1-x}$ 的泰勒展开式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ln-1-x-的泰勒展开式"><span class="nav-number">4.4.</span> <span class="nav-text">$ln(1 + x)$ 的泰勒展开式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sin-x-的泰勒展开式"><span class="nav-number">4.5.</span> <span class="nav-text">$sin \ x$ 的泰勒展开式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cos-x-的泰勒展开式"><span class="nav-number">4.6.</span> <span class="nav-text">$cos \ x$ 的泰勒展开式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不等式举例"><span class="nav-number">4.7.</span> <span class="nav-text">不等式举例</span></a></li></ol></li></ol></div>
             
 
           </div>
