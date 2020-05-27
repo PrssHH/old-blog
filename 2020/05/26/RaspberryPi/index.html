@@ -87,7 +87,7 @@
 <meta property="og:description" content="树莓派折腾清单初始化树莓派首先，你得有个树莓派，一张够大的TF卡（8G以上）。 安装Raspbian官网下载Raspbian镜像，我使用的是Raspbian Buster with desktop and recommended software，另外两个没试过不知道好不好。 下载Win32 Disk Imager进行烧录，把.img文件烧录到TF卡里。 烧录完后把卡插进树莓派，就可以正常开机了。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-26T04:40:34.000Z">
-<meta property="article:modified_time" content="2020-05-26T12:02:32.872Z">
+<meta property="article:modified_time" content="2020-05-27T05:24:56.237Z">
 <meta property="article:author" content="HH">
 <meta name="twitter:card" content="summary">
 
@@ -338,8 +338,20 @@
 <p>烧录完后把卡插进树莓派，就可以正常开机了。</p>
 <p>按照个人喜好设定一下地区、时区、密码什么的。</p>
 <p>到这里你就可以骄傲地向别人炫耀你有一台树莓派了！</p>
-<h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><p>据说有直接SSH配置的办法（PuTTY），但反正我都有显示器和键鼠，所以就直接插上开机了。</p>
-<h3 id="网络连接"><a href="#网络连接" class="headerlink" title="网络连接"></a>网络连接</h3><p>鉴于用WIFI好像比较麻烦，所以华华直接使用有线连接，插上网线就能用了。</p>
+<h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><p>如果没有专门的一套显示器、键鼠给树莓派使用，先看看后文的“网络连接”和“SSH”，如果有就可以暂时跳过，直接插上卡开机，等用得到再回来看。</p>
+<h3 id="网络连接"><a href="#网络连接" class="headerlink" title="网络连接"></a>网络连接</h3><h4 id="有线"><a href="#有线" class="headerlink" title="有线"></a>有线</h4><p>有线就没什么好说的，插上网线就能用了。</p>
+<h4 id="Wifi"><a href="#Wifi" class="headerlink" title="Wifi"></a>Wifi</h4><p>如果有键盘鼠标，可以插上TF卡进系统设置。</p>
+<p>如果没有的话：</p>
+<p>在<strong>电脑</strong>里打开TF卡，新建一个名为<code>wpa_supplicant.conf</code>的文件，打开在里面输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">country&#x3D;CN</span><br><span class="line">ctrl_interface&#x3D;DIR&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant GROUP&#x3D;netdev</span><br><span class="line">update_config&#x3D;1</span><br><span class="line"></span><br><span class="line">network&#x3D;&#123;</span><br><span class="line">    ssid&#x3D;&quot;你的WIFI网络名称&quot;</span><br><span class="line">    psk&#x3D;&quot;你的WIFI网络密码&quot;</span><br><span class="line">    key_mgmt&#x3D;WPA-PSK</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中wifi名称和密码都是要保留引号的，就是只改中文部分。</p>
+<p>注意这里的<code>key_mgmt</code>不论你的网络加密是<code>WPA-PSK</code>还是<code>WPA2-PSK</code>统一写<code>WPA-PSK</code>。</p>
+<h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><h4 id="方法一："><a href="#方法一：" class="headerlink" title="　方法一："></a>　方法一：</h4><p>进系统在命令行输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;ssh start</span><br></pre></td></tr></table></figure>
+<p>这种方法是临时的（重启后失效）</p>
+<h4 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h4><p>TF卡连到电脑，打开直接新建名为<code>SSH</code>的文件（无后缀）。</p>
+<p>这样子就可以通过SSH来连接树莓派了，我使用的是<code>PuTTY</code></p>
+<p><a href="https://www.jianshu.com/p/654ee08d2b3a" target="_blank" rel="noopener">参考</a></p>
 <h3 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h3><p>由于系统里默认的软件源受到墙的影响，速度不尽人意，建议（务必）换成墙内的软件源。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i &#39;s#:&#x2F;&#x2F;raspbian.raspberrypi.org#s:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;raspbian#g&#39; &#x2F;etc&#x2F;apt&#x2F;sources.list </span><br><span class="line">sudo sed -i &#39;s#:&#x2F;&#x2F;archive.raspberrypi.org&#x2F;debian#s:&#x2F;&#x2F;mirrors.ustc.edu.cn&#x2F;archive.raspberrypi.org&#x2F;debian#g&#39; &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;raspi.list</span><br></pre></td></tr></table></figure>
 <p>更新本地软件引索</p>
@@ -351,7 +363,7 @@
 <p>ps: WIN + R 里运行 mstsc 可以装逼又快速的开启远程桌面连接。</p>
 <p>ps: 建议调整一下分辨率，不全屏的连接使用体验更佳。</p>
 <ul>
-<li>待填坑：ssh；ftp；wifi；raspi-config设定；</li>
+<li>待填坑：ssh；ftp；raspi-config设定；</li>
 </ul>
 <h2 id="各种小玩意儿"><a href="#各种小玩意儿" class="headerlink" title="各种小玩意儿"></a>各种小玩意儿</h2><h3 id="smb服务器"><a href="#smb服务器" class="headerlink" title="smb服务器"></a>smb服务器</h3><p>可以利用树莓派共享文件夹，在别的机子上通过smb协议读写树莓派上的文件，就像读写本机的文件一样。我这里是打算当成全家的一个共享硬盘，可以放一些电影、视频、番、音乐，在各个设备上轻松的访问。</p>
 <p>首先安装samba</p>
@@ -545,7 +557,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#树莓派折腾清单"><span class="nav-number">1.</span> <span class="nav-text">树莓派折腾清单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化树莓派"><span class="nav-number">1.1.</span> <span class="nav-text">初始化树莓派</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Raspbian"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装Raspbian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本配置"><span class="nav-number">1.1.2.</span> <span class="nav-text">基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络连接"><span class="nav-number">1.1.3.</span> <span class="nav-text">网络连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#换源"><span class="nav-number">1.1.4.</span> <span class="nav-text">换源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程桌面连接"><span class="nav-number">1.1.5.</span> <span class="nav-text">远程桌面连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种小玩意儿"><span class="nav-number">1.2.</span> <span class="nav-text">各种小玩意儿</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#smb服务器"><span class="nav-number">1.2.1.</span> <span class="nav-text">smb服务器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#剩下的慢慢来"><span class="nav-number">2.</span> <span class="nav-text">剩下的慢慢来</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#树莓派折腾清单"><span class="nav-number">1.</span> <span class="nav-text">树莓派折腾清单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化树莓派"><span class="nav-number">1.1.</span> <span class="nav-text">初始化树莓派</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Raspbian"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装Raspbian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本配置"><span class="nav-number">1.1.2.</span> <span class="nav-text">基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络连接"><span class="nav-number">1.1.3.</span> <span class="nav-text">网络连接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#有线"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">有线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Wifi"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">Wifi</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH"><span class="nav-number">1.1.4.</span> <span class="nav-text">SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法一："><span class="nav-number">1.1.4.1.</span> <span class="nav-text">　方法一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法二："><span class="nav-number">1.1.4.2.</span> <span class="nav-text">方法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#换源"><span class="nav-number">1.1.5.</span> <span class="nav-text">换源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程桌面连接"><span class="nav-number">1.1.6.</span> <span class="nav-text">远程桌面连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种小玩意儿"><span class="nav-number">1.2.</span> <span class="nav-text">各种小玩意儿</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#smb服务器"><span class="nav-number">1.2.1.</span> <span class="nav-text">smb服务器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#剩下的慢慢来"><span class="nav-number">2.</span> <span class="nav-text">剩下的慢慢来</span></a></li></ol></div>
             
 
           </div>
