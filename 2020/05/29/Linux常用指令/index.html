@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="操作指南,博客," />
+  <meta name="keywords" content="操作指南,Linux," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="此文章非教程，是华华用来防止自己忘记怎么弄做写给自己看的。  前期工作GitHub 创建以 username.github.io 为名的 Repository安装 Git绑定 Git 与 GitHub 账号，获得 ssh 密钥123git config --global user.name &quot;username&quot;git config --global user.email &amp;q">
+<meta name="description" content="文件操作cdChange Directory之意。非常基本的一个指令，用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。 123cd &#x2F;root&#x2F;Docements # 切换到目录&#x2F;root&#x2F;Docementscd .&#x2F;path          # 切换到当前目录下的path目录中，“.”表示当前目录  cd .">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客搭建">
-<meta property="og:url" content="https://jarvishh.github.io/2020/05/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:title" content="Linux常用指令">
+<meta property="og:url" content="https://jarvishh.github.io/2020/05/29/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/index.html">
 <meta property="og:site_name" content="HH❤Hexo">
-<meta property="og:description" content="此文章非教程，是华华用来防止自己忘记怎么弄做写给自己看的。  前期工作GitHub 创建以 username.github.io 为名的 Repository安装 Git绑定 Git 与 GitHub 账号，获得 ssh 密钥123git config --global user.name &quot;username&quot;git config --global user.email &amp;q">
+<meta property="og:description" content="文件操作cdChange Directory之意。非常基本的一个指令，用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。 123cd &#x2F;root&#x2F;Docements # 切换到目录&#x2F;root&#x2F;Docementscd .&#x2F;path          # 切换到当前目录下的path目录中，“.”表示当前目录  cd .">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-11T15:16:46.000Z">
-<meta property="article:modified_time" content="2020-05-18T05:13:40.618Z">
+<meta property="article:published_time" content="2020-05-29T11:11:44.000Z">
+<meta property="article:modified_time" content="2020-05-29T14:13:17.320Z">
 <meta property="article:author" content="HH">
 <meta property="article:tag" content="操作指南">
-<meta property="article:tag" content="博客">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://jarvishh.github.io/2020/05/11/博客搭建/"/>
+  <link rel="canonical" href="https://jarvishh.github.io/2020/05/29/Linux常用指令/"/>
 
 
 
 
 
-  <title>博客搭建 | HH❤Hexo</title>
+  <title>Linux常用指令 | HH❤Hexo</title>
   
 
 
@@ -264,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jarvishh.github.io/2020/05/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="https://jarvishh.github.io/2020/05/29/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HH">
@@ -281,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">博客搭建</h1>
+          <h1 class="post-title" itemprop="name headline">Linux常用指令</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-11T23:16:46+08:00">
-                2020-05-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-29T19:11:44+08:00">
+                2020-05-29
               </time>
             
 
@@ -356,33 +356,27 @@
       
 
       
-        <blockquote>
-<p>此文章非教程，是华华用来防止自己忘记怎么弄做写给自己看的。</p>
-</blockquote>
-<h3 id="前期工作"><a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h3><h4 id="GitHub-创建以-username-github-io-为名的-Repository"><a href="#GitHub-创建以-username-github-io-为名的-Repository" class="headerlink" title="GitHub 创建以 username.github.io 为名的 Repository"></a>GitHub 创建以 username.github.io 为名的 Repository</h4><h4 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h4><p>绑定 Git 与 GitHub 账号，获得 ssh 密钥<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;email&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;email&quot;</span><br></pre></td></tr></table></figure><br>找到生成的 .ssh 文件夹中的 id_rsa.pub 粘贴到GitHub里</p>
-<h4 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h4><h4 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd &lt;file&gt;</span><br><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<h4 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h4><p>打开<strong>站点配置文件</strong>_config.yml，翻到最后</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: https:\\github.com\xxx\xxx.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
-<h4 id="安装-Git-部署插件"><a href="#安装-Git-部署插件" class="headerlink" title="安装 Git 部署插件"></a>安装 Git 部署插件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<h4 id="安装-Next-主题"><a href="#安装-Next-主题" class="headerlink" title="安装 Next 主题"></a>安装 Next 主题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &lt;file&gt;</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-<p><strong>站点配置文件</strong>中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-<h4 id="附"><a href="#附" class="headerlink" title="附"></a>附</h4><h5 id="只显示文章预览："><a href="#只显示文章预览：" class="headerlink" title="只显示文章预览："></a>只显示文章预览：</h5><p><strong>主题配置文件</strong>中<code>auto_excerpt</code>部分：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: false</span><br><span class="line">  length: 150</span><br></pre></td></tr></table></figure>
-<p><code>false</code>改成<code>true</code></p>
-<h5 id="置顶"><a href="#置顶" class="headerlink" title="置顶"></a>置顶</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall hexo-generator-index --save</span><br><span class="line">$ npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
-<p><code>/blog/themes/next/layout/_macro</code>下<code>post.swig</code>里，<code>&lt;div class=&quot;post-meta&quot;&gt;</code>加上如下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">  &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">  &lt;font color&#x3D;9999FF&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">  &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<p>置顶文章<code>Front-matter</code>加上<code>top: true</code>就行了</p>
-<p>到此为止安装工作就算做好了</p>
-<h3 id="使用-hexo"><a href="#使用-hexo" class="headerlink" title="使用 hexo"></a>使用 hexo</h3><h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p>新建文章<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br><span class="line">$ hexo n [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure></p>
-<p>生成网页文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo g</span><br></pre></td></tr></table></figure></p>
-<p>启动服务预览<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure></p>
-<p>部署<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></p>
-<p>清除缓存<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure></p>
-<h3 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h3><p>先 new 一个文件出来，然后在 /sorce/_posts 下会找到文件，Markdown编辑即可。</p>
-<h3 id="上传文章"><a href="#上传文章" class="headerlink" title="上传文章"></a>上传文章</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a><br><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">next</a><br><a href="https://www.runoob.com/markdown" target="_blank" rel="noopener">markdown</a></p>
+        <h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><p>Change Directory之意。<br>非常基本的一个指令，用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;root&#x2F;Docements # 切换到目录&#x2F;root&#x2F;Docements</span><br><span class="line">cd .&#x2F;path          # 切换到当前目录下的path目录中，“.”表示当前目录  </span><br><span class="line">cd ..&#x2F;path         # 切换到上层目录中的path目录中，“..”表示上一层目录</span><br></pre></td></tr></table></figure>
+<h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><p>List之意。<br>这是一个非常有用的查看文件与目录的命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-l ：列出长数据串，包含文件的属性与权限数据等</span><br><span class="line">-a ：列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）</span><br><span class="line">-d ：仅列出目录本身，而不是列出目录的文件数据</span><br><span class="line">-h ：将文件容量以较易读的方式（GB，kB等）列出来</span><br><span class="line">-R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来</span><br></pre></td></tr></table></figure>
+<p>如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -l filename #以长数据串的形式列出filename文件的数据</span><br><span class="line">ls -l #以长数据串的形式列出当前目录下的数据文件和目录</span><br><span class="line">ls -lR #以长数据串的形式列出当前目录下的所有文件</span><br></pre></td></tr></table></figure>
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p>如其名，搜索。是一个非常强大的命令，使用复杂，参数也多。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">find [PATH] [option] [action]</span><br><span class="line"></span><br><span class="line"># 与时间有关的参数：</span><br><span class="line">-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；</span><br><span class="line">-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；</span><br><span class="line">-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；</span><br><span class="line">-newer file : 列出比file还要新的文件名</span><br><span class="line"># 例如：</span><br><span class="line">find &#x2F;root -mtime 0 # 在当前目录下查找今天之内有改动的文件</span><br><span class="line"></span><br><span class="line"># 与用户或用户组名有关的参数：</span><br><span class="line">-user name : 列出文件所有者为name的文件</span><br><span class="line">-group name : 列出文件所属用户组为name的文件</span><br><span class="line">-uid n : 列出文件所有者为用户ID为n的文件</span><br><span class="line">-gid n : 列出文件所属用户组为用户组ID为n的文件</span><br><span class="line"># 例如：</span><br><span class="line">find &#x2F;home&#x2F;ljianhui -user ljianhui # 在目录&#x2F;home&#x2F;ljianhui中找出所有者为ljianhui的文件</span><br><span class="line"></span><br><span class="line"># 与文件权限及名称有关的参数：</span><br><span class="line">-name filename ：找出文件名为filename的文件</span><br><span class="line">-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件</span><br><span class="line">-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、</span><br><span class="line">             目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；</span><br><span class="line">-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；</span><br><span class="line">-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示</span><br><span class="line">-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示</span><br><span class="line"># 例如：</span><br><span class="line">find &#x2F; -name passwd # 查找文件名为passwd的文件</span><br><span class="line">find . -perm 0755 # 查找当前目录中文件权限的0755的文件</span><br><span class="line">find . -size +12k # 查找当前目录中大于12KB的文件，注意c表示byte</span><br></pre></td></tr></table></figure>
+<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><p>Copy之意。<br>用于复制文件。常用参数如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-a ：将文件的特性一起复制</span><br><span class="line">-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份</span><br><span class="line">-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行</span><br><span class="line">-r ：递归持续复制，用于目录的复制行为</span><br><span class="line">-u ：目标文件与源文件有差异时才会复制</span><br></pre></td></tr></table></figure>
+<p>如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp -a file1 file2 #连同文件的所有特性把文件file1复制成文件file2</span><br><span class="line">cp file1 file2 file3 dir #把文件file1、file2、file3复制到目录dir中</span><br></pre></td></tr></table></figure>
+<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><p>Move之意。<br>用于移动文件、目录或更名。常用参数如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖</span><br><span class="line">-i ：若目标文件已经存在，就会询问是否覆盖</span><br><span class="line">-u ：若目标文件已经存在，且比目标文件新，才会更新</span><br></pre></td></tr></table></figure>
+<p>如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv file1 file2 file3 dir # 把文件file1、file2、file3移动到目录dir中</span><br><span class="line">mv file1 file2 # 把文件file1重命名为file2</span><br></pre></td></tr></table></figure>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p>Remove之意。<br>用于删除目录或文件。常用参数如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f ：就是force的意思，忽略不存在的文件，不会出现警告消息</span><br><span class="line">-i ：互动模式，在删除前会询问用户是否操作</span><br><span class="line">-r ：递归删除，最常用于目录删除，它是一个非常危险的参数</span><br></pre></td></tr></table></figure>
+<p>如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm -i file # 删除文件file，在删除之前会询问是否进行该操作</span><br><span class="line">rm -fr dir # 强制删除目录dir中的所有文件</span><br></pre></td></tr></table></figure>
+<p>另：<code>rm -rf /</code> 表示强制递归删除根目录，常用于删库跑路。</p>
 
       
     </div>
@@ -402,7 +396,7 @@
           
             <a href="/tags/%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97/" rel="tag"># 操作指南</a>
           
-            <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"># 博客</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
         </div>
       
@@ -415,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/11/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2020/05/27/%E6%9D%82%E9%80%89%E6%91%98%E5%BD%95/" rel="next" title="杂选摘录">
+                <i class="fa fa-chevron-left"></i> 杂选摘录
               </a>
             
           </div>
@@ -424,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/05/12/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/" rel="prev" title="高中数学知识">
-                高中数学知识 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -563,7 +553,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前期工作"><span class="nav-number">1.</span> <span class="nav-text">前期工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub-创建以-username-github-io-为名的-Repository"><span class="nav-number">1.1.</span> <span class="nav-text">GitHub 创建以 username.github.io 为名的 Repository</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Git"><span class="nav-number">1.2.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Node-js"><span class="nav-number">1.3.</span> <span class="nav-text">安装 Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">1.4.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推送网站"><span class="nav-number">1.5.</span> <span class="nav-text">推送网站</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Git-部署插件"><span class="nav-number">1.6.</span> <span class="nav-text">安装 Git 部署插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-Next-主题"><span class="nav-number">1.7.</span> <span class="nav-text">安装 Next 主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附"><span class="nav-number">1.8.</span> <span class="nav-text">附</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#只显示文章预览："><span class="nav-number">1.8.1.</span> <span class="nav-text">只显示文章预览：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#置顶"><span class="nav-number">1.8.2.</span> <span class="nav-text">置顶</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-hexo"><span class="nav-number">2.</span> <span class="nav-text">使用 hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用命令"><span class="nav-number">2.1.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写文章"><span class="nav-number">3.</span> <span class="nav-text">写文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传文章"><span class="nav-number">4.</span> <span class="nav-text">上传文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考链接"><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件操作"><span class="nav-number">1.</span> <span class="nav-text">文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cd"><span class="nav-number">1.1.</span> <span class="nav-text">cd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ls"><span class="nav-number">1.2.</span> <span class="nav-text">ls</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find"><span class="nav-number">1.3.</span> <span class="nav-text">find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp"><span class="nav-number">1.4.</span> <span class="nav-text">cp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mv"><span class="nav-number">1.5.</span> <span class="nav-text">mv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm"><span class="nav-number">1.6.</span> <span class="nav-text">rm</span></a></li></ol></li></ol></div>
             
 
           </div>

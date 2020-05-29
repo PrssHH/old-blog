@@ -87,7 +87,7 @@
 <meta property="og:description" content="树莓派折腾清单初始化树莓派首先，你得有个树莓派，一张够大的TF卡（8G以上）。 安装Raspbian官网下载Raspbian镜像，我使用的是Raspbian Buster with desktop and recommended software，另外两个没试过不知道好不好。 下载Win32 Disk Imager进行烧录，把.img文件烧录到TF卡里。 烧录完后把卡插进树莓派，就可以正常开机了。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-26T04:40:34.000Z">
-<meta property="article:modified_time" content="2020-05-27T15:05:10.801Z">
+<meta property="article:modified_time" content="2020-05-29T15:11:07.959Z">
 <meta property="article:author" content="HH">
 <meta property="article:tag" content="操作指南">
 <meta property="article:tag" content="RaspberryPi">
@@ -388,7 +388,7 @@
 <p>ps: WIN + R 里运行 mstsc 可以装逼又快速的开启远程桌面连接。</p>
 <p>ps: 建议调整一下分辨率，不全屏的连接使用体验更佳。</p>
 <ul>
-<li>待填坑：ftp；raspi-config设定；</li>
+<li>待填坑：ftp；</li>
 </ul>
 <h2 id="各种小玩意儿"><a href="#各种小玩意儿" class="headerlink" title="各种小玩意儿"></a>各种小玩意儿</h2><h3 id="smb服务器"><a href="#smb服务器" class="headerlink" title="smb服务器"></a>smb服务器</h3><p>可以利用树莓派共享文件夹，在别的机子上通过smb协议读写树莓派上的文件，就像读写本机的文件一样。我这里是打算当成全家的一个共享硬盘，可以放一些电影、视频、番、音乐，在各个设备上轻松的访问。</p>
 <p>首先安装samba</p>
@@ -421,6 +421,29 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kodi</span><br></pre></td></tr></table></figure>
 <p>没了。</p>
 <p>一开始kodi很慢，后面发现是wifi跟不上视频的码率，所以换了有线连接，然后就可用了。<br>（但说实话除了能遥控之外并没有比直接用Raspbian里的smb配vlc播放视频来的方便）</p>
+<h3 id="moonlight"><a href="#moonlight" class="headerlink" title="moonlight"></a>moonlight</h3><p>这个是配合Nvidia卡进行串流的应用，可以用来远程利用电脑的算力来打树莓派带不动的游戏。<br>甚至可以通过毒瘤方法把整个系统当作一个游戏来远程使用（失败了 *见后文）。</p>
+<p><a href="https://github.com/irtimmer/moonlight-embedded/wiki/Packages" target="_blank" rel="noopener">github教程</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano &#x2F;etc&#x2F;apt&#x2F;sources.list</span><br></pre></td></tr></table></figure>
+<p>添加源：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;archive.itimmer.nl&#x2F;raspbian&#x2F;moonlight buster main</span><br></pre></td></tr></table></figure>
+<p>如果直接update会显示无法认证源，默认禁用。所以添加签名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http:&#x2F;&#x2F;archive.itimmer.nl&#x2F;itimmer.gpg</span><br><span class="line">sudo apt-key add itimmer.gpg</span><br></pre></td></tr></table></figure>
+<p>然后安装moonlight。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install moonlight-embedded</span><br></pre></td></tr></table></figure>
+<p>接着匹配电脑，x.x.x.x表示电脑局域网ipv4的ip。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">moonlight pair x.x.x.x</span><br></pre></td></tr></table></figure>
+<p>开启串流。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">moonlight stream x.x.x.x</span><br></pre></td></tr></table></figure>
+<p>可选的选项，（插入在<code>stream</code>与<code>x.x.x.x</code>之间）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">-720 Use 1280x720 resolution [default]</span><br><span class="line">-1080 Use 1920x1080 resolution</span><br><span class="line">-width Horizontal resolution (default 1280)</span><br><span class="line">-height Vertical resolution (default 720)</span><br><span class="line">-30fps Use 30fps (好像这个和下面的那个60fps失效了)</span><br><span class="line">-60fps Use 60fps [default]</span><br><span class="line">-bitrate Specify the bitrate in Kbps</span><br><span class="line">-packetsize Specify the maximum packetsize in bytes</span><br><span class="line">-app Name of app to stream</span><br><span class="line">-nosops Don&#39;t allow GFE to modify game settings</span><br><span class="line">-input Use as input. Can be used multiple times</span><br><span class="line">-mapping Use as gamepad mapping configuration file (use before -input)</span><br><span class="line">-audio Use as ALSA audio output device (default sysdefault)</span><br><span class="line">-localaudio Play audio locally</span><br></pre></td></tr></table></figure>
+<p>几个快捷键</p>
+<ul>
+<li>Ctrl + Alt + Shift + Z 切换鼠标指针捕获</li>
+<li>Ctrl + Alt + Shift + X 切换全屏和窗口模式</li>
+<li>Ctrl + Alt + Shift + Q 退出流媒体对话（最常用的）（游戏还在运行）</li>
+</ul>
+<p>附：<strong>失败原因</strong></p>
+<p>本以为moonlight可以和win\macOS\iOS\Android一样通过运行mstsc.exe来实现整个系统的串流，但是树莓派版的moonlight强制开启steam的big screen模式，就只能打游戏了。本来以为可以和steam link一样退出大屏幕模式，但是moonlight只有直接退出remote play这个选项，点了就直接停止串流了。那么为什么不用steam link呢？我steam link出了一点小bug，点开没有反应，所以只能将就着用moonlight了。</p>
 <h1 id="剩下的慢慢来"><a href="#剩下的慢慢来" class="headerlink" title="剩下的慢慢来"></a>剩下的慢慢来</h1>
       
     </div>
@@ -548,7 +571,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -570,7 +593,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -603,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#树莓派折腾清单"><span class="nav-number">1.</span> <span class="nav-text">树莓派折腾清单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化树莓派"><span class="nav-number">1.1.</span> <span class="nav-text">初始化树莓派</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Raspbian"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装Raspbian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本配置"><span class="nav-number">1.1.2.</span> <span class="nav-text">基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络连接"><span class="nav-number">1.1.3.</span> <span class="nav-text">网络连接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#有线"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">有线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Wifi"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">Wifi</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH"><span class="nav-number">1.1.4.</span> <span class="nav-text">SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法一："><span class="nav-number">1.1.4.1.</span> <span class="nav-text">　方法一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法二："><span class="nav-number">1.1.4.2.</span> <span class="nav-text">方法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#换源"><span class="nav-number">1.1.5.</span> <span class="nav-text">换源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程桌面连接"><span class="nav-number">1.1.6.</span> <span class="nav-text">远程桌面连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种小玩意儿"><span class="nav-number">1.2.</span> <span class="nav-text">各种小玩意儿</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#smb服务器"><span class="nav-number">1.2.1.</span> <span class="nav-text">smb服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kodi"><span class="nav-number">1.2.2.</span> <span class="nav-text">kodi</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#剩下的慢慢来"><span class="nav-number">2.</span> <span class="nav-text">剩下的慢慢来</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#树莓派折腾清单"><span class="nav-number">1.</span> <span class="nav-text">树莓派折腾清单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化树莓派"><span class="nav-number">1.1.</span> <span class="nav-text">初始化树莓派</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Raspbian"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装Raspbian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本配置"><span class="nav-number">1.1.2.</span> <span class="nav-text">基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络连接"><span class="nav-number">1.1.3.</span> <span class="nav-text">网络连接</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#有线"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">有线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Wifi"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">Wifi</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH"><span class="nav-number">1.1.4.</span> <span class="nav-text">SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法一："><span class="nav-number">1.1.4.1.</span> <span class="nav-text">　方法一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法二："><span class="nav-number">1.1.4.2.</span> <span class="nav-text">方法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#换源"><span class="nav-number">1.1.5.</span> <span class="nav-text">换源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程桌面连接"><span class="nav-number">1.1.6.</span> <span class="nav-text">远程桌面连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种小玩意儿"><span class="nav-number">1.2.</span> <span class="nav-text">各种小玩意儿</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#smb服务器"><span class="nav-number">1.2.1.</span> <span class="nav-text">smb服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kodi"><span class="nav-number">1.2.2.</span> <span class="nav-text">kodi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#moonlight"><span class="nav-number">1.2.3.</span> <span class="nav-text">moonlight</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#剩下的慢慢来"><span class="nav-number">2.</span> <span class="nav-text">剩下的慢慢来</span></a></li></ol></div>
             
 
           </div>
