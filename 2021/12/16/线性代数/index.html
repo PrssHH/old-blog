@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="数学," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="线性方程组与矩阵定义 1.7 同型设矩阵 $A &#x3D; (a_ij)_{m \times n}$ , $\ B &#x3D; (b_ij)_{s \times t}$, 如果 $m &#x3D; s$ , $n &#x3D; t$ 则称矩阵 $A$ 与 $B$ 同型. 定义 1.9 阶梯形矩阵行阶梯形矩阵，简称阶梯形矩阵：  零行（元素全为零的行）排在所有非零行的下方； 每个非零行的第一个（从左至右）非零元（称为主元）的列表号，从">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性代数">
+<meta property="og:url" content="https://prsshh.github.io/2021/12/16/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/index.html">
+<meta property="og:site_name" content="HH❤Hexo">
+<meta property="og:description" content="线性方程组与矩阵定义 1.7 同型设矩阵 $A &#x3D; (a_ij)_{m \times n}$ , $\ B &#x3D; (b_ij)_{s \times t}$, 如果 $m &#x3D; s$ , $n &#x3D; t$ 则称矩阵 $A$ 与 $B$ 同型. 定义 1.9 阶梯形矩阵行阶梯形矩阵，简称阶梯形矩阵：  零行（元素全为零的行）排在所有非零行的下方； 每个非零行的第一个（从左至右）非零元（称为主元）的列表号，从">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-16T03:47:00.000Z">
+<meta property="article:modified_time" content="2021-12-16T13:51:33.662Z">
+<meta property="article:author" content="HH">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://prsshh.github.io/2021/12/16/线性代数/"/>
+
+
+
+
+
+  <title>线性代数 | HH❤Hexo</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HH❤Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://prsshh.github.io/2021/12/16/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HH">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/hh.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HH❤Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">线性代数</h1>
+        
+
+        <div class="post-meta">
+          
+          
+          
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-12-16T11:47:00+08:00">
+                2021-12-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%96%87%E5%8C%96%E8%AF%BE/" itemprop="url" rel="index">
+                    <span itemprop="name">文化课</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="线性方程组与矩阵"><a href="#线性方程组与矩阵" class="headerlink" title="线性方程组与矩阵"></a>线性方程组与矩阵</h2><h3 id="定义-1-7-同型"><a href="#定义-1-7-同型" class="headerlink" title="定义 1.7 同型"></a>定义 1.7 同型</h3><p>设矩阵 $A = (a_ij)_{m \times n}$ , $\ B = (b_ij)_{s \times t}$, 如果 $m = s$ , $n = t$ 则称矩阵 $A$ 与 $B$ 同型.</p>
+<h3 id="定义-1-9-阶梯形矩阵"><a href="#定义-1-9-阶梯形矩阵" class="headerlink" title="定义 1.9 阶梯形矩阵"></a>定义 1.9 阶梯形矩阵</h3><p>行阶梯形矩阵，简称阶梯形矩阵：</p>
+<ol>
+<li>零行（元素全为零的行）排在所有非零行的下方；</li>
+<li>每个非零行的第一个（从左至右）非零元（称为主元）的列表号，从上到下，严格递增.</li>
+</ol>
+<h3 id="定义-1-10-最简形"><a href="#定义-1-10-最简形" class="headerlink" title="定义 1.10 最简形"></a>定义 1.10 最简形</h3><p>阶梯形矩阵若满足下面两条，称为（行）简化阶梯形（行最简形、规范阶梯形、厄密特（Hermite）标准型）：</p>
+<ol>
+<li><p>主元均为 $1$ ;</p>
+</li>
+<li><p>主元所在列的其他元素全为零.</p>
+</li>
+</ol>
+<h3 id="定理-1-3-线性方程组解的判别"><a href="#定理-1-3-线性方程组解的判别" class="headerlink" title="定理 1.3 线性方程组解的判别"></a>定理 1.3 线性方程组解的判别</h3><p>$m \times n$ 的线性方程组，其增广矩阵化成阶梯形有 $r$ 个非零行，其中对应于方程组的系数矩阵部分有 $s$ 个非零行. 则线性方程组有解的充分必要条件为 $s=r$，且</p>
+<ol>
+<li><p>$s = r = n$，原方程组有唯一解；</p>
+</li>
+<li><p>$s = r &lt; n$，原方程组有无穷多解；</p>
+</li>
+<li><p>$s &lt; r$，原方程组无解.</p>
+</li>
+</ol>
+<p><strong>推论：</strong></p>
+<p>$m \times n$ 的齐次线性方程组，其系数矩阵的阶梯形的非零行数为 $s$，则</p>
+<ol>
+<li><p>方程组有唯一零解的充分必要条件为 $s=n$；</p>
+</li>
+<li><p>方程组有无穷多解，即有非零解的充分必要条件为 $s &lt; n$；</p>
+</li>
+<li><p>如果 $m &lt; n&gt;$，则齐次线性方程组必有非零解.</p>
+</li>
+</ol>
+<h3 id="定义-2-4-可换矩阵"><a href="#定义-2-4-可换矩阵" class="headerlink" title="定义 2.4 可换矩阵"></a>定义 2.4 可换矩阵</h3><p>两个矩阵 $A$，$B$，如果 $AB = BA$，那么称矩阵 $A$，$B$ 相乘可换，简称 $A$，$B$ 可换.</p>
+<p>易知：</p>
+<ol>
+<li><p>若 $A$，$B$ 相乘可换，则 $A$，$B$ 必是同阶方阵；</p>
+</li>
+<li><p>单位矩阵与任何与之同阶的方阵相乘可换；</p>
+</li>
+<li><p>数量矩阵同与之同阶的方阵相乘可换；</p>
+</li>
+<li><p>同阶对角矩阵相乘可换.</p>
+</li>
+</ol>
+<h3 id="定义-2-7-矩阵的转置"><a href="#定义-2-7-矩阵的转置" class="headerlink" title="定义 2.7 矩阵的转置"></a>定义 2.7 矩阵的转置</h3><p>矩阵的转置 $A^T$</p>
+<h3 id="性质-2-4-矩阵转置的性质"><a href="#性质-2-4-矩阵转置的性质" class="headerlink" title="性质 2.4 矩阵转置的性质"></a>性质 2.4 矩阵转置的性质</h3><p>设 $A$，$B$，$C$，$A_1$，$A_2$，$\dots$，$A_m$ 均为矩阵，$k \in F$，假设下列运算均可进行，则</p>
+<ol>
+<li><p>$(A ^ T) ^ T = A$.</p>
+</li>
+<li><p>$(B + C) ^ T = B ^ T + C ^ T$.</p>
+</li>
+<li><p>$(kA) ^ T = k A ^ T$.</p>
+</li>
+<li><p>$(AB) ^ T = B ^ T A ^ T$，$(A_1 A_2 \cdots A_m) ^ T = (A_m^T A_{m-1}^T \cdots A_2^T A_1^T$.</p>
+</li>
+<li><p>若 $A$ 为方阵，则 $(A^m) ^ T = (A ^ T) ^ m$，$m$ 为正整数.</p>
+</li>
+<li><p>$A$ 为对称矩阵 $\Leftrightarrow$  $A^T = A$，$A$ 为反对称矩阵 $\Leftrightarrow$  $A^T = -A$.</p>
+</li>
+</ol>
+<h3 id="定义-2-8-方阵的迹"><a href="#定义-2-8-方阵的迹" class="headerlink" title="定义 2.8 方阵的迹"></a>定义 2.8 方阵的迹</h3><p>设数域 $F$ 上的方阵 $A = (a_ij)_{n \times n} $，称 $\sum_{i = 1}^n a_{ii}$ 为方阵的迹，记为 $tr(A)$. 即 $tr(A) = \sum_{i = 1}^n a_{ii}$.</p>
+<h3 id="性质-2-5-方阵的迹的性质"><a href="#性质-2-5-方阵的迹的性质" class="headerlink" title="性质 2.5 方阵的迹的性质"></a>性质 2.5 方阵的迹的性质</h3><ol>
+<li><p>$tr(A + B) = tr(A) + tr(B)$</p>
+</li>
+<li><p>$tr(kA) = ktr(A)$</p>
+</li>
+<li><p>$tr(AB) = tr(BA)$</p>
+</li>
+<li><p>$tr(A^T) = tr(A)$</p>
+</li>
+</ol>
+<h3 id="定义-2-11-余子式"><a href="#定义-2-11-余子式" class="headerlink" title="定义 2.11 余子式"></a>定义 2.11 余子式</h3><p>$n$ 阶方阵 $A = (a_ij)_{n \times n} $ 划去 $a_{ij}$ 所在的行和列，剩下的元素安原来的相对位置不懂构成 $n-1$ 阶方阵，它的行列式称为元素 $a_{ij}$ 的余子式，记为 $M_{ij}$.</p>
+<p>称 $(-1)^{i+j}M_{ij}$ 为元素 $a_{ij}$ 的代数余子式，记为 $A_{ij}$，即 $A_{ij} = (-1)^{i + j} M_{ij}$</p>
+<p>$p.s.$ 本质上是每行取一个、每列取一个，带着符号相乘，即所有不同行不同列的元素带符号相乘.</p>
+<h2 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h2><h3 id="性质-2-6-转置不变"><a href="#性质-2-6-转置不变" class="headerlink" title="性质 2.6 转置不变"></a>性质 2.6 转置不变</h3><p>$A$ 是方阵，$A^T$ 是其转置矩阵，则 $|A| = |A^T|$.</p>
+<h3 id="性质-2-7-交换变号"><a href="#性质-2-7-交换变号" class="headerlink" title="性质 2.7 交换变号"></a>性质 2.7 交换变号</h3><p>交换一个方阵的某两行，则它的行列式值改变符号.</p>
+<p><strong>推论</strong></p>
+<p>如果一个方阵有两行对应元素相同，则其行列式值为 $0$.</p>
+<h3 id="性质-2-8-数乘一行"><a href="#性质-2-8-数乘一行" class="headerlink" title="性质 2.8 数乘一行"></a>性质 2.8 数乘一行</h3><p>方阵 $A$ 的某一行的所有元素乘以数 $k$，即 $A \xrightarrow[]{kr_i} B$，则 $|B| = k |A|$.</p>
+<p>推论：</p>
+<ol>
+<li><p>行列式中某行有公因子，可提到行列式符号外面.</p>
+</li>
+<li><p>行列式中某两行对应成比例，则此行列式值为 $0$.</p>
+</li>
+<li><p>行列式中有某行的元素全为 $0$，则此行列式值为 $0$.</p>
+</li>
+</ol>
+<h3 id="性质-2-9-加和性"><a href="#性质-2-9-加和性" class="headerlink" title="性质 2.9 加和性"></a>性质 2.9 加和性</h3><p>行列式中某行的所有元素都是两个元素的和，则此行列式可分解为两个行列式的和，即：</p>
+<script type="math/tex; mode=display">\left| \begin{array}{} 
+a_{11} & \cdots & a_{1n} \\
+\vdots & & \vdots \\
+a_{i1} + b_1 & \cdots & a_{in} + b_n \\
+\vdots & & \vdots \\
+a_{n1} & \cdots & a_{nn}
+\end{array} \right| =
+
+
+\left| \begin{array}{} 
+a_{11} & \cdots & a_{1n} \\
+\vdots & & \vdots \\
+a_{i1} & \cdots & a_{in} \\
+\vdots & & \vdots \\
+a_{n1} & \cdots & a_{nn}
+\end{array} \right|
+
++
+
+\left| \begin{array}{} 
+a_{11} & \cdots & a_{1n} \\
+\vdots & & \vdots \\
+b_1 & \cdots & b_n \\
+\vdots & & \vdots \\
+a_{n1} & \cdots & a_{nn}
+\end{array} \right|</script><h3 id="性质-2-10-行间加和不变性"><a href="#性质-2-10-行间加和不变性" class="headerlink" title="性质 2.10 行间加和不变性"></a>性质 2.10 行间加和不变性</h3><p>方阵 $A$ 的某行 $k$ 倍驾到另一行，得到方阵 $B$，$A \xrightarrow[]{r_j + kr_i} B$，则 $|B| = |A|$.</p>
+<h3 id="性质-2-11-任意展开"><a href="#性质-2-11-任意展开" class="headerlink" title="性质 2.11 任意展开"></a>性质 2.11 任意展开</h3><p>设方阵 $A = (a_{ij})_{n \times n}$，则 $|A|$ 等于 $A$ 中任意一行所有元素与他们各自的代数余子式乘积之和. 即</p>
+<script type="math/tex; mode=display">|A| = \sum_{k = 1}^{n} (-1) ^ {i + k} a_{ik} M_{ik} = \sum_{k = 1}^{n} a_{ik} A_{ik}</script><p><strong>推论</strong></p>
+<p>设方阵 $A = (a_{ij})_{n \times n}，则 $A$ 的第 $i$ 行的所有元素与第 $j(j \neq i) $ 行对应元素的代数余子式乘积之和等于零. 即</p>
+<script type="math/tex; mode=display">a_{i1} A_{j1} + a_{i2} A_{j2} + \cdots + a_{in} A_{in} = \sum_{k = 1}^{n} a_{ik} A_{ik} = 0 (i \neq j).</script><h3 id="例-2-22-范德蒙德行列式"><a href="#例-2-22-范德蒙德行列式" class="headerlink" title="例 2.22 范德蒙德行列式"></a>例 2.22 范德蒙德行列式</h3><script type="math/tex; mode=display">D = \left| \begin{array}{cc} 
+1 & 1 & \cdots & 1 \\
+x_1 & x_2 & \cdots & x_n \\
+x_1^2 & x_2^2 & \cdots & x_n^2 \\
+\vdots & \vdots & & \vdots \\
+x_1^{n-1} & x_2^{n-1} & \cdots & x_n^{n-1}
+\end{array}\right|</script><p>解：</p>
+<script type="math/tex; mode=display">D = \left| \begin{array}{cc} 
+1 & 1 & \cdots & 1 \\
+x_1 & x_2 & \cdots & x_n \\
+x_1^2 & x_2^2 & \cdots & x_n^2 \\
+\vdots & \vdots & & \vdots \\
+x_1^{n-1} & x_2^{n-1} & \cdots & x_n^{n-1}
+\end{array}\right|  \xrightarrow[]{r_{i+1} - x_1r_i}
+
+\left| \begin{array}{cc} 
+1 & 1 & \cdots & 1 \\
+0 & x_2 - x_1 & \cdots & x_n - x_1 \\
+0 & x_2(x_2 - x_1) & \cdots & x_n(x_n - x_1) \\
+\vdots & \vdots & & \vdots \\
+0 & x_2^{n-2}(x_2 - x_1) & \cdots & x_n^{n-2}(x_n - x_1)
+\end{array}\right|</script><p>每列提取 $x_i - x_1$，实现降阶</p>
+<script type="math/tex; mode=display">
+= (x_2 - x_1) \cdots (x_n - x_1) 
+\left| \begin{array}{cc} 
+1 & 1 & \cdots & 1 \\
+x_2 & x_3 & \cdots & x_n \\
+x_2^2 & x_3^2 & \cdots & x_n^2 \\
+\vdots & \vdots & & \vdots \\
+x_2^{n - 2} & x_3^{n - 2} & \cdots & x_n^{n - 2}
+\end{array}\right|</script><p>重复降阶得</p>
+<script type="math/tex; mode=display">D = \prod_{1 \leq j < i \leq n} (x_i - x_j)</script><h3 id="性质-2-12-同阶可拆"><a href="#性质-2-12-同阶可拆" class="headerlink" title="性质 2.12 同阶可拆"></a>性质 2.12 同阶可拆</h3><p>设 $A$，$B$ 为同阶方阵，则 $|AB| = |A||B|$.</p>
+<h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><h3 id="定义-2-14-逆矩阵的定义"><a href="#定义-2-14-逆矩阵的定义" class="headerlink" title="定义 2.14 逆矩阵的定义"></a>定义 2.14 逆矩阵的定义</h3><p>设 $n$ 阶方阵 $A$，若存在 $n$ 阶方阵 $B$，使得</p>
+<script type="math/tex; mode=display">AB = BA = E</script><p>则称矩阵 $A$ 可逆，$B$ 是 $A$ 的逆矩阵，记作 $B = A^{-1}$. 如果不存在满足条件的矩阵 $B$ 则称矩阵 $A$ 不可逆.</p>
+<h3 id="定理-2-1-逆矩阵唯一"><a href="#定理-2-1-逆矩阵唯一" class="headerlink" title="定理 2.1 逆矩阵唯一"></a>定理 2.1 逆矩阵唯一</h3><p>如果 $n$ 阶方阵 $A$ 可逆，则其逆矩阵唯一.</p>
+<h3 id="定义-2-15-伴随矩阵"><a href="#定义-2-15-伴随矩阵" class="headerlink" title="定义 2.15 伴随矩阵"></a>定义 2.15 伴随矩阵</h3><p>设 $n$ 阶方阵 $A = (a_{ij})_{n \times n} $，$A_{ij}$ 为元素 $a_{ij}$ 的代数余子式，$i,j = 1,2,\cdots,n$，称矩阵</p>
+<script type="math/tex; mode=display">\begin{bmatrix} 
+
+A_{11} & A_{21} & \cdots & A_{n1} \\
+A_{12} & A_{22} & \cdots & A_{n2} \\
+\vdots & \vdots & & \vdots \\
+A_{1n} & A_{2n} & \cdots & A_{nn} 
+\end{bmatrix}</script><p>为矩阵 $A$ 的伴随矩阵，记为 $A^*$ （即：代数余子式+转置排列的矩阵）</p>
+<h3 id="命题-2-1"><a href="#命题-2-1" class="headerlink" title="命题 2.1"></a>命题 2.1</h3><p>设 $n$ 阶方阵 $A = (a_{ij})_{n \times n} $，则 $AA^<em> = A^</em>A = |A|E$</p>
+<h3 id="定理-2-2-可逆矩阵"><a href="#定理-2-2-可逆矩阵" class="headerlink" title="定理 2.2 可逆矩阵"></a>定理 2.2 可逆矩阵</h3><p>$n$ 阶方阵 $A$ 可逆的充分必要条件为 $|A| \neq 0$，且有</p>
+<script type="math/tex; mode=display">A^{-1} = \frac{1}{|A|} A^*.</script><h3 id="例-2-26"><a href="#例-2-26" class="headerlink" title="例 2.26"></a>例 2.26</h3><p>$n$ 阶方阵 $A$，$A^<em>$ 是其伴随矩阵，证明 $|A^</em>| = |A|^{n-1}$</p>
+<p>证明：由 $AA^<em> = |A|E$，两边取行列式 $|AA^</em>| = |(|A|)E| = |A|^n$，再对 $|A|=0$ 讨论即可</p>
+<h3 id="定理-2-3-克拉默法则"><a href="#定理-2-3-克拉默法则" class="headerlink" title="定理 2.3 克拉默法则"></a>定理 2.3 克拉默法则</h3><p>[克拉默(Cramer)法则] 设 $n \times n$ 的线性方程组 $A_{n \times n} X = b$，其中 $A = (a_{ij})_{n \times n}$，$X = (x_1, x_2, \dots , x_n)^T$，$b = (b_1, b_2, \dots , b_n)^T$. 若方程组系数行列式 $D = |A| \neq 0$，则方程组 $AX = b$ 由唯一解，且</p>
+<script type="math/tex; mode=display">x_j = \frac{D_j}{D}, j = 1, \ 2, \ \cdots, \ n ,</script><p>其中 $D_j$ 是 $D$ 中第 $j$ 列换成 $b$ 所得到的行列式，即</p>
+<script type="math/tex; mode=display">D_j = \left| \begin{array}{cc}  
+a_{11} & \cdots & a_{1, j-1} & b_1 & a_{1, j + 1} & \cdots & a_{1n} \\
+a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
+\vdots &        & \vdots     & \vdots & \vdots    &        &  \vdots \\
+a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
+\end{array}\right|</script><h3 id="命题-2-2"><a href="#命题-2-2" class="headerlink" title="命题 2.2"></a>命题 2.2</h3><p>若 $n \times n$ 的线性方程组 $A_{n \times n} X = b$ 有唯一解，则方程组的系数行列式 $D=|A| \neq 0$</p>
+<p><strong>推论：</strong> 对 $n \times n$ 的齐次线性方程组 $A_{n \times n}X = 0$，有</p>
+<ol>
+<li><p>$|A| \neq 0 \Leftrightarrow AX = 0$ 只有零解</p>
+</li>
+<li><p>$|A| = 0 \Leftrightarrow AX = 0$ 有非零解</p>
+</li>
+</ol>
+<h3 id="性质-2-13-可逆矩阵的运算性质"><a href="#性质-2-13-可逆矩阵的运算性质" class="headerlink" title="性质 2.13 可逆矩阵的运算性质"></a>性质 2.13 可逆矩阵的运算性质</h3><p>设 $A$，$B$，$A_i(i = 1, 2, \dots, m)$ 均为 $n$ 阶可逆矩阵， $k$ 为非零常数，则</p>
+<ol>
+<li><p>$(A^{-1})^{-1} = A$</p>
+</li>
+<li><p>$kA$ 可逆，且 $(kA)^{-1} = \frac{1}{k}A^{-1}$</p>
+</li>
+<li><p>$AB$ 可逆，且 $(AB)^{-1} = B^{-1} A^{-1}$，$(A_1 A_2 \cdots A_m)^{-1} = A_m^{-1} A_{m-1}^{-1} \cdots A_1^{-1} $</p>
+</li>
+<li><p>$A^m$ 可逆，且 $(A^m)^{-1} = (A^{-1})^m$</p>
+</li>
+<li><p>$A^T$ 可逆，且 $(A^T)^{-1} = (A^{-1})^T$</p>
+</li>
+<li><p>$|A^{-1}| = \frac{1}{|A|}$</p>
+</li>
+</ol>
+<h2 id="秩"><a href="#秩" class="headerlink" title="秩"></a>秩</h2><h3 id="定义-2-18-等价"><a href="#定义-2-18-等价" class="headerlink" title="定义 2.18 等价"></a>定义 2.18 等价</h3><p>矩阵 $A$ 经有限次初等变换变到矩阵 $B$，称矩阵 $A4 与矩阵 $B$ 等价（相抵），记为 $A \cong B$</p>
+<p>等价关系具有下面的性质：</p>
+<ol>
+<li><p>反身性: $A \cong A$</p>
+</li>
+<li><p>对称性: $A \cong B \Rightarrow B \cong A$</p>
+</li>
+<li><p>传递性: $A \cong B, \ B \cong C \Rightarrow A \cong C$</p>
+</li>
+</ol>
+<h3 id="定义-2-19-初等矩阵"><a href="#定义-2-19-初等矩阵" class="headerlink" title="定义 2.19 初等矩阵"></a>定义 2.19 初等矩阵</h3><p>单位矩阵 $E$ 经一次初等变换后得到的矩阵，称之为初等矩阵</p>
+<h3 id="定理-2-4-左行右列"><a href="#定理-2-4-左行右列" class="headerlink" title="定理 2.4 左行右列"></a>定理 2.4 左行右列</h3><p>设 $A$ 是一个 $m \times n$ 的矩阵，对 $A$ 进行一次初等行变换相当于在 $A$ 的左边成一个相应类型的 $m$ 阶初等矩阵；对 $A$ 进行一次初等列变换相当于在 $A$ 的右边乘一个相应类型的 $n$ 阶初等矩阵.</p>
+<p><strong>推论</strong>: 初等矩阵都是可逆矩阵，且</p>
+<script type="math/tex; mode=display">E(i, j)^{-1} = E(i, j) \\ E(i(k))^{-1} = E(i(\frac{1}{k})) \\ E(j, i(k))^{-1} = E(j, i(-k))</script><h3 id="定理-2-5"><a href="#定理-2-5" class="headerlink" title="定理 2.5"></a>定理 2.5</h3><p>对任意的 $m \times n$ 矩阵 $A$，存在一系列 $m$ 阶初等矩阵 $P_1, P_2, \dots, P_s$，及 $n$ 阶初等矩阵 $Q_1, Q_2, \dots, Q_t$，使得</p>
+<script type="math/tex; mode=display">P_s \cdots P_2 P_1 A Q_1 Q_2 \cdots Q_t = \begin{bmatrix} E_r & O \\ O & O \end{bmatrix}</script><p>为标准型，其中 $E_r$ 为 $r$ 阶单位矩阵，$r$ 是 $A$ 的行列阶梯形中非零行的行数.</p>
+<h3 id="定义-2-21-秩的定义"><a href="#定义-2-21-秩的定义" class="headerlink" title="定义 2.21 秩的定义"></a>定义 2.21 秩的定义</h3><p>设 $A$ 为 $m \times n$ 的矩阵，在 $A$ 中若存在一个 $r$ 阶姿势不等于零，而所有 $r+1$ 阶（若有的话）子式全为零，称 $r$ 为矩阵 $A$ 的秩，记为 $r(A)$. 规定零矩阵的秩为 $0$.</p>
+<h3 id="性质-2-14-秩的性质"><a href="#性质-2-14-秩的性质" class="headerlink" title="性质 2.14 秩的性质"></a>性质 2.14 秩的性质</h3><ol>
+<li><p>矩阵 $A$ 的秩是唯一的.</p>
+</li>
+<li><p>$0 \leq r(A) \leq min{m, n}$.</p>
+</li>
+<li><p>设 $A_1$ 是 $A$ 的一个部分矩阵，则 $r(A_1) \leq r(A)$.</p>
+</li>
+<li><p>若 $A$ 中存在 $r$ 阶子式不为零，则 $r(A) \geq r$; 若 $A$ 中所有 $r$ 阶子式全为零，则 $r(A) &lt; r$.</p>
+</li>
+<li><p>$r(A^T) = r(A)$</p>
+</li>
+<li><p>$r(kA) = \Big{ \begin{array}{} r(A), \ k \neq 0 \ 0, \ k = 0\end{array}$</p>
+</li>
+<li><p>阶梯形矩阵的秩等于它的非零行的个数</p>
+</li>
+<li><p>可逆矩阵的秩等于它的阶数</p>
+</li>
+</ol>
+<h3 id="定理-2-6"><a href="#定理-2-6" class="headerlink" title="定理 2.6"></a>定理 2.6</h3><p>初等变换不改变矩阵的秩</p>
+<h3 id="定理-2-8-初等变换不改变方程的解"><a href="#定理-2-8-初等变换不改变方程的解" class="headerlink" title="定理 2.8 初等变换不改变方程的解"></a>定理 2.8 初等变换不改变方程的解</h3><p>设 $A$ 是 $m \times n$ 的矩阵，线性方程组 $Ax = b$ 经过初等行变换得到的新方程组 $A_1x = b_1$ 与原方程组同解.</p>
+<h3 id="定理-2-9-解的判别"><a href="#定理-2-9-解的判别" class="headerlink" title="定理 2.9 解的判别"></a>定理 2.9 解的判别</h3><p>$ m \times n $ 的线性方程组 $Ax = b$，其增广矩阵为 $ \widetilde{A} = (A b)$. 则线性方程组有解的充分必要条件为线性方程组的系数矩阵的秩等于其增广矩阵的秩，即 $r(A) = r(\widetilde{A})$，且</p>
+<ol>
+<li><p>$r(A) = r(\widetilde{A}) = n$，原方程组有唯一解;</p>
+</li>
+<li><p>$r(A) = r(\widetilde{A}) &lt; n$，原方程组有无穷多解;</p>
+</li>
+<li><p>$r(A) &lt; r(\widetilde{A})$，原方程组无解.</p>
+</li>
+</ol>
+<p><strong>推论</strong></p>
+<p>$m \times n$ 的齐次线性方程组 $Ax = 0$，则</p>
+<ol>
+<li><p>齐次线性方程组有唯一零解的充分必要条件是 $r(A) = n$;</p>
+</li>
+<li><p>齐次线性方程组有无穷多解，即有非零解的充分必要条件为 $r(A) &lt; n$;</p>
+</li>
+<li><p>如果 $m &lt; n$，则齐次线性方程组必有非零解;</p>
+</li>
+<li><p>当 $m = n$ 时，齐次线性方程组有唯一零解的充分必要条件为 $|A| \neq 0$，有非零解的充分必要条件为 $|A| \neq 0$</p>
+</li>
+</ol>
+<h3 id="初等变换求逆矩阵"><a href="#初等变换求逆矩阵" class="headerlink" title="初等变换求逆矩阵"></a>初等变换求逆矩阵</h3><p>构造矩阵 $(A \ \ E) \xrightarrow[]{一系列初等变换} (E \ \ A^{-1})$</p>
+<p>未完待续…</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/29/Linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" rel="next" title="Linux常用指令">
+                <i class="fa fa-chevron-left"></i> Linux常用指令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/hh.jpg"
+                alt="HH" />
+            
+              <p class="site-author-name" itemprop="name">HH</p>
+              <p class="site-description motion-element" itemprop="description">今日も可愛い！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性方程组与矩阵"><span class="nav-number">1.</span> <span class="nav-text">线性方程组与矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1-7-同型"><span class="nav-number">1.1.</span> <span class="nav-text">定义 1.7 同型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1-9-阶梯形矩阵"><span class="nav-number">1.2.</span> <span class="nav-text">定义 1.9 阶梯形矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1-10-最简形"><span class="nav-number">1.3.</span> <span class="nav-text">定义 1.10 最简形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-1-3-线性方程组解的判别"><span class="nav-number">1.4.</span> <span class="nav-text">定理 1.3 线性方程组解的判别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-4-可换矩阵"><span class="nav-number">1.5.</span> <span class="nav-text">定义 2.4 可换矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-7-矩阵的转置"><span class="nav-number">1.6.</span> <span class="nav-text">定义 2.7 矩阵的转置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-4-矩阵转置的性质"><span class="nav-number">1.7.</span> <span class="nav-text">性质 2.4 矩阵转置的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-8-方阵的迹"><span class="nav-number">1.8.</span> <span class="nav-text">定义 2.8 方阵的迹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-5-方阵的迹的性质"><span class="nav-number">1.9.</span> <span class="nav-text">性质 2.5 方阵的迹的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-11-余子式"><span class="nav-number">1.10.</span> <span class="nav-text">定义 2.11 余子式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行列式"><span class="nav-number">2.</span> <span class="nav-text">行列式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-6-转置不变"><span class="nav-number">2.1.</span> <span class="nav-text">性质 2.6 转置不变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-7-交换变号"><span class="nav-number">2.2.</span> <span class="nav-text">性质 2.7 交换变号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-8-数乘一行"><span class="nav-number">2.3.</span> <span class="nav-text">性质 2.8 数乘一行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-9-加和性"><span class="nav-number">2.4.</span> <span class="nav-text">性质 2.9 加和性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-10-行间加和不变性"><span class="nav-number">2.5.</span> <span class="nav-text">性质 2.10 行间加和不变性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-11-任意展开"><span class="nav-number">2.6.</span> <span class="nav-text">性质 2.11 任意展开</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例-2-22-范德蒙德行列式"><span class="nav-number">2.7.</span> <span class="nav-text">例 2.22 范德蒙德行列式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-12-同阶可拆"><span class="nav-number">2.8.</span> <span class="nav-text">性质 2.12 同阶可拆</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可逆矩阵"><span class="nav-number">3.</span> <span class="nav-text">可逆矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-14-逆矩阵的定义"><span class="nav-number">3.1.</span> <span class="nav-text">定义 2.14 逆矩阵的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-1-逆矩阵唯一"><span class="nav-number">3.2.</span> <span class="nav-text">定理 2.1 逆矩阵唯一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-15-伴随矩阵"><span class="nav-number">3.3.</span> <span class="nav-text">定义 2.15 伴随矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-2-1"><span class="nav-number">3.4.</span> <span class="nav-text">命题 2.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-2-可逆矩阵"><span class="nav-number">3.5.</span> <span class="nav-text">定理 2.2 可逆矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例-2-26"><span class="nav-number">3.6.</span> <span class="nav-text">例 2.26</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-3-克拉默法则"><span class="nav-number">3.7.</span> <span class="nav-text">定理 2.3 克拉默法则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-2-2"><span class="nav-number">3.8.</span> <span class="nav-text">命题 2.2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-13-可逆矩阵的运算性质"><span class="nav-number">3.9.</span> <span class="nav-text">性质 2.13 可逆矩阵的运算性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#秩"><span class="nav-number">4.</span> <span class="nav-text">秩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-18-等价"><span class="nav-number">4.1.</span> <span class="nav-text">定义 2.18 等价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-19-初等矩阵"><span class="nav-number">4.2.</span> <span class="nav-text">定义 2.19 初等矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-4-左行右列"><span class="nav-number">4.3.</span> <span class="nav-text">定理 2.4 左行右列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-5"><span class="nav-number">4.4.</span> <span class="nav-text">定理 2.5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-21-秩的定义"><span class="nav-number">4.5.</span> <span class="nav-text">定义 2.21 秩的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-14-秩的性质"><span class="nav-number">4.6.</span> <span class="nav-text">性质 2.14 秩的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-6"><span class="nav-number">4.7.</span> <span class="nav-text">定理 2.6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-8-初等变换不改变方程的解"><span class="nav-number">4.8.</span> <span class="nav-text">定理 2.8 初等变换不改变方程的解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-9-解的判别"><span class="nav-number">4.9.</span> <span class="nav-text">定理 2.9 解的判别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初等变换求逆矩阵"><span class="nav-number">4.10.</span> <span class="nav-text">初等变换求逆矩阵</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HH</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
