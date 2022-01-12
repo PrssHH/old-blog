@@ -87,7 +87,7 @@
 <meta property="og:description" content="线性方程组与矩阵定义 1.7 同型设矩阵 $A &#x3D; (a_{ij})_{m \times n}$ , $\ B &#x3D; (b_{ij})_{s \times t}$, 如果 $m &#x3D; s$ , $n &#x3D; t$ 则称矩阵 $A$ 与 $B$ 同型. 定义 1.9 阶梯形矩阵行阶梯形矩阵，简称阶梯形矩阵：  零行（元素全为零的行）排在所有非零行的下方； 每个非零行的第一个（从左至右）非零元（称为主元）的列">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-16T03:47:00.000Z">
-<meta property="article:modified_time" content="2022-01-12T07:48:25.080Z">
+<meta property="article:modified_time" content="2022-01-12T13:16:15.343Z">
 <meta property="article:author" content="HH">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
@@ -355,20 +355,20 @@
       
 
       
-        <h2 id="线性方程组与矩阵"><a href="#线性方程组与矩阵" class="headerlink" title="线性方程组与矩阵"></a>线性方程组与矩阵</h2><h3 id="定义-1-7-同型"><a href="#定义-1-7-同型" class="headerlink" title="定义 1.7 同型"></a>定义 1.7 同型</h3><p>设矩阵 $A = (a_{ij})_{m \times n}$ , $\ B = (b_{ij})_{s \times t}$, 如果 $m = s$ , $n = t$ 则称矩阵 $A$ 与 $B$ 同型.</p>
-<h3 id="定义-1-9-阶梯形矩阵"><a href="#定义-1-9-阶梯形矩阵" class="headerlink" title="定义 1.9 阶梯形矩阵"></a>定义 1.9 阶梯形矩阵</h3><p>行阶梯形矩阵，简称阶梯形矩阵：</p>
+        <h1 id="线性方程组与矩阵"><a href="#线性方程组与矩阵" class="headerlink" title="线性方程组与矩阵"></a>线性方程组与矩阵</h1><h2 id="定义-1-7-同型"><a href="#定义-1-7-同型" class="headerlink" title="定义 1.7 同型"></a>定义 1.7 同型</h2><p>设矩阵 $A = (a_{ij})_{m \times n}$ , $\ B = (b_{ij})_{s \times t}$, 如果 $m = s$ , $n = t$ 则称矩阵 $A$ 与 $B$ 同型.</p>
+<h2 id="定义-1-9-阶梯形矩阵"><a href="#定义-1-9-阶梯形矩阵" class="headerlink" title="定义 1.9 阶梯形矩阵"></a>定义 1.9 阶梯形矩阵</h2><p>行阶梯形矩阵，简称阶梯形矩阵：</p>
 <ol>
 <li>零行（元素全为零的行）排在所有非零行的下方；</li>
 <li>每个非零行的第一个（从左至右）非零元（称为主元）的列表号，从上到下，严格递增.</li>
 </ol>
-<h3 id="定义-1-10-最简形"><a href="#定义-1-10-最简形" class="headerlink" title="定义 1.10 最简形"></a>定义 1.10 最简形</h3><p>阶梯形矩阵若满足下面两条，称为（行）简化阶梯形（行最简形、规范阶梯形、厄密特（Hermite）标准型）：</p>
+<h2 id="定义-1-10-最简形"><a href="#定义-1-10-最简形" class="headerlink" title="定义 1.10 最简形"></a>定义 1.10 最简形</h2><p>阶梯形矩阵若满足下面两条，称为（行）简化阶梯形（行最简形、规范阶梯形、厄密特（Hermite）标准型）：</p>
 <ol>
 <li><p>主元均为 $1$ ;</p>
 </li>
 <li><p>主元所在列的其他元素全为零.</p>
 </li>
 </ol>
-<h3 id="定理-1-3-线性方程组解的判别"><a href="#定理-1-3-线性方程组解的判别" class="headerlink" title="定理 1.3 线性方程组解的判别"></a>定理 1.3 线性方程组解的判别</h3><p>$m \times n$ 的线性方程组，其增广矩阵化成阶梯形有 $r$ 个非零行，其中对应于方程组的系数矩阵部分有 $s$ 个非零行. 则线性方程组有解的充分必要条件为 $s=r$，且</p>
+<h2 id="定理-1-3-线性方程组解的判别"><a href="#定理-1-3-线性方程组解的判别" class="headerlink" title="定理 1.3 线性方程组解的判别"></a>定理 1.3 线性方程组解的判别</h2><p>$m \times n$ 的线性方程组，其增广矩阵化成阶梯形有 $r$ 个非零行，其中对应于方程组的系数矩阵部分有 $s$ 个非零行. 则线性方程组有解的充分必要条件为 $s=r$，且</p>
 <ol>
 <li><p>$s = r = n$，原方程组有唯一解；</p>
 </li>
@@ -387,7 +387,7 @@
 <li><p>如果 $m &lt; n&gt;$，则齐次线性方程组必有非零解.</p>
 </li>
 </ol>
-<h3 id="定义-2-4-可换矩阵"><a href="#定义-2-4-可换矩阵" class="headerlink" title="定义 2.4 可换矩阵"></a>定义 2.4 可换矩阵</h3><p>两个矩阵 $A$，$B$，如果 $AB = BA$，那么称矩阵 $A$，$B$ 相乘可换，简称 $A$，$B$ 可换.</p>
+<h2 id="定义-2-4-可换矩阵"><a href="#定义-2-4-可换矩阵" class="headerlink" title="定义 2.4 可换矩阵"></a>定义 2.4 可换矩阵</h2><p>两个矩阵 $A$，$B$，如果 $AB = BA$，那么称矩阵 $A$，$B$ 相乘可换，简称 $A$，$B$ 可换.</p>
 <p>易知：</p>
 <ol>
 <li><p>若 $A$，$B$ 相乘可换，则 $A$，$B$ 必是同阶方阵；</p>
@@ -399,8 +399,8 @@
 <li><p>同阶对角矩阵相乘可换.</p>
 </li>
 </ol>
-<h3 id="定义-2-7-矩阵的转置"><a href="#定义-2-7-矩阵的转置" class="headerlink" title="定义 2.7 矩阵的转置"></a>定义 2.7 矩阵的转置</h3><p>矩阵的转置 $A^T$</p>
-<h3 id="性质-2-4-矩阵转置的性质"><a href="#性质-2-4-矩阵转置的性质" class="headerlink" title="性质 2.4 矩阵转置的性质"></a>性质 2.4 矩阵转置的性质</h3><p>设 $A$，$B$，$C$，$A_1$，$A_2$，$\dots$，$A_m$ 均为矩阵，$k \in F$，假设下列运算均可进行，则</p>
+<h2 id="定义-2-7-矩阵的转置"><a href="#定义-2-7-矩阵的转置" class="headerlink" title="定义 2.7 矩阵的转置"></a>定义 2.7 矩阵的转置</h2><p>矩阵的转置 $A^T$</p>
+<h2 id="性质-2-4-矩阵转置的性质"><a href="#性质-2-4-矩阵转置的性质" class="headerlink" title="性质 2.4 矩阵转置的性质"></a>性质 2.4 矩阵转置的性质</h2><p>设 $A$，$B$，$C$，$A_1$，$A_2$，$\dots$，$A_m$ 均为矩阵，$k \in F$，假设下列运算均可进行，则</p>
 <ol>
 <li><p>$(A ^ T) ^ T = A$.</p>
 </li>
@@ -415,8 +415,8 @@
 <li><p>$A$ 为对称矩阵 $\Leftrightarrow$  $A^T = A$，$A$ 为反对称矩阵 $\Leftrightarrow$  $A^T = -A$.</p>
 </li>
 </ol>
-<h3 id="定义-2-8-方阵的迹"><a href="#定义-2-8-方阵的迹" class="headerlink" title="定义 2.8 方阵的迹"></a>定义 2.8 方阵的迹</h3><p>设数域 $F$ 上的方阵 $A = (a_ij)_{n \times n} $，称 $\sum_{i = 1}^n a_{ii}$ 为方阵的迹，记为 $tr(A)$. 即 $tr(A) = \sum_{i = 1}^n a_{ii}$.</p>
-<h3 id="性质-2-5-方阵的迹的性质"><a href="#性质-2-5-方阵的迹的性质" class="headerlink" title="性质 2.5 方阵的迹的性质"></a>性质 2.5 方阵的迹的性质</h3><ol>
+<h2 id="定义-2-8-方阵的迹"><a href="#定义-2-8-方阵的迹" class="headerlink" title="定义 2.8 方阵的迹"></a>定义 2.8 方阵的迹</h2><p>设数域 $F$ 上的方阵 $A = (a_ij)_{n \times n} $，称 $\sum_{i = 1}^n a_{ii}$ 为方阵的迹，记为 $tr(A)$. 即 $tr(A) = \sum_{i = 1}^n a_{ii}$.</p>
+<h2 id="性质-2-5-方阵的迹的性质"><a href="#性质-2-5-方阵的迹的性质" class="headerlink" title="性质 2.5 方阵的迹的性质"></a>性质 2.5 方阵的迹的性质</h2><ol>
 <li><p>$tr(A + B) = tr(A) + tr(B)$</p>
 </li>
 <li><p>$tr(kA) = ktr(A)$</p>
@@ -426,14 +426,14 @@
 <li><p>$tr(A^T) = tr(A)$</p>
 </li>
 </ol>
-<h3 id="定义-2-11-余子式"><a href="#定义-2-11-余子式" class="headerlink" title="定义 2.11 余子式"></a>定义 2.11 余子式</h3><p>$n$ 阶方阵 $A = (a_ij)_{n \times n} $ 划去 $a_{ij}$ 所在的行和列，剩下的元素安原来的相对位置不懂构成 $n-1$ 阶方阵，它的行列式称为元素 $a_{ij}$ 的余子式，记为 $M_{ij}$.</p>
+<h2 id="定义-2-11-余子式"><a href="#定义-2-11-余子式" class="headerlink" title="定义 2.11 余子式"></a>定义 2.11 余子式</h2><p>$n$ 阶方阵 $A = (a_ij)_{n \times n} $ 划去 $a_{ij}$ 所在的行和列，剩下的元素安原来的相对位置不懂构成 $n-1$ 阶方阵，它的行列式称为元素 $a_{ij}$ 的余子式，记为 $M_{ij}$.</p>
 <p>称 $(-1)^{i+j}M_{ij}$ 为元素 $a_{ij}$ 的代数余子式，记为 $A_{ij}$，即 $A_{ij} = (-1)^{i + j} M_{ij}$</p>
 <p>$p.s.$ 本质上是每行取一个、每列取一个，带着符号相乘，即所有不同行不同列的元素带符号相乘.</p>
-<h2 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h2><h3 id="性质-2-6-转置不变"><a href="#性质-2-6-转置不变" class="headerlink" title="性质 2.6 转置不变"></a>性质 2.6 转置不变</h3><p>$A$ 是方阵，$A^T$ 是其转置矩阵，则 $|A| = |A^T|$.</p>
-<h3 id="性质-2-7-交换变号"><a href="#性质-2-7-交换变号" class="headerlink" title="性质 2.7 交换变号"></a>性质 2.7 交换变号</h3><p>交换一个方阵的某两行，则它的行列式值改变符号.</p>
+<h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><h2 id="性质-2-6-转置不变"><a href="#性质-2-6-转置不变" class="headerlink" title="性质 2.6 转置不变"></a>性质 2.6 转置不变</h2><p>$A$ 是方阵，$A^T$ 是其转置矩阵，则 $|A| = |A^T|$.</p>
+<h2 id="性质-2-7-交换变号"><a href="#性质-2-7-交换变号" class="headerlink" title="性质 2.7 交换变号"></a>性质 2.7 交换变号</h2><p>交换一个方阵的某两行，则它的行列式值改变符号.</p>
 <p><strong>推论</strong></p>
 <p>如果一个方阵有两行对应元素相同，则其行列式值为 $0$.</p>
-<h3 id="性质-2-8-数乘一行"><a href="#性质-2-8-数乘一行" class="headerlink" title="性质 2.8 数乘一行"></a>性质 2.8 数乘一行</h3><p>方阵 $A$ 的某一行的所有元素乘以数 $k$，即 $A \xrightarrow[]{kr_i} B$，则 $|B| = k |A|$.</p>
+<h2 id="性质-2-8-数乘一行"><a href="#性质-2-8-数乘一行" class="headerlink" title="性质 2.8 数乘一行"></a>性质 2.8 数乘一行</h2><p>方阵 $A$ 的某一行的所有元素乘以数 $k$，即 $A \xrightarrow[]{kr_i} B$，则 $|B| = k |A|$.</p>
 <p>推论：</p>
 <ol>
 <li><p>行列式中某行有公因子，可提到行列式符号外面.</p>
@@ -443,7 +443,7 @@
 <li><p>行列式中有某行的元素全为 $0$，则此行列式值为 $0$.</p>
 </li>
 </ol>
-<h3 id="性质-2-9-加和性"><a href="#性质-2-9-加和性" class="headerlink" title="性质 2.9 加和性"></a>性质 2.9 加和性</h3><p>行列式中某行的所有元素都是两个元素的和，则此行列式可分解为两个行列式的和，即：</p>
+<h2 id="性质-2-9-加和性"><a href="#性质-2-9-加和性" class="headerlink" title="性质 2.9 加和性"></a>性质 2.9 加和性</h2><p>行列式中某行的所有元素都是两个元素的和，则此行列式可分解为两个行列式的和，即：</p>
 <script type="math/tex; mode=display">\left| \begin{array}{} 
 a_{11} & \cdots & a_{1n} \\
 \vdots & & \vdots \\
@@ -469,11 +469,11 @@ a_{11} & \cdots & a_{1n} \\
 b_1 & \cdots & b_n \\
 \vdots & & \vdots \\
 a_{n1} & \cdots & a_{nn}
-\end{array} \right|</script><h3 id="性质-2-10-行间加和不变性"><a href="#性质-2-10-行间加和不变性" class="headerlink" title="性质 2.10 行间加和不变性"></a>性质 2.10 行间加和不变性</h3><p>方阵 $A$ 的某行 $k$ 倍驾到另一行，得到方阵 $B$，$A \xrightarrow[]{r_j + kr_i} B$，则 $|B| = |A|$.</p>
-<h3 id="性质-2-11-任意展开"><a href="#性质-2-11-任意展开" class="headerlink" title="性质 2.11 任意展开"></a>性质 2.11 任意展开</h3><p>设方阵 $A = (a_{ij})_{n \times n}$，则 $|A|$ 等于 $A$ 中任意一行所有元素与他们各自的代数余子式乘积之和. 即</p>
+\end{array} \right|</script><h2 id="性质-2-10-行间加和不变性"><a href="#性质-2-10-行间加和不变性" class="headerlink" title="性质 2.10 行间加和不变性"></a>性质 2.10 行间加和不变性</h2><p>方阵 $A$ 的某行 $k$ 倍驾到另一行，得到方阵 $B$，$A \xrightarrow[]{r_j + kr_i} B$，则 $|B| = |A|$.</p>
+<h2 id="性质-2-11-任意展开"><a href="#性质-2-11-任意展开" class="headerlink" title="性质 2.11 任意展开"></a>性质 2.11 任意展开</h2><p>设方阵 $A = (a_{ij})_{n \times n}$，则 $|A|$ 等于 $A$ 中任意一行所有元素与他们各自的代数余子式乘积之和. 即</p>
 <script type="math/tex; mode=display">|A| = \sum_{k = 1}^{n} (-1) ^ {i + k} a_{ik} M_{ik} = \sum_{k = 1}^{n} a_{ik} A_{ik}</script><p><strong>推论</strong></p>
 <p>设方阵 $A = (a_{ij})_{n \times n}，则 $A$ 的第 $i$ 行的所有元素与第 $j(j \neq i) $ 行对应元素的代数余子式乘积之和等于零. 即</p>
-<script type="math/tex; mode=display">a_{i1} A_{j1} + a_{i2} A_{j2} + \cdots + a_{in} A_{in} = \sum_{k = 1}^{n} a_{ik} A_{ik} = 0 (i \neq j).</script><h3 id="例-2-22-范德蒙德行列式"><a href="#例-2-22-范德蒙德行列式" class="headerlink" title="例 2.22 范德蒙德行列式"></a>例 2.22 范德蒙德行列式</h3><script type="math/tex; mode=display">D = \left| \begin{array}{cc} 
+<script type="math/tex; mode=display">a_{i1} A_{j1} + a_{i2} A_{j2} + \cdots + a_{in} A_{in} = \sum_{k = 1}^{n} a_{ik} A_{ik} = 0 (i \neq j).</script><h2 id="例-2-22-范德蒙德行列式"><a href="#例-2-22-范德蒙德行列式" class="headerlink" title="例 2.22 范德蒙德行列式"></a>例 2.22 范德蒙德行列式</h2><script type="math/tex; mode=display">D = \left| \begin{array}{cc} 
 1 & 1 & \cdots & 1 \\
 x_1 & x_2 & \cdots & x_n \\
 x_1^2 & x_2^2 & \cdots & x_n^2 \\
@@ -504,11 +504,11 @@ x_2^2 & x_3^2 & \cdots & x_n^2 \\
 \vdots & \vdots & & \vdots \\
 x_2^{n - 2} & x_3^{n - 2} & \cdots & x_n^{n - 2}
 \end{array}\right|</script><p>重复降阶得</p>
-<script type="math/tex; mode=display">D = \prod_{1 \leq j < i \leq n} (x_i - x_j)</script><h3 id="性质-2-12-同阶可拆"><a href="#性质-2-12-同阶可拆" class="headerlink" title="性质 2.12 同阶可拆"></a>性质 2.12 同阶可拆</h3><p>设 $A$，$B$ 为同阶方阵，则 $|AB| = |A||B|$.</p>
-<h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><h3 id="定义-2-14-逆矩阵的定义"><a href="#定义-2-14-逆矩阵的定义" class="headerlink" title="定义 2.14 逆矩阵的定义"></a>定义 2.14 逆矩阵的定义</h3><p>设 $n$ 阶方阵 $A$，若存在 $n$ 阶方阵 $B$，使得</p>
+<script type="math/tex; mode=display">D = \prod_{1 \leq j < i \leq n} (x_i - x_j)</script><h2 id="性质-2-12-同阶可拆"><a href="#性质-2-12-同阶可拆" class="headerlink" title="性质 2.12 同阶可拆"></a>性质 2.12 同阶可拆</h2><p>设 $A$，$B$ 为同阶方阵，则 $|AB| = |A||B|$.</p>
+<h1 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h1><h2 id="定义-2-14-逆矩阵的定义"><a href="#定义-2-14-逆矩阵的定义" class="headerlink" title="定义 2.14 逆矩阵的定义"></a>定义 2.14 逆矩阵的定义</h2><p>设 $n$ 阶方阵 $A$，若存在 $n$ 阶方阵 $B$，使得</p>
 <script type="math/tex; mode=display">AB = BA = E</script><p>则称矩阵 $A$ 可逆，$B$ 是 $A$ 的逆矩阵，记作 $B = A^{-1}$. 如果不存在满足条件的矩阵 $B$ 则称矩阵 $A$ 不可逆.</p>
-<h3 id="定理-2-1-逆矩阵唯一"><a href="#定理-2-1-逆矩阵唯一" class="headerlink" title="定理 2.1 逆矩阵唯一"></a>定理 2.1 逆矩阵唯一</h3><p>如果 $n$ 阶方阵 $A$ 可逆，则其逆矩阵唯一.</p>
-<h3 id="定义-2-15-伴随矩阵"><a href="#定义-2-15-伴随矩阵" class="headerlink" title="定义 2.15 伴随矩阵"></a>定义 2.15 伴随矩阵</h3><p>设 $n$ 阶方阵 $A = (a_{ij})_{n \times n} $，$A_{ij}$ 为元素 $a_{ij}$ 的代数余子式，$i,j = 1,2,\cdots,n$，称矩阵</p>
+<h2 id="定理-2-1-逆矩阵唯一"><a href="#定理-2-1-逆矩阵唯一" class="headerlink" title="定理 2.1 逆矩阵唯一"></a>定理 2.1 逆矩阵唯一</h2><p>如果 $n$ 阶方阵 $A$ 可逆，则其逆矩阵唯一.</p>
+<h2 id="定义-2-15-伴随矩阵"><a href="#定义-2-15-伴随矩阵" class="headerlink" title="定义 2.15 伴随矩阵"></a>定义 2.15 伴随矩阵</h2><p>设 $n$ 阶方阵 $A = (a_{ij})_{n \times n} $，$A_{ij}$ 为元素 $a_{ij}$ 的代数余子式，$i,j = 1,2,\cdots,n$，称矩阵</p>
 <script type="math/tex; mode=display">\begin{bmatrix} 
 
 A_{11} & A_{21} & \cdots & A_{n1} \\
@@ -516,18 +516,18 @@ A_{12} & A_{22} & \cdots & A_{n2} \\
 \vdots & \vdots & & \vdots \\
 A_{1n} & A_{2n} & \cdots & A_{nn} 
 \end{bmatrix}</script><p>为矩阵 $A$ 的伴随矩阵，记为 $A^*$ （即：代数余子式+转置排列的矩阵）</p>
-<h3 id="命题-2-1"><a href="#命题-2-1" class="headerlink" title="命题 2.1"></a>命题 2.1</h3><p>设 $n$ 阶方阵 $A = (a_{ij})_{n \times n} $，则 $ A A ^{\star} = A ^{\star} A = |A| E $</p>
-<h3 id="定理-2-2-可逆矩阵"><a href="#定理-2-2-可逆矩阵" class="headerlink" title="定理 2.2 可逆矩阵"></a>定理 2.2 可逆矩阵</h3><p>$n$ 阶方阵 $A$ 可逆的充分必要条件为 $|A| \neq 0$，且有</p>
-<script type="math/tex; mode=display">A^{-1} = \frac{1}{|A|} A^*.</script><h3 id="例-2-26"><a href="#例-2-26" class="headerlink" title="例 2.26"></a>例 2.26</h3><p>$n$ 阶方阵 $A$，$A^{\star}$ 是其伴随矩阵，证明 $|A^{\star}| = |A|^{n-1}$</p>
+<h2 id="命题-2-1"><a href="#命题-2-1" class="headerlink" title="命题 2.1"></a>命题 2.1</h2><p>设 $n$ 阶方阵 $A = (a_{ij})_{n \times n} $，则 $ A A ^{\star} = A ^{\star} A = |A| E $</p>
+<h2 id="定理-2-2-可逆矩阵"><a href="#定理-2-2-可逆矩阵" class="headerlink" title="定理 2.2 可逆矩阵"></a>定理 2.2 可逆矩阵</h2><p>$n$ 阶方阵 $A$ 可逆的充分必要条件为 $|A| \neq 0$，且有</p>
+<script type="math/tex; mode=display">A^{-1} = \frac{1}{|A|} A^*.</script><h2 id="例-2-26"><a href="#例-2-26" class="headerlink" title="例 2.26"></a>例 2.26</h2><p>$n$ 阶方阵 $A$，$A^{\star}$ 是其伴随矩阵，证明 $|A^{\star}| = |A|^{n-1}$</p>
 <p>证明：由 $AA^{\star} = |A|E$，两边取行列式 $|AA^{\star}| = |(|A|)E| = |A|^n$，再对 $|A|=0$ 讨论即可</p>
-<h3 id="定理-2-3-克拉默法则"><a href="#定理-2-3-克拉默法则" class="headerlink" title="定理 2.3 克拉默法则"></a>定理 2.3 克拉默法则</h3><p>[克拉默(Cramer)法则] 设 $n \times n$ 的线性方程组 $A_{n \times n} X = b$，其中 $A = (a_{ij})_{n \times n}$，$X = (x_1, x_2, \dots , x_n)^T$，$b = (b_1, b_2, \dots , b_n)^T$. 若方程组系数行列式 $D = |A| \neq 0$，则方程组 $AX = b$ 由唯一解，且</p>
+<h2 id="定理-2-3-克拉默法则"><a href="#定理-2-3-克拉默法则" class="headerlink" title="定理 2.3 克拉默法则"></a>定理 2.3 克拉默法则</h2><p>[克拉默(Cramer)法则] 设 $n \times n$ 的线性方程组 $A_{n \times n} X = b$，其中 $A = (a_{ij})_{n \times n}$，$X = (x_1, x_2, \dots , x_n)^T$，$b = (b_1, b_2, \dots , b_n)^T$. 若方程组系数行列式 $D = |A| \neq 0$，则方程组 $AX = b$ 由唯一解，且</p>
 <script type="math/tex; mode=display">x_j = \frac{D_j}{D}, j = 1, \ 2, \ \cdots, \ n ,</script><p>其中 $D_j$ 是 $D$ 中第 $j$ 列换成 $b$ 所得到的行列式，即</p>
 <script type="math/tex; mode=display">D_j = \left| \begin{array}{cc}  
 a_{11} & \cdots & a_{1, j-1} & b_1 & a_{1, j + 1} & \cdots & a_{1n} \\
 a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 \vdots &        & \vdots     & \vdots & \vdots    &        &  \vdots \\
 a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
-\end{array}\right|</script><h3 id="命题-2-2"><a href="#命题-2-2" class="headerlink" title="命题 2.2"></a>命题 2.2</h3><p>若 $n \times n$ 的线性方程组 $A_{n \times n} X = b$ 有唯一解，则方程组的系数行列式 $D=|A| \neq 0$</p>
+\end{array}\right|</script><h2 id="命题-2-2"><a href="#命题-2-2" class="headerlink" title="命题 2.2"></a>命题 2.2</h2><p>若 $n \times n$ 的线性方程组 $A_{n \times n} X = b$ 有唯一解，则方程组的系数行列式 $D=|A| \neq 0$</p>
 <p><strong>推论：</strong> 对 $n \times n$ 的齐次线性方程组 $A_{n \times n}X = 0$，有</p>
 <ol>
 <li><p>$|A| \neq 0 \Leftrightarrow AX = 0$ 只有零解</p>
@@ -535,7 +535,7 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <li><p>$|A| = 0 \Leftrightarrow AX = 0$ 有非零解</p>
 </li>
 </ol>
-<h3 id="性质-2-13-可逆矩阵的运算性质"><a href="#性质-2-13-可逆矩阵的运算性质" class="headerlink" title="性质 2.13 可逆矩阵的运算性质"></a>性质 2.13 可逆矩阵的运算性质</h3><p>设 $A$，$B$，$A_i(i = 1, 2, \dots, m)$ 均为 $n$ 阶可逆矩阵， $k$ 为非零常数，则</p>
+<h2 id="性质-2-13-可逆矩阵的运算性质"><a href="#性质-2-13-可逆矩阵的运算性质" class="headerlink" title="性质 2.13 可逆矩阵的运算性质"></a>性质 2.13 可逆矩阵的运算性质</h2><p>设 $A$，$B$，$A_i(i = 1, 2, \dots, m)$ 均为 $n$ 阶可逆矩阵， $k$ 为非零常数，则</p>
 <ol>
 <li><p>$(A^{-1})^{-1} = A$</p>
 </li>
@@ -550,7 +550,7 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <li><p>$|A^{-1}| = \frac{1}{|A|}$</p>
 </li>
 </ol>
-<h2 id="秩"><a href="#秩" class="headerlink" title="秩"></a>秩</h2><h3 id="定义-2-18-等价"><a href="#定义-2-18-等价" class="headerlink" title="定义 2.18 等价"></a>定义 2.18 等价</h3><p>矩阵 $A$ 经有限次初等变换变到矩阵 $B$，称矩阵 $A$ 与矩阵 $B$ 等价（相抵），记为 $A \cong B$</p>
+<h1 id="秩"><a href="#秩" class="headerlink" title="秩"></a>秩</h1><h2 id="定义-2-18-等价"><a href="#定义-2-18-等价" class="headerlink" title="定义 2.18 等价"></a>定义 2.18 等价</h2><p>矩阵 $A$ 经有限次初等变换变到矩阵 $B$，称矩阵 $A$ 与矩阵 $B$ 等价（相抵），记为 $A \cong B$</p>
 <p>等价关系具有下面的性质：</p>
 <ol>
 <li><p>反身性: $A \cong A$</p>
@@ -560,13 +560,13 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <li><p>传递性: $A \cong B, \ B \cong C \Rightarrow A \cong C$</p>
 </li>
 </ol>
-<h3 id="定义-2-19-初等矩阵"><a href="#定义-2-19-初等矩阵" class="headerlink" title="定义 2.19 初等矩阵"></a>定义 2.19 初等矩阵</h3><p>单位矩阵 $E$ 经一次初等变换后得到的矩阵，称之为初等矩阵</p>
-<h3 id="定理-2-4-左行右列"><a href="#定理-2-4-左行右列" class="headerlink" title="定理 2.4 左行右列"></a>定理 2.4 左行右列</h3><p>设 $A$ 是一个 $m \times n$ 的矩阵，对 $A$ 进行一次初等行变换相当于在 $A$ 的左边成一个相应类型的 $m$ 阶初等矩阵；对 $A$ 进行一次初等列变换相当于在 $A$ 的右边乘一个相应类型的 $n$ 阶初等矩阵.</p>
+<h2 id="定义-2-19-初等矩阵"><a href="#定义-2-19-初等矩阵" class="headerlink" title="定义 2.19 初等矩阵"></a>定义 2.19 初等矩阵</h2><p>单位矩阵 $E$ 经一次初等变换后得到的矩阵，称之为初等矩阵</p>
+<h2 id="定理-2-4-左行右列"><a href="#定理-2-4-左行右列" class="headerlink" title="定理 2.4 左行右列"></a>定理 2.4 左行右列</h2><p>设 $A$ 是一个 $m \times n$ 的矩阵，对 $A$ 进行一次初等行变换相当于在 $A$ 的左边成一个相应类型的 $m$ 阶初等矩阵；对 $A$ 进行一次初等列变换相当于在 $A$ 的右边乘一个相应类型的 $n$ 阶初等矩阵.</p>
 <p><strong>推论</strong>: 初等矩阵都是可逆矩阵，且</p>
-<script type="math/tex; mode=display">E(i, j)^{-1} = E(i, j) \\ E(i(k))^{-1} = E(i(\frac{1}{k})) \\ E(j, i(k))^{-1} = E(j, i(-k))</script><h3 id="定理-2-5"><a href="#定理-2-5" class="headerlink" title="定理 2.5"></a>定理 2.5</h3><p>对任意的 $m \times n$ 矩阵 $A$，存在一系列 $m$ 阶初等矩阵 $P_1, P_2, \dots, P_s$，及 $n$ 阶初等矩阵 $Q_1, Q_2, \dots, Q_t$，使得</p>
+<script type="math/tex; mode=display">E(i, j)^{-1} = E(i, j) \\ E(i(k))^{-1} = E(i(\frac{1}{k})) \\ E(j, i(k))^{-1} = E(j, i(-k))</script><h2 id="定理-2-5"><a href="#定理-2-5" class="headerlink" title="定理 2.5"></a>定理 2.5</h2><p>对任意的 $m \times n$ 矩阵 $A$，存在一系列 $m$ 阶初等矩阵 $P_1, P_2, \dots, P_s$，及 $n$ 阶初等矩阵 $Q_1, Q_2, \dots, Q_t$，使得</p>
 <script type="math/tex; mode=display">P_s \cdots P_2 P_1 A Q_1 Q_2 \cdots Q_t = \begin{bmatrix} E_r & O \\ O & O \end{bmatrix}</script><p>为标准型，其中 $E_r$ 为 $r$ 阶单位矩阵，$r$ 是 $A$ 的行列阶梯形中非零行的行数.</p>
-<h3 id="定义-2-21-秩的定义"><a href="#定义-2-21-秩的定义" class="headerlink" title="定义 2.21 秩的定义"></a>定义 2.21 秩的定义</h3><p>设 $A$ 为 $m \times n$ 的矩阵，在 $A$ 中若存在一个 $r$ 阶姿势不等于零，而所有 $r+1$ 阶（若有的话）子式全为零，称 $r$ 为矩阵 $A$ 的秩，记为 $r(A)$. 规定零矩阵的秩为 $0$.</p>
-<h3 id="性质-2-14-秩的性质"><a href="#性质-2-14-秩的性质" class="headerlink" title="性质 2.14 秩的性质"></a>性质 2.14 秩的性质</h3><ol>
+<h2 id="定义-2-21-秩的定义"><a href="#定义-2-21-秩的定义" class="headerlink" title="定义 2.21 秩的定义"></a>定义 2.21 秩的定义</h2><p>设 $A$ 为 $m \times n$ 的矩阵，在 $A$ 中若存在一个 $r$ 阶姿势不等于零，而所有 $r+1$ 阶（若有的话）子式全为零，称 $r$ 为矩阵 $A$ 的秩，记为 $r(A)$. 规定零矩阵的秩为 $0$.</p>
+<h2 id="性质-2-14-秩的性质"><a href="#性质-2-14-秩的性质" class="headerlink" title="性质 2.14 秩的性质"></a>性质 2.14 秩的性质</h2><ol>
 <li><p>矩阵 $A$ 的秩是唯一的.</p>
 </li>
 <li><p>$0 \leq r(A) \leq min{m, n}$.</p>
@@ -584,9 +584,9 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <li><p>可逆矩阵的秩等于它的阶数</p>
 </li>
 </ol>
-<h3 id="定理-2-6"><a href="#定理-2-6" class="headerlink" title="定理 2.6"></a>定理 2.6</h3><p>初等变换不改变矩阵的秩</p>
-<h3 id="定理-2-8-初等变换不改变方程的解"><a href="#定理-2-8-初等变换不改变方程的解" class="headerlink" title="定理 2.8 初等变换不改变方程的解"></a>定理 2.8 初等变换不改变方程的解</h3><p>设 $A$ 是 $m \times n$ 的矩阵，线性方程组 $Ax = b$ 经过初等行变换得到的新方程组 $A_1x = b_1$ 与原方程组同解.</p>
-<h3 id="定理-2-9-解的判别"><a href="#定理-2-9-解的判别" class="headerlink" title="定理 2.9 解的判别"></a>定理 2.9 解的判别</h3><p>$ m \times n $ 的线性方程组 $Ax = b$，其增广矩阵为 $ \widetilde{A} = (A b)$. 则线性方程组有解的充分必要条件为线性方程组的系数矩阵的秩等于其增广矩阵的秩，即 $r(A) = r(\widetilde{A})$，且</p>
+<h2 id="定理-2-6"><a href="#定理-2-6" class="headerlink" title="定理 2.6"></a>定理 2.6</h2><p>初等变换不改变矩阵的秩</p>
+<h2 id="定理-2-8-初等变换不改变方程的解"><a href="#定理-2-8-初等变换不改变方程的解" class="headerlink" title="定理 2.8 初等变换不改变方程的解"></a>定理 2.8 初等变换不改变方程的解</h2><p>设 $A$ 是 $m \times n$ 的矩阵，线性方程组 $Ax = b$ 经过初等行变换得到的新方程组 $A_1x = b_1$ 与原方程组同解.</p>
+<h2 id="定理-2-9-解的判别"><a href="#定理-2-9-解的判别" class="headerlink" title="定理 2.9 解的判别"></a>定理 2.9 解的判别</h2><p>$ m \times n $ 的线性方程组 $Ax = b$，其增广矩阵为 $ \widetilde{A} = (A b)$. 则线性方程组有解的充分必要条件为线性方程组的系数矩阵的秩等于其增广矩阵的秩，即 $r(A) = r(\widetilde{A})$，且</p>
 <ol>
 <li><p>$r(A) = r(\widetilde{A}) = n$，原方程组有唯一解;</p>
 </li>
@@ -607,9 +607,9 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <li><p>当 $m = n$ 时，齐次线性方程组有唯一零解的充分必要条件为 $|A| \neq 0$，有非零解的充分必要条件为 $|A| \neq 0$</p>
 </li>
 </ol>
-<h3 id="初等变换求逆矩阵"><a href="#初等变换求逆矩阵" class="headerlink" title="初等变换求逆矩阵"></a>初等变换求逆矩阵</h3><p>构造矩阵 $(A \ \ E) \xrightarrow[]{一系列初等变换} (E \ \ A^{-1})$</p>
-<h2 id="n维向量与线性方程组"><a href="#n维向量与线性方程组" class="headerlink" title="n维向量与线性方程组"></a>n维向量与线性方程组</h2><h3 id="线性组合"><a href="#线性组合" class="headerlink" title="线性组合"></a>线性组合</h3><p>$ L(\alpha_1, \alpha_2, \dots, \alpha_n) : \alpha_1, \alpha_2, \dots, \alpha_n$ 的线性组合.</p>
-<h3 id="线性表出"><a href="#线性表出" class="headerlink" title="线性表出"></a>线性表出</h3><p>$n$ 维向量 $\beta$ 可由向量组 $\alpha_1, \alpha_2, \dots , \alpha_m$ 线性表示的充分必要条件为 </p>
+<h2 id="初等变换求逆矩阵"><a href="#初等变换求逆矩阵" class="headerlink" title="初等变换求逆矩阵"></a>初等变换求逆矩阵</h2><p>构造矩阵 $(A \ \ E) \xrightarrow[]{一系列初等变换} (E \ \ A^{-1})$</p>
+<h1 id="n维向量与线性方程组"><a href="#n维向量与线性方程组" class="headerlink" title="n维向量与线性方程组"></a>n维向量与线性方程组</h1><h2 id="线性组合"><a href="#线性组合" class="headerlink" title="线性组合"></a>线性组合</h2><p>$ L(\alpha_1, \alpha_2, \dots, \alpha_n) : \alpha_1, \alpha_2, \dots, \alpha_n$ 的线性组合.</p>
+<h2 id="线性表出"><a href="#线性表出" class="headerlink" title="线性表出"></a>线性表出</h2><p>$n$ 维向量 $\beta$ 可由向量组 $\alpha_1, \alpha_2, \dots , \alpha_m$ 线性表示的充分必要条件为 </p>
 <script type="math/tex; mode=display">r(A) = r( \widetilde{A})</script><p>其中 $A = (\alpha_1, \alpha_2, \dots, \alpha_m), \ \widetilde{A} = (A, \beta)$ 进而:</p>
 <ol>
 <li><p>$\beta$ 可由 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性表示且表示系数唯一的充分必要条件是 $r(A) = r(\widetilde{A}) = m$.</p>
@@ -619,10 +619,10 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <li><p>$\beta$ 不能由 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性表示的充分必要条件是 $r(A) \neq r(\widetilde{A})$.</p>
 </li>
 </ol>
-<h3 id="定义-3-5-向量组的等价"><a href="#定义-3-5-向量组的等价" class="headerlink" title="定义 3.5 向量组的等价"></a>定义 3.5 向量组的等价</h3><p>设有两个向量组</p>
+<h2 id="定义-3-5-向量组的等价"><a href="#定义-3-5-向量组的等价" class="headerlink" title="定义 3.5 向量组的等价"></a>定义 3.5 向量组的等价</h2><p>设有两个向量组</p>
 <script type="math/tex; mode=display">(I) \alpha_1, \alpha_2, \dots, \alpha_s; \ (II) \beta_1, \beta_2, \dots, \beta_t</script><p>若 $(I)$ 中的每个向量都能由向量组 $(II)$ 线性表示，则称向量组 $(I)$ 可由向量组 $(II)$ 线性表示. 若向量组 $(I)$ 与 $(II)$ 可以互相线性表示，则称向量组 $(I)$ 与 $(II)$ 等价. </p>
-<h3 id="命题-3-2-线性表示的传递性"><a href="#命题-3-2-线性表示的传递性" class="headerlink" title="命题 3.2 线性表示的传递性"></a>命题 3.2 线性表示的传递性</h3><p>设向量组 $\alpha_1, \alpha_2, \dots, \alpha_s$ 可由 $\beta_1, \beta_2, \dots, \beta_t$ 线性表示，又向量 $\gamma$ 可由向量组 $\alpha_1, \alpha_2, \dots, \alpha_s$ 线性表示，则向量 $\gamma$ 可由向量组 $\beta_1, \beta_2, \dots, \beta_t$ 线性表示.</p>
-<h3 id="性质-3-2-等价的性质"><a href="#性质-3-2-等价的性质" class="headerlink" title="性质 3.2 等价的性质"></a>性质 3.2 等价的性质</h3><ol>
+<h2 id="命题-3-2-线性表示的传递性"><a href="#命题-3-2-线性表示的传递性" class="headerlink" title="命题 3.2 线性表示的传递性"></a>命题 3.2 线性表示的传递性</h2><p>设向量组 $\alpha_1, \alpha_2, \dots, \alpha_s$ 可由 $\beta_1, \beta_2, \dots, \beta_t$ 线性表示，又向量 $\gamma$ 可由向量组 $\alpha_1, \alpha_2, \dots, \alpha_s$ 线性表示，则向量 $\gamma$ 可由向量组 $\beta_1, \beta_2, \dots, \beta_t$ 线性表示.</p>
+<h2 id="性质-3-2-等价的性质"><a href="#性质-3-2-等价的性质" class="headerlink" title="性质 3.2 等价的性质"></a>性质 3.2 等价的性质</h2><ol>
 <li><p>反身性，即每个向量组与它自身等价</p>
 </li>
 <li><p>对称性，即若 $(I)$ 与 $(II)$ 等价，则 $(II)$ 与 $(I)$ 等价.</p>
@@ -630,9 +630,9 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <li><p>传递性，若 $(I)$ 与 $(II)$ 等价，且 $(II)$ 与 $(III)$ 等价，则 $(I)$ 与 $(III)$ 等价.</p>
 </li>
 </ol>
-<h3 id="定义-3-6-线性相关与线性无关"><a href="#定义-3-6-线性相关与线性无关" class="headerlink" title="定义 3.6 线性相关与线性无关"></a>定义 3.6 线性相关与线性无关</h3><p>设 $\alpha_1, \alpha_2, \dots, \alpha_m$ 为 $n$ 维向量，若存在不全为零的数 $k_1, k_2, \dots, k_m$， 使</p>
+<h2 id="定义-3-6-线性相关与线性无关"><a href="#定义-3-6-线性相关与线性无关" class="headerlink" title="定义 3.6 线性相关与线性无关"></a>定义 3.6 线性相关与线性无关</h2><p>设 $\alpha_1, \alpha_2, \dots, \alpha_m$ 为 $n$ 维向量，若存在不全为零的数 $k_1, k_2, \dots, k_m$， 使</p>
 <script type="math/tex; mode=display">k_1 \alpha_1 + k_2 \alpha_2 + \dots + k_m \alpha_m = 0</script><p>则称向量 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性相关，否则它们线性无关，即仅当 $k_1 = k_2 = \dots = k_m = 0$ 时，等式才成立，则 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性无关.</p>
-<h3 id="定理-3-2"><a href="#定理-3-2" class="headerlink" title="定理 3.2"></a>定理 3.2</h3><p>$n$ 维向量组 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性相关（线性无关）的充分必要条件是齐次线性方程组有非零解（唯一零解）.</p>
+<h2 id="定理-3-2"><a href="#定理-3-2" class="headerlink" title="定理 3.2"></a>定理 3.2</h2><p>$n$ 维向量组 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性相关（线性无关）的充分必要条件是齐次线性方程组有非零解（唯一零解）.</p>
 <p><strong>推论1</strong> </p>
 <p>$\alpha_1, \alpha_2, \dots, \alpha_m$ 线性相关的充分必要条件是 $r(A) &lt; m$; 向量$\alpha_1, \alpha_2, \dots, \alpha_m$ 线性无关的充分必要条件是 $r(A) = m$.</p>
 <p><strong>推论2</strong> </p>
@@ -640,34 +640,34 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <p>$n$ 个 $n$ 维向量 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性相关的充分必要条件是 $|A| \neq 0$ ;</p>
 <p><strong>推论3</strong></p>
 <p>对于 ${\mathbb{R}}^n$ 中任意 $m$ 个向量，当 $m &gt; n$ 时必线性相关.</p>
-<h3 id="定理-3-3"><a href="#定理-3-3" class="headerlink" title="定理 3.3"></a>定理 3.3</h3><p>向量 $\alpha_1, \alpha_2, \dots, \alpha_m (m \geq 2) $ 线性相关的充分必要条件是其中至少有一个向量是其余向量的线性组合. </p>
-<h3 id="定理-3-4"><a href="#定理-3-4" class="headerlink" title="定理 3.4"></a>定理 3.4</h3><p>若向量 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性无关，而向量 $\alpha_1, \alpha_2, \dots, \alpha_m, \beta$ 线性相关，则向量 $\beta$ 可由 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性表示，且线性表示系数唯一.</p>
-<h3 id="定义-3-7-极大线性无关组"><a href="#定义-3-7-极大线性无关组" class="headerlink" title="定义 3.7 极大线性无关组"></a>定义 3.7 极大线性无关组</h3><p>设向量组 $I: \alpha_1, \alpha_2, \dots, \alpha_m, \dots$，若存在它的部分向量组 $II: \alpha_{i_1}, \alpha_{i_2}, \dots, \alpha_{i_r}$ 满足</p>
+<h2 id="定理-3-3"><a href="#定理-3-3" class="headerlink" title="定理 3.3"></a>定理 3.3</h2><p>向量 $\alpha_1, \alpha_2, \dots, \alpha_m (m \geq 2) $ 线性相关的充分必要条件是其中至少有一个向量是其余向量的线性组合. </p>
+<h2 id="定理-3-4"><a href="#定理-3-4" class="headerlink" title="定理 3.4"></a>定理 3.4</h2><p>若向量 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性无关，而向量 $\alpha_1, \alpha_2, \dots, \alpha_m, \beta$ 线性相关，则向量 $\beta$ 可由 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性表示，且线性表示系数唯一.</p>
+<h2 id="定义-3-7-极大线性无关组"><a href="#定义-3-7-极大线性无关组" class="headerlink" title="定义 3.7 极大线性无关组"></a>定义 3.7 极大线性无关组</h2><p>设向量组 $I: \alpha_1, \alpha_2, \dots, \alpha_m, \dots$，若存在它的部分向量组 $II: \alpha_{i_1}, \alpha_{i_2}, \dots, \alpha_{i_r}$ 满足</p>
 <ol>
 <li><p>$\alpha_{i_1}, \alpha_{i_2}, \dots, \alpha_{i_r}$ 线性无关</p>
 </li>
 <li><p>向量组 $I$ 中每一个向量都可由向量组 $II$ 线性表示，则称向量组 $II: \alpha_{i_1}, \alpha_{i_2}, \dots, \alpha_{i_r}$ 是向量组 $I$ 的一个<strong>极大线性无关组</strong>，简称<strong>极大无关组</strong>.</p>
 </li>
 </ol>
-<h3 id="命题-3-6"><a href="#命题-3-6" class="headerlink" title="命题 3.6"></a>命题 3.6</h3><p>一个向量组若有极大线性无关组，则这个向量组与其极大线性无关组等价.</p>
-<h3 id="命题-3-7"><a href="#命题-3-7" class="headerlink" title="命题 3.7"></a>命题 3.7</h3><p>若向量组的极大线性无关组不唯一，则其任意两个极大线性无关组都等价.</p>
-<h3 id="定义-3-8-向量组的秩"><a href="#定义-3-8-向量组的秩" class="headerlink" title="定义 3.8 向量组的秩"></a>定义 3.8 向量组的秩</h3><p>向量组 $\alpha_1, \alpha_2, \dots, \alpha_m$ 的极大线性无关组所含向量的个数称为向量组的秩，记作 $r(\alpha_1, \alpha_2, \dots, \alpha_m)$.</p>
-<h3 id="命题-3-8"><a href="#命题-3-8" class="headerlink" title="命题 3.8"></a>命题 3.8</h3><p>向量组 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性无关的充分必要条件是 $r(\alpha_1, \alpha_2, \dots, \alpha_m) = m$;</p>
+<h2 id="命题-3-6"><a href="#命题-3-6" class="headerlink" title="命题 3.6"></a>命题 3.6</h2><p>一个向量组若有极大线性无关组，则这个向量组与其极大线性无关组等价.</p>
+<h2 id="命题-3-7"><a href="#命题-3-7" class="headerlink" title="命题 3.7"></a>命题 3.7</h2><p>若向量组的极大线性无关组不唯一，则其任意两个极大线性无关组都等价.</p>
+<h2 id="定义-3-8-向量组的秩"><a href="#定义-3-8-向量组的秩" class="headerlink" title="定义 3.8 向量组的秩"></a>定义 3.8 向量组的秩</h2><p>向量组 $\alpha_1, \alpha_2, \dots, \alpha_m$ 的极大线性无关组所含向量的个数称为向量组的秩，记作 $r(\alpha_1, \alpha_2, \dots, \alpha_m)$.</p>
+<h2 id="命题-3-8"><a href="#命题-3-8" class="headerlink" title="命题 3.8"></a>命题 3.8</h2><p>向量组 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性无关的充分必要条件是 $r(\alpha_1, \alpha_2, \dots, \alpha_m) = m$;</p>
 <p>向量组 $\alpha_1, \alpha_2, \dots, \alpha_m$ 线性相关的充分必要条件是 $r(\alpha_1, \alpha_2, \dots, \alpha_m) &lt; m$.</p>
-<h3 id="命题-3-9"><a href="#命题-3-9" class="headerlink" title="命题 3.9"></a>命题 3.9</h3><p>等价的向量组必有相同的秩.</p>
-<h3 id="命题-3-10"><a href="#命题-3-10" class="headerlink" title="命题 3.10"></a>命题 3.10</h3><p>如果一个向量组的秩为 $r(r&gt;0)$，则向量组中任意 $r$ 个线性无关的向量都是它的一个极大无关组.</p>
-<h3 id="命题-3-11"><a href="#命题-3-11" class="headerlink" title="命题 3.11"></a>命题 3.11</h3><p>设向量组 $\alpha_1, \alpha_2, \dots, \alpha_s$ 可由向量组 $\beta_1, \beta_2, \dots, \beta_t$ 线性表示，则</p>
-<script type="math/tex; mode=display">r(\alpha_1, \alpha_2, \dots, \alpha_s) \leq r(\beta_1, \beta_2, \dots, \beta_t)</script><h2 id="线性方程组解的结构"><a href="#线性方程组解的结构" class="headerlink" title="线性方程组解的结构"></a>线性方程组解的结构</h2><h3 id="定义-3-9-基础解系"><a href="#定义-3-9-基础解系" class="headerlink" title="定义 3.9 基础解系"></a>定义 3.9 基础解系</h3><p>设 $\eta_1, \eta_2, \dots ,\eta_p$ 是齐次线性方程组 $Ax=0$ 的一组解向量，如果:</p>
+<h2 id="命题-3-9"><a href="#命题-3-9" class="headerlink" title="命题 3.9"></a>命题 3.9</h2><p>等价的向量组必有相同的秩.</p>
+<h2 id="命题-3-10"><a href="#命题-3-10" class="headerlink" title="命题 3.10"></a>命题 3.10</h2><p>如果一个向量组的秩为 $r(r&gt;0)$，则向量组中任意 $r$ 个线性无关的向量都是它的一个极大无关组.</p>
+<h2 id="命题-3-11"><a href="#命题-3-11" class="headerlink" title="命题 3.11"></a>命题 3.11</h2><p>设向量组 $\alpha_1, \alpha_2, \dots, \alpha_s$ 可由向量组 $\beta_1, \beta_2, \dots, \beta_t$ 线性表示，则</p>
+<script type="math/tex; mode=display">r(\alpha_1, \alpha_2, \dots, \alpha_s) \leq r(\beta_1, \beta_2, \dots, \beta_t)</script><h1 id="线性方程组解的结构"><a href="#线性方程组解的结构" class="headerlink" title="线性方程组解的结构"></a>线性方程组解的结构</h1><h2 id="定义-3-9-基础解系"><a href="#定义-3-9-基础解系" class="headerlink" title="定义 3.9 基础解系"></a>定义 3.9 基础解系</h2><p>设 $\eta_1, \eta_2, \dots ,\eta_p$ 是齐次线性方程组 $Ax=0$ 的一组解向量，如果:</p>
 <ol>
 <li><p>$\eta_1, \eta_2, \dots ,\eta_p$ 线性无关</p>
 </li>
 <li><p>齐次线性方程组 $Ax=0$ 的任意一个解向量都可由 $\eta_1, \eta_2, \dots ,\eta_p$ 线性表示，则称 $\eta_1, \eta_2, \dots ,\eta_p$ 是齐次线性方程组 $Ax=0$ 的一个基础解系.</p>
 </li>
 </ol>
-<h3 id="定理-3-7-基础解系的大小"><a href="#定理-3-7-基础解系的大小" class="headerlink" title="定理 3.7 基础解系的大小"></a>定理 3.7 基础解系的大小</h3><p>设 $A$ 是 $m \times n$ 矩阵，若 $r(A) = r &lt; n$，则齐次线性方程组 $Ax=0$ 存在一个由 $n-r$ 个线性无关的解向量 $\eta_1, \eta_2, \dots ,\eta_{n-r}$ 构成的基础解系，它们的线性组合</p>
+<h2 id="定理-3-7-基础解系的大小"><a href="#定理-3-7-基础解系的大小" class="headerlink" title="定理 3.7 基础解系的大小"></a>定理 3.7 基础解系的大小</h2><p>设 $A$ 是 $m \times n$ 矩阵，若 $r(A) = r &lt; n$，则齐次线性方程组 $Ax=0$ 存在一个由 $n-r$ 个线性无关的解向量 $\eta_1, \eta_2, \dots ,\eta_{n-r}$ 构成的基础解系，它们的线性组合</p>
 <script type="math/tex; mode=display">\widetilde{\eta} = k_1 \eta_1 + k_2 \eta_2 + \dots k_{n-r} \eta_{n-r}</script><p>其中 $k_1, k_2, \dots, k_{n-r}$ 为任意常数，给出了齐次线性方程组 $Ax=0$ 的所有解.</p>
-<h3 id="非齐次线性方程组解的结构"><a href="#非齐次线性方程组解的结构" class="headerlink" title="非齐次线性方程组解的结构"></a>非齐次线性方程组解的结构</h3><p>一个特解+导出组的通解（有空补充）</p>
-<h2 id="线性空间与线性变换"><a href="#线性空间与线性变换" class="headerlink" title="线性空间与线性变换"></a>线性空间与线性变换</h2><h3 id="定义-4-1-线性空间的定义"><a href="#定义-4-1-线性空间的定义" class="headerlink" title="定义 4.1 线性空间的定义"></a>定义 4.1 线性空间的定义</h3><p>设 $V$ 是一个非空集合，$F$ 是数域. 在 $V$ 的元素之间定义加法运算，记作 “+”，即对任意两个元素 $\alpha, \beta \in V$，有唯一一个元素 $\delta \in V$ 与之对应，称 $\delta$ 为 $\alpha$ 和 $\beta$ 的和，记作 $\delta = \alpha + \beta$. 并且加法运算 “+” 满足:</p>
+<h2 id="非齐次线性方程组解的结构"><a href="#非齐次线性方程组解的结构" class="headerlink" title="非齐次线性方程组解的结构"></a>非齐次线性方程组解的结构</h2><p>一个特解+导出组的通解（有空补充）</p>
+<h1 id="线性空间与线性变换"><a href="#线性空间与线性变换" class="headerlink" title="线性空间与线性变换"></a>线性空间与线性变换</h1><h2 id="定义-4-1-线性空间的定义"><a href="#定义-4-1-线性空间的定义" class="headerlink" title="定义 4.1 线性空间的定义"></a>定义 4.1 线性空间的定义</h2><p>设 $V$ 是一个非空集合，$F$ 是数域. 在 $V$ 的元素之间定义加法运算，记作 “+”，即对任意两个元素 $\alpha, \beta \in V$，有唯一一个元素 $\delta \in V$ 与之对应，称 $\delta$ 为 $\alpha$ 和 $\beta$ 的和，记作 $\delta = \alpha + \beta$. 并且加法运算 “+” 满足:</p>
 <ol>
 <li><p><strong>交换律</strong>: $\alpha + \beta = \beta + \alpha$;</p>
 </li>
@@ -691,7 +691,7 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 </ol>
 <p>则称集合 $V$ 关于向量加法和纯量乘法组成数域 $F$ 上的一个线性空间，或称 $V$ 为 $F$ 上的一个线性空间. 特别的，当 $F$ 为实数域时，称 $V$ 为实线性空间.</p>
 <p>$p.s.$ 即线性空间仅由“向量加法”和“纯量乘法”定义，与内积无关.</p>
-<h3 id="性质-4-1-线性空间的简单性质"><a href="#性质-4-1-线性空间的简单性质" class="headerlink" title="性质 4.1 线性空间的简单性质"></a>性质 4.1 线性空间的简单性质</h3><p>设 $V$ 是数域 $F$ 上的线性空间，则</p>
+<h2 id="性质-4-1-线性空间的简单性质"><a href="#性质-4-1-线性空间的简单性质" class="headerlink" title="性质 4.1 线性空间的简单性质"></a>性质 4.1 线性空间的简单性质</h2><p>设 $V$ 是数域 $F$ 上的线性空间，则</p>
 <ol>
 <li><p>零元唯一，记作 $0$;</p>
 </li>
@@ -704,8 +704,8 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <li><p>若 $k\alpha = 0$，则有 $k=0$ 或 $\alpha = 0$。</p>
 </li>
 </ol>
-<h3 id="命题-4-1-线性子空间的条件"><a href="#命题-4-1-线性子空间的条件" class="headerlink" title="命题 4.1 线性子空间的条件"></a>命题 4.1 线性子空间的条件</h3><p>设 $V$ 是数域 $F$ 上的线性空间，则 $V$ 的非空子集合 $W$ 为 $V$ 的一个字空间的充分必要条件为 $W$ 对于 $V$ 的<strong>加法</strong>和<strong>纯量乘法</strong>运算封闭.</p>
-<h3 id="定义-4-4-基"><a href="#定义-4-4-基" class="headerlink" title="定义 4.4 基"></a>定义 4.4 基</h3><p>设 $V$ 是数域 $F$ 上的线性空间，若 $V$ 中存在一组向量 $\alpha_1, \alpha_2, \dots, \alpha_n$ 满足:</p>
+<h2 id="命题-4-1-线性子空间的条件"><a href="#命题-4-1-线性子空间的条件" class="headerlink" title="命题 4.1 线性子空间的条件"></a>命题 4.1 线性子空间的条件</h2><p>设 $V$ 是数域 $F$ 上的线性空间，则 $V$ 的非空子集合 $W$ 为 $V$ 的一个字空间的充分必要条件为 $W$ 对于 $V$ 的<strong>加法</strong>和<strong>纯量乘法</strong>运算封闭.</p>
+<h2 id="定义-4-4-基"><a href="#定义-4-4-基" class="headerlink" title="定义 4.4 基"></a>定义 4.4 基</h2><p>设 $V$ 是数域 $F$ 上的线性空间，若 $V$ 中存在一组向量 $\alpha_1, \alpha_2, \dots, \alpha_n$ 满足:</p>
 <ol>
 <li><p>$\alpha_1, \alpha_2, \dots, \alpha_n$ 线性无关;</p>
 </li>
@@ -713,10 +713,10 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 </li>
 </ol>
 <p>则称 $\alpha_1, \alpha_2, \dots, \alpha_n$ 是线性空间 $V$ 的一组<strong>基底</strong>或<strong>基</strong>. 称基 $\alpha_1, \alpha_2, \dots, \alpha_n$ 所含向量的个数 $n$ 为线性空间 $V$ 的<strong>维数</strong>，记为 $dimV = n$，此时也成线性空间 $V$ 是 $n$ 维线性空间，有时记作 $V_n$.</p>
-<h3 id="定义-4-5-坐标"><a href="#定义-4-5-坐标" class="headerlink" title="定义 4.5 坐标"></a>定义 4.5 坐标</h3><p>设 $\alpha_1, \alpha_2, \dots, \alpha_n$ 是 $n$ 维线性空间 $V$ 的一组基，$\gamma \in V$，且</p>
+<h2 id="定义-4-5-坐标"><a href="#定义-4-5-坐标" class="headerlink" title="定义 4.5 坐标"></a>定义 4.5 坐标</h2><p>设 $\alpha_1, \alpha_2, \dots, \alpha_n$ 是 $n$ 维线性空间 $V$ 的一组基，$\gamma \in V$，且</p>
 <script type="math/tex; mode=display">\gamma = x_1 \alpha_1 + x_2 \alpha_2 +  \dots + x_n \alpha_n = (\alpha_1, \alpha_2, \dots, \alpha_n)x,</script><p>其中 </p>
 <script type="math/tex; mode=display">x = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n\end{pmatrix}</script><p>称向量 $x$ 为 $\gamma$ 在基 $\alpha_1, \alpha_2, \dots, \alpha_n$ 下的<strong>坐标</strong>.</p>
-<h3 id="定义-4-6-同构"><a href="#定义-4-6-同构" class="headerlink" title="定义 4.6 同构"></a>定义 4.6 同构</h3><p>设 $V$ 和 $V’$ 是数域 $F$ 上的两个线性空间，如果存在 $V$ 到 $V’$ 上的一个满足下述条件一一对应的 $\sigma$:</p>
+<h2 id="定义-4-6-同构"><a href="#定义-4-6-同构" class="headerlink" title="定义 4.6 同构"></a>定义 4.6 同构</h2><p>设 $V$ 和 $V’$ 是数域 $F$ 上的两个线性空间，如果存在 $V$ 到 $V’$ 上的一个满足下述条件一一对应的 $\sigma$:</p>
 <ol>
 <li><p>$\sigma (\alpha + \beta) = \sigma (\alpha) + \sigma (\beta), \ \forall \alpha , \beta \in V$;</p>
 </li>
@@ -724,14 +724,14 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 </li>
 </ol>
 <p>则称 $\sigma$ 为线性空间 $V$ 到 $V’$ 的一个<strong>同构映射</strong>，也称线性空间 $V$ 与 $V’$ <strong>同构</strong>.</p>
-<h3 id="命题-4-2"><a href="#命题-4-2" class="headerlink" title="命题 4.2"></a>命题 4.2</h3><p>数域 $F$ 上任意一个 $n$ 维线性空间 $V$ 均与 ${\mathbb{F}}^{n}$ 同构. </p>
-<h3 id="定义-4-7-过渡矩阵"><a href="#定义-4-7-过渡矩阵" class="headerlink" title="定义 4.7 过渡矩阵"></a>定义 4.7 过渡矩阵</h3><p>设 $\epsilon_1, \epsilon_2, \dots , \epsilon_n$ 是 $n$ 维线性空间 $V$ 中的两组基，且</p>
+<h2 id="命题-4-2"><a href="#命题-4-2" class="headerlink" title="命题 4.2"></a>命题 4.2</h2><p>数域 $F$ 上任意一个 $n$ 维线性空间 $V$ 均与 ${\mathbb{F}}^{n}$ 同构. </p>
+<h2 id="定义-4-7-过渡矩阵"><a href="#定义-4-7-过渡矩阵" class="headerlink" title="定义 4.7 过渡矩阵"></a>定义 4.7 过渡矩阵</h2><p>设 $\epsilon_1, \epsilon_2, \dots , \epsilon_n$ 是 $n$ 维线性空间 $V$ 中的两组基，且</p>
 <script type="math/tex; mode=display">( \eta_1, \eta_2, \dots, \eta_n) = (\epsilon_1, \epsilon_2, \dots , \epsilon_n)C</script><p>则称矩阵 $C=(c_{ij})_{m \times n}$ 为由基 $\epsilon_1, \epsilon_2, \dots , \epsilon_n$ 到基 $\eta_1, \eta_2, \dots, \eta_n$ 的<strong>过渡矩阵</strong></p>
-<h3 id="定理-4-1-基变换"><a href="#定理-4-1-基变换" class="headerlink" title="定理 4.1 基变换"></a>定理 4.1 基变换</h3><p>设 $\epsilon_1, \epsilon_2, \dots , \epsilon_n$ 和 $\eta_1, \eta_2, \dots, \eta_n$ 是 $n$ 维线性空间的两组基，由基$\epsilon_1, \epsilon_2, \dots , \epsilon_n$ 到基 $\eta_1, \eta_2, \dots, \eta_n$ 的过度矩阵记为 $C=(c_{ij})_{m \times n}$，即</p>
+<h2 id="定理-4-1-基变换"><a href="#定理-4-1-基变换" class="headerlink" title="定理 4.1 基变换"></a>定理 4.1 基变换</h2><p>设 $\epsilon_1, \epsilon_2, \dots , \epsilon_n$ 和 $\eta_1, \eta_2, \dots, \eta_n$ 是 $n$ 维线性空间的两组基，由基$\epsilon_1, \epsilon_2, \dots , \epsilon_n$ 到基 $\eta_1, \eta_2, \dots, \eta_n$ 的过度矩阵记为 $C=(c_{ij})_{m \times n}$，即</p>
 <script type="math/tex; mode=display">( \eta_1, \eta_2, \dots, \eta_n) = (\epsilon_1, \epsilon_2, \dots , \epsilon_n)C</script><p>若向量在 $\epsilon_1, \epsilon_2, \dots , \epsilon_n$ 基下的坐标为 $x = (x_1, x_2, \dots, x_n)^T$</p>
 <p>在 $\eta_1, \eta_2, \dots, \eta_n$ 基下的坐标为 $x’ = (x_1’, x_2’, \dots, x_n’)$</p>
 <p>则有 $x = Cx’$ 或者等价地有 $x’ = C^{-1}x$.</p>
-<h3 id="定义-4-8-内积与欧氏空间"><a href="#定义-4-8-内积与欧氏空间" class="headerlink" title="定义 4.8 内积与欧氏空间"></a>定义 4.8 内积与欧氏空间</h3><p>设 $V$ 为实数域 $\mathbb{R}$ 上的一个线性空间，对 $V$ 中任意一对元素 $\alpha$ 与 $\beta$，都有 $\mathbb{R}$ 中唯一一个实数与之对应，将此实数记作 $(\alpha, \beta)$，若此对应关系满足以下条件：</p>
+<h2 id="定义-4-8-内积与欧氏空间"><a href="#定义-4-8-内积与欧氏空间" class="headerlink" title="定义 4.8 内积与欧氏空间"></a>定义 4.8 内积与欧氏空间</h2><p>设 $V$ 为实数域 $\mathbb{R}$ 上的一个线性空间，对 $V$ 中任意一对元素 $\alpha$ 与 $\beta$，都有 $\mathbb{R}$ 中唯一一个实数与之对应，将此实数记作 $(\alpha, \beta)$，若此对应关系满足以下条件：</p>
 <ol>
 <li><p><strong>对称性</strong>：$(\alpha, \beta) = (\beta, \alpha) , \ \forall \alpha, \beta \in V$；</p>
 </li>
@@ -741,8 +741,8 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 </li>
 </ol>
 <p>则称 $(\alpha, \beta)$ 为向量 $\alpha$ 与 $\beta$ 的<strong>内积</strong>，定义了内积的实线性空间 $V$ 称为一个欧几里得空间，简称欧氏空间</p>
-<h3 id="定义-4-9-向量长度"><a href="#定义-4-9-向量长度" class="headerlink" title="定义 4.9 向量长度"></a>定义 4.9 向量长度</h3><script type="math/tex; mode=display">|\alpha| = \sqrt{(\alpha, \alpha)}</script><p>称 $|\alpha|$ 为向量 $\alpha$ 的长度，若 $|\alpha| = 1$，则称 $\alpha$ 为单位向量</p>
-<h3 id="定理-4-2-向量长度的性质"><a href="#定理-4-2-向量长度的性质" class="headerlink" title="定理 4.2 向量长度的性质"></a>定理 4.2 向量长度的性质</h3><ol>
+<h2 id="定义-4-9-向量长度"><a href="#定义-4-9-向量长度" class="headerlink" title="定义 4.9 向量长度"></a>定义 4.9 向量长度</h2><script type="math/tex; mode=display">|\alpha| = \sqrt{(\alpha, \alpha)}</script><p>称 $|\alpha|$ 为向量 $\alpha$ 的长度，若 $|\alpha| = 1$，则称 $\alpha$ 为单位向量</p>
+<h2 id="定理-4-2-向量长度的性质"><a href="#定理-4-2-向量长度的性质" class="headerlink" title="定理 4.2 向量长度的性质"></a>定理 4.2 向量长度的性质</h2><ol>
 <li><p>$|\alpha| \geq 0$，且 $|\alpha| = 0$ 的充要条件是 $\alpha = 0$；</p>
 </li>
 <li><p>$|k\alpha| = |k| \cdot |\alpha|, \forall k \in \mathbb{R}, \alpha \in V$</p>
@@ -750,12 +750,12 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <li><p>柯西施瓦茨不等式 $|(\alpha, \beta) | \leq |\alpha| \cdot |\beta|, \forall \alpha, \beta \in V$，当且仅当 $\alpha$ 与 $\beta$ 线性相关时，$|(\alpha, \beta) | = |\alpha| \cdot |\beta|$</p>
 </li>
 </ol>
-<h3 id="定义-4-10-向量夹角"><a href="#定义-4-10-向量夹角" class="headerlink" title="定义 4.10 向量夹角"></a>定义 4.10 向量夹角</h3><script type="math/tex; mode=display"><\alpha, \beta> = arccos \frac{(\alpha, \beta)}{|\alpha| \cdot |\beta|}</script><p>称 $&lt;\alpha, \beta&gt;$ 为向量 $\alpha$ 与 $\beta$ 的夹角，特别地，当 $(\alpha, \beta) = 0$ 时称 $\alpha$ 与 $\beta$ 正交，记作 $\alpha \perp \beta$</p>
-<h3 id="定义-4-11-正交向量组"><a href="#定义-4-11-正交向量组" class="headerlink" title="定义 4.11 正交向量组"></a>定义 4.11 正交向量组</h3><p>设 $\alpha_1, \alpha_2, \dots, \alpha_s$ 为欧氏空间 $V$ 中一组非零向量，若对任意 $1 \leq i, j \leq s$ 当 $i \neq j$ 时都有 $\alpha_i \perp \alpha_j$ 则称向量组 $\alpha_1, \alpha_2, \dots, \alpha_s$ 为一个<strong>正交向量组</strong>.</p>
-<h3 id="定义-4-12-向量距离"><a href="#定义-4-12-向量距离" class="headerlink" title="定义 4.12 向量距离"></a>定义 4.12 向量距离</h3><script type="math/tex; mode=display">d(\alpha, \beta) = |\alpha - \beta|</script><p>称 $d(\alpha, \beta)$ 为向量 $\alpha$ 与 $\beta$ 的距离，即向量 $\alpha$ 与 $\beta$ 的距离等于向量 $\alpha - \beta$ 的长度.</p>
-<h3 id="命题-4-3"><a href="#命题-4-3" class="headerlink" title="命题 4.3"></a>命题 4.3</h3><p>设 $\alpha_1, \alpha_2, \dots, \alpha_s$ 为欧氏空间 $V$ 中的一个正交向量组，则 $\alpha_1, \alpha_2, \dots, \alpha_s$ 线性无关.</p>
-<h3 id="定义-4-13-标准正交基"><a href="#定义-4-13-标准正交基" class="headerlink" title="定义 4.13 标准正交基"></a>定义 4.13 标准正交基</h3><p>设 $\epsilon_1, \epsilon_2, \dots , \epsilon_n$ 为 $n$ 维欧氏空间 $V$ 的一个正交向量组，因此是 $V$ 的一组基，称为 $V$ 的一组<strong>正交基</strong>，若正交基中每一个向量都是单位向量，则称此正交基为<strong>标准正交基</strong>.</p>
-<h3 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化"></a>施密特正交化</h3><p>设 $\alpha_1, \alpha_2, \dots, \alpha_s$ 是线性无关的向量组：</p>
+<h2 id="定义-4-10-向量夹角"><a href="#定义-4-10-向量夹角" class="headerlink" title="定义 4.10 向量夹角"></a>定义 4.10 向量夹角</h2><script type="math/tex; mode=display"><\alpha, \beta> = arccos \frac{(\alpha, \beta)}{|\alpha| \cdot |\beta|}</script><p>称 $&lt;\alpha, \beta&gt;$ 为向量 $\alpha$ 与 $\beta$ 的夹角，特别地，当 $(\alpha, \beta) = 0$ 时称 $\alpha$ 与 $\beta$ 正交，记作 $\alpha \perp \beta$</p>
+<h2 id="定义-4-11-正交向量组"><a href="#定义-4-11-正交向量组" class="headerlink" title="定义 4.11 正交向量组"></a>定义 4.11 正交向量组</h2><p>设 $\alpha_1, \alpha_2, \dots, \alpha_s$ 为欧氏空间 $V$ 中一组非零向量，若对任意 $1 \leq i, j \leq s$ 当 $i \neq j$ 时都有 $\alpha_i \perp \alpha_j$ 则称向量组 $\alpha_1, \alpha_2, \dots, \alpha_s$ 为一个<strong>正交向量组</strong>.</p>
+<h2 id="定义-4-12-向量距离"><a href="#定义-4-12-向量距离" class="headerlink" title="定义 4.12 向量距离"></a>定义 4.12 向量距离</h2><script type="math/tex; mode=display">d(\alpha, \beta) = |\alpha - \beta|</script><p>称 $d(\alpha, \beta)$ 为向量 $\alpha$ 与 $\beta$ 的距离，即向量 $\alpha$ 与 $\beta$ 的距离等于向量 $\alpha - \beta$ 的长度.</p>
+<h2 id="命题-4-3"><a href="#命题-4-3" class="headerlink" title="命题 4.3"></a>命题 4.3</h2><p>设 $\alpha_1, \alpha_2, \dots, \alpha_s$ 为欧氏空间 $V$ 中的一个正交向量组，则 $\alpha_1, \alpha_2, \dots, \alpha_s$ 线性无关.</p>
+<h2 id="定义-4-13-标准正交基"><a href="#定义-4-13-标准正交基" class="headerlink" title="定义 4.13 标准正交基"></a>定义 4.13 标准正交基</h2><p>设 $\epsilon_1, \epsilon_2, \dots , \epsilon_n$ 为 $n$ 维欧氏空间 $V$ 的一个正交向量组，因此是 $V$ 的一组基，称为 $V$ 的一组<strong>正交基</strong>，若正交基中每一个向量都是单位向量，则称此正交基为<strong>标准正交基</strong>.</p>
+<h2 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化"></a>施密特正交化</h2><p>设 $\alpha_1, \alpha_2, \dots, \alpha_s$ 是线性无关的向量组：</p>
 <ol>
 <li>正交化</li>
 </ol>
@@ -764,11 +764,11 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <li>单位化</li>
 </ol>
 <script type="math/tex; mode=display">\eta_i = \frac{1}{|\beta_i|} \beta_i \ (i = 1, 2, \dots , s)</script><p>则 $\eta_1, \eta_2, \dots, \eta_s$ 为标准正交向量组.</p>
-<h3 id="定义-4-14-正交矩阵"><a href="#定义-4-14-正交矩阵" class="headerlink" title="定义 4.14 正交矩阵"></a>定义 4.14 正交矩阵</h3><p>设 $A$ 为 $n$ 阶实矩阵，若 $A$ 的列向量组是标准正交向量组. 即若记 $A = (\alpha_1, \alpha_2, \dots , \alpha_n)$</p>
+<h2 id="定义-4-14-正交矩阵"><a href="#定义-4-14-正交矩阵" class="headerlink" title="定义 4.14 正交矩阵"></a>定义 4.14 正交矩阵</h2><p>设 $A$ 为 $n$ 阶实矩阵，若 $A$ 的列向量组是标准正交向量组. 即若记 $A = (\alpha_1, \alpha_2, \dots , \alpha_n)$</p>
 <p>$A$ 的列向量 $\alpha_1, \alpha_2, \dots , \alpha_n$ 满足</p>
 <script type="math/tex; mode=display">(\alpha_i, \alpha_j) = \big\{ \begin{array}{} 0, i \neq j \\ 1, i = j \end{array} (i, j = 1, 2, \dots, n)</script><p>则称 $A$ 为<strong>正交矩阵</strong>.</p>
-<h3 id="定理-4-3-正交矩阵的判定"><a href="#定理-4-3-正交矩阵的判定" class="headerlink" title="定理 4.3 正交矩阵的判定"></a>定理 4.3 正交矩阵的判定</h3><p>$n$ 阶实矩阵 $A$ 为正交矩阵的充分必要条件为 $A^TA = E$。</p>
-<h3 id="性质-4-2-正交矩阵的性质"><a href="#性质-4-2-正交矩阵的性质" class="headerlink" title="性质 4.2 正交矩阵的性质"></a>性质 4.2 正交矩阵的性质</h3><ol>
+<h2 id="定理-4-3-正交矩阵的判定"><a href="#定理-4-3-正交矩阵的判定" class="headerlink" title="定理 4.3 正交矩阵的判定"></a>定理 4.3 正交矩阵的判定</h2><p>$n$ 阶实矩阵 $A$ 为正交矩阵的充分必要条件为 $A^TA = E$。</p>
+<h2 id="性质-4-2-正交矩阵的性质"><a href="#性质-4-2-正交矩阵的性质" class="headerlink" title="性质 4.2 正交矩阵的性质"></a>性质 4.2 正交矩阵的性质</h2><ol>
 <li><p>若 $A$ 为正交矩阵，则 $|A| = \pm 1$；</p>
 </li>
 <li><p>实矩阵 $A$ 为正交矩阵的充要条件为 $A^{-1} = A^T$；</p>
@@ -778,7 +778,7 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 <li><p>若 $n$ 阶矩阵 $A$ 和 $B$ 都是正交矩阵，则乘积 $AB$ 也是正交矩阵.</p>
 </li>
 </ol>
-<h3 id="定义-4-15-线性变换"><a href="#定义-4-15-线性变换" class="headerlink" title="定义 4.15 线性变换"></a>定义 4.15 线性变换</h3><p>设 $V$ 是数域 $F$ 上的线性空间，若 $\mathscr{A}$ 是线性空间 $V$ 到自身的一个映射，即对 $\forall \alpha \in V$，有唯一的向量 $\beta \in V$ 与 $\alpha$ 对应，则称 $\mathscr{A}$ 为 $V$ 的一个变换. 进而，若变换 $\mathscr{A}$ 满足：</p>
+<h2 id="定义-4-15-线性变换"><a href="#定义-4-15-线性变换" class="headerlink" title="定义 4.15 线性变换"></a>定义 4.15 线性变换</h2><p>设 $V$ 是数域 $F$ 上的线性空间，若 $\mathscr{A}$ 是线性空间 $V$ 到自身的一个映射，即对 $\forall \alpha \in V$，有唯一的向量 $\beta \in V$ 与 $\alpha$ 对应，则称 $\mathscr{A}$ 为 $V$ 的一个变换. 进而，若变换 $\mathscr{A}$ 满足：</p>
 <ol>
 <li><p>可加性：$\mathscr{A}(\alpha + \beta) = \mathscr{A}(\alpha) + \mathscr{A}(\beta)$，</p>
 </li>
@@ -786,14 +786,14 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 </li>
 </ol>
 <p>则称 $\mathscr{A}$ 为线性空间 $V$ 的一个<strong>线性变换</strong>. 称 $\beta$ 为 $\alpha$ 在线性变换 $\mathscr{A}$ 下的像，记作 $\beta = \mathscr{A}\alpha$ 或 $\beta = \mathscr{A}(\alpha)$.</p>
-<h3 id="定义-4-16-核空间与像空间"><a href="#定义-4-16-核空间与像空间" class="headerlink" title="定义 4.16 核空间与像空间"></a>定义 4.16 核空间与像空间</h3><p>设 $\mathscr{A}$ 为线性空间 $V$ 的线性变换，令</p>
+<h2 id="定义-4-16-核空间与像空间"><a href="#定义-4-16-核空间与像空间" class="headerlink" title="定义 4.16 核空间与像空间"></a>定义 4.16 核空间与像空间</h2><p>设 $\mathscr{A}$ 为线性空间 $V$ 的线性变换，令</p>
 <script type="math/tex; mode=display">Im(\mathscr{A}) = \{ \mathscr{A}(\xi) | \xi \in V\} ,</script><script type="math/tex; mode=display">Ker(\mathscr{A}) = \{ \xi \in V | \mathscr{A}(\xi) = 0\}</script><p>则称 $Im(\mathscr{A})$ 为线性变换 $\mathscr{A}$ 的值域（像空间），$Ker(\mathscr{A})$ 为线性变换的核（核空间）</p>
 <p>令</p>
 <script type="math/tex; mode=display">r(\mathscr{A}) = dim(Im(\mathscr{A}))</script><script type="math/tex; mode=display">r(Ker(\mathscr{A})) = dim(Ker(\mathscr{A}))</script><p>则称 $r(\mathscr{A})$ 为线性变换 $\mathscr{A}$ 的秩（像空间维数），称 $r(Ker(\mathscr{A}))$ 为线性变换 $\mathscr{A}$ 的零度（核空间维数）.</p>
 <p>$p.s.$ 核空间就是原空间中被线性变换压成0的那几个维度张成的空间.</p>
-<h3 id="定义-4-17-线性变换的运算律"><a href="#定义-4-17-线性变换的运算律" class="headerlink" title="定义 4.17 线性变换的运算律"></a>定义 4.17 线性变换的运算律</h3><script type="math/tex; mode=display">(\mathscr{A} + \mathscr{B})(\alpha) = \mathscr{A}(\alpha) + \mathscr{B}(\alpha)</script><script type="math/tex; mode=display">(k\mathscr{A})(\alpha) = k(\mathscr{A}(\alpha))</script><script type="math/tex; mode=display">(\mathscr{A}\mathscr{B})(\alpha) = \mathscr{A}(\mathscr{B}(\alpha))</script><p>称 $\mathscr{A} + \mathscr{B}$ 为线性变换 $\mathscr{A}$ 与 $\mathscr{B}$ 的和，$k\mathscr{A}$ 为数 $k$ 与 线性变换 $\mathscr{A}$ 的纯量乘积，$\mathscr{A}\mathscr{B}$ 为线性变换 $\mathscr{A}$ 与 $\mathscr{B}$ 的积.</p>
-<h3 id="定理-4-4"><a href="#定理-4-4" class="headerlink" title="定理 4.4"></a>定理 4.4</h3><p>若 $V$ 为数域 $F$ 上的线性空间，$k \in F$  $\mathscr{A}$ 与 $\mathscr{B}$ 为 $V$ 中的两个线性变换，则 $\mathscr{A} + \mathscr{B}$，$k\mathscr{A}$ 与 $\mathscr{A}\mathscr{B}$ 都是 $V$ 的线性变换.</p>
-<h3 id="性质-4-3-线性变换的性质"><a href="#性质-4-3-线性变换的性质" class="headerlink" title="性质 4.3 线性变换的性质"></a>性质 4.3 线性变换的性质</h3><p>若 $\mathscr{A}$ 是数域 $F$ 上的线性空间 $V$ 的线性变换，则：</p>
+<h2 id="定义-4-17-线性变换的运算律"><a href="#定义-4-17-线性变换的运算律" class="headerlink" title="定义 4.17 线性变换的运算律"></a>定义 4.17 线性变换的运算律</h2><script type="math/tex; mode=display">(\mathscr{A} + \mathscr{B})(\alpha) = \mathscr{A}(\alpha) + \mathscr{B}(\alpha)</script><script type="math/tex; mode=display">(k\mathscr{A})(\alpha) = k(\mathscr{A}(\alpha))</script><script type="math/tex; mode=display">(\mathscr{A}\mathscr{B})(\alpha) = \mathscr{A}(\mathscr{B}(\alpha))</script><p>称 $\mathscr{A} + \mathscr{B}$ 为线性变换 $\mathscr{A}$ 与 $\mathscr{B}$ 的和，$k\mathscr{A}$ 为数 $k$ 与 线性变换 $\mathscr{A}$ 的纯量乘积，$\mathscr{A}\mathscr{B}$ 为线性变换 $\mathscr{A}$ 与 $\mathscr{B}$ 的积.</p>
+<h2 id="定理-4-4"><a href="#定理-4-4" class="headerlink" title="定理 4.4"></a>定理 4.4</h2><p>若 $V$ 为数域 $F$ 上的线性空间，$k \in F$  $\mathscr{A}$ 与 $\mathscr{B}$ 为 $V$ 中的两个线性变换，则 $\mathscr{A} + \mathscr{B}$，$k\mathscr{A}$ 与 $\mathscr{A}\mathscr{B}$ 都是 $V$ 的线性变换.</p>
+<h2 id="性质-4-3-线性变换的性质"><a href="#性质-4-3-线性变换的性质" class="headerlink" title="性质 4.3 线性变换的性质"></a>性质 4.3 线性变换的性质</h2><p>若 $\mathscr{A}$ 是数域 $F$ 上的线性空间 $V$ 的线性变换，则：</p>
 <ol>
 <li><p>$\mathscr{A}(0) = 0, \mathscr{A}(-\alpha) = -\mathscr{A}(\alpha)$</p>
 </li>
@@ -802,7 +802,7 @@ a_{21} & \cdots & a_{2, j-1} & b_2 & a_{2, j + 1} & \cdots & a_{2n} \\
 </ol>
 <script type="math/tex; mode=display">\mathscr{A}(k_1 \alpha_1 + k_2 \alpha_2 + \cdots + k_m \alpha_m) = k_1 \mathscr{A}(\alpha_1) + k_2 \mathscr{A}(\alpha_2) + \cdots + k_m \mathscr{A}(\alpha_m)</script><p>即</p>
 <script type="math/tex; mode=display">\mathscr{A}[(\alpha_1, \alpha_2, \dots, \alpha_m)k] = (\mathscr(A)\alpha_1, \mathscr(A)\alpha_2, \dots, \mathscr(A)\alpha_m)k</script><p>其中 $k = (k_1, k_2, \dots, k_m)^T$.</p>
-<h3 id="定义-4-18-线性变换的矩阵"><a href="#定义-4-18-线性变换的矩阵" class="headerlink" title="定义 4.18 线性变换的矩阵"></a>定义 4.18 线性变换的矩阵</h3><p>设 $\epsilon_1, \epsilon_2, \dots, \epsilon_n$ 是 $n$ 维线性空间 $V$ 的一组基，$\epsilon_1, \epsilon_2, \dots, \epsilon_n$ 在线性变换 $\mathscr{A}$ 下的像分别为</p>
+<h2 id="定义-4-18-线性变换的矩阵"><a href="#定义-4-18-线性变换的矩阵" class="headerlink" title="定义 4.18 线性变换的矩阵"></a>定义 4.18 线性变换的矩阵</h2><p>设 $\epsilon_1, \epsilon_2, \dots, \epsilon_n$ 是 $n$ 维线性空间 $V$ 的一组基，$\epsilon_1, \epsilon_2, \dots, \epsilon_n$ 在线性变换 $\mathscr{A}$ 下的像分别为</p>
 <script type="math/tex; mode=display">\big\{ \begin{array}{lr} 
 \mathscr{A}(\epsilon_1) = a_{11} \epsilon_1 + a_{12} \epsilon_2 + \cdots + a_{1n} \epsilon_n, \\
 \mathscr{A}(\epsilon_2) = a_{21} \epsilon_1 + a_{22} \epsilon_2 + \cdots + a_{2n} \epsilon_n, \\
@@ -819,17 +819,17 @@ a_{21} & a_{22} & \cdots & a_{2n} \\
 a_{n1} & a_{n2} & \cdots & a_{nn}
 
 \end{bmatrix}</script><p>为线性变换 $\mathscr{A}$ 在基 $\epsilon_1, \epsilon_2, \dots, \epsilon_n$ 下的矩阵.</p>
-<h3 id="定理-4-5-线性变换与矩阵对应"><a href="#定理-4-5-线性变换与矩阵对应" class="headerlink" title="定理 4.5 线性变换与矩阵对应"></a>定理 4.5 线性变换与矩阵对应</h3><p>设 $\epsilon_1, \epsilon_2, \dots, \epsilon_n$ 是 $n$ 维线性空间 $V$ 的一组基，$A = (a_{ij})_{n \times n}$ 阶方阵，那么比存在唯一的线性变换 $\mathscr{A}$，它在基 $\epsilon_1, \epsilon_2, \dots, \epsilon_n$ 下的矩阵为 $A$.</p>
-<h3 id="定理-4-6"><a href="#定理-4-6" class="headerlink" title="定理 4.6"></a>定理 4.6</h3><p>设 $\epsilon_1, \epsilon_2, \dots, \epsilon_n$ 是 $n$ 维线性空间 $V$ 的一组基，那么 $V$ 中所有的线性变换 $\mathscr{A}$ 与所有的 $n$ 阶方阵 $A$ 之间存在一一对应的关系，这种关系由</p>
+<h2 id="定理-4-5-线性变换与矩阵对应"><a href="#定理-4-5-线性变换与矩阵对应" class="headerlink" title="定理 4.5 线性变换与矩阵对应"></a>定理 4.5 线性变换与矩阵对应</h2><p>设 $\epsilon_1, \epsilon_2, \dots, \epsilon_n$ 是 $n$ 维线性空间 $V$ 的一组基，$A = (a_{ij})_{n \times n}$ 阶方阵，那么比存在唯一的线性变换 $\mathscr{A}$，它在基 $\epsilon_1, \epsilon_2, \dots, \epsilon_n$ 下的矩阵为 $A$.</p>
+<h2 id="定理-4-6"><a href="#定理-4-6" class="headerlink" title="定理 4.6"></a>定理 4.6</h2><p>设 $\epsilon_1, \epsilon_2, \dots, \epsilon_n$ 是 $n$ 维线性空间 $V$ 的一组基，那么 $V$ 中所有的线性变换 $\mathscr{A}$ 与所有的 $n$ 阶方阵 $A$ 之间存在一一对应的关系，这种关系由</p>
 <script type="math/tex; mode=display">(\mathscr{A}(\epsilon_1), \mathscr{A}(\epsilon_2), \dots, \mathscr{A}(\epsilon_n)) = (\epsilon_1, \epsilon_2, \dots, \epsilon_n)A</script><p>确定.</p>
-<h3 id="定理-4-7-线性变换在不同基下矩阵间的关系"><a href="#定理-4-7-线性变换在不同基下矩阵间的关系" class="headerlink" title="定理 4.7 线性变换在不同基下矩阵间的关系"></a>定理 4.7 线性变换在不同基下矩阵间的关系</h3><p>设 $(\eta) = (\epsilon) C$ ，线性变换 $\mathscr{A}$ 在这 $\epsilon, \eta$ 两组基下的矩阵分别为 $A$ 和 $B$ 则</p>
-<script type="math/tex; mode=display">B = C^{-1} A C</script><h2 id="相似变换"><a href="#相似变换" class="headerlink" title="相似变换"></a>相似变换</h2><h3 id="定理-5-1-特征值与特征向量"><a href="#定理-5-1-特征值与特征向量" class="headerlink" title="定理 5.1 特征值与特征向量"></a>定理 5.1 特征值与特征向量</h3><p>若 $A\alpha = \lambda\alpha$ 则称 $\lambda$ 为方阵 $A$ 的一个特征值，$\alpha$ 为 $A$ 的对应于特征值 $\lambda$ 的特征向量.</p>
-<h3 id="定义-5-2-几何重数"><a href="#定义-5-2-几何重数" class="headerlink" title="定义 5.2 几何重数"></a>定义 5.2 几何重数</h3><p>特征子空间 $V_{\lambda_0}$ 的维数称为特征值 $\lambda_0$ 的几何重数.</p>
-<h3 id="定义-5-3-特征多项式"><a href="#定义-5-3-特征多项式" class="headerlink" title="定义 5.3 特征多项式"></a>定义 5.3 特征多项式</h3><script type="math/tex; mode=display">f(\lambda) = |\lambda E - A| = \lambda^n - (a_{11} + a_{22} + \cdots + a_{nn}) \lambda^{n-1} + \cdots + (-1)^n|A|</script><p>且 $f(\lambda)$ 在复数域内恰有 $n$ 个根，所以 $n$ 阶方阵在复数域内必有 $n$ 个特征值.</p>
-<h3 id="定义-5-4-代数重数"><a href="#定义-5-4-代数重数" class="headerlink" title="定义 5.4 代数重数"></a>定义 5.4 代数重数</h3><p>设 $n$ 阶方阵 $A$ 的特征多项式在复数域内的分解为</p>
+<h2 id="定理-4-7-线性变换在不同基下矩阵间的关系"><a href="#定理-4-7-线性变换在不同基下矩阵间的关系" class="headerlink" title="定理 4.7 线性变换在不同基下矩阵间的关系"></a>定理 4.7 线性变换在不同基下矩阵间的关系</h2><p>设 $(\eta) = (\epsilon) C$ ，线性变换 $\mathscr{A}$ 在这 $\epsilon, \eta$ 两组基下的矩阵分别为 $A$ 和 $B$ 则</p>
+<script type="math/tex; mode=display">B = C^{-1} A C</script><h1 id="相似变换"><a href="#相似变换" class="headerlink" title="相似变换"></a>相似变换</h1><h2 id="定理-5-1-特征值与特征向量"><a href="#定理-5-1-特征值与特征向量" class="headerlink" title="定理 5.1 特征值与特征向量"></a>定理 5.1 特征值与特征向量</h2><p>若 $A\alpha = \lambda\alpha$ 则称 $\lambda$ 为方阵 $A$ 的一个特征值，$\alpha$ 为 $A$ 的对应于特征值 $\lambda$ 的特征向量.</p>
+<h2 id="定义-5-2-几何重数"><a href="#定义-5-2-几何重数" class="headerlink" title="定义 5.2 几何重数"></a>定义 5.2 几何重数</h2><p>特征子空间 $V_{\lambda_0}$ 的维数称为特征值 $\lambda_0$ 的几何重数.</p>
+<h2 id="定义-5-3-特征多项式"><a href="#定义-5-3-特征多项式" class="headerlink" title="定义 5.3 特征多项式"></a>定义 5.3 特征多项式</h2><script type="math/tex; mode=display">f(\lambda) = |\lambda E - A| = \lambda^n - (a_{11} + a_{22} + \cdots + a_{nn}) \lambda^{n-1} + \cdots + (-1)^n|A|</script><p>且 $f(\lambda)$ 在复数域内恰有 $n$ 个根，所以 $n$ 阶方阵在复数域内必有 $n$ 个特征值.</p>
+<h2 id="定义-5-4-代数重数"><a href="#定义-5-4-代数重数" class="headerlink" title="定义 5.4 代数重数"></a>定义 5.4 代数重数</h2><p>设 $n$ 阶方阵 $A$ 的特征多项式在复数域内的分解为</p>
 <script type="math/tex; mode=display">|\lambda E - A| = (\lambda - \lambda_1) ^ {n_1} (\lambda - \lambda_2)^n_2 \cdots (\lambda - \lambda_s)^{n_s}</script><p>其中 $n_i$ 叫做 $\lambda_i$ 的代数重数，特别地，代数重数为 $1$ 的特征值也称为单特征值或特征多项式的单根.</p>
-<h3 id="性质-5-1"><a href="#性质-5-1" class="headerlink" title="性质 5.1"></a>性质 5.1</h3><script type="math/tex; mode=display">\sum_{j = 1}^{n} \lambda_j = \sum_{i = 1}^{n} a_{ii} = tr(A)</script><script type="math/tex; mode=display">\prod_{j = 1}^{n} \lambda_j = |A|</script><h3 id="性质-5-2-转置不变"><a href="#性质-5-2-转置不变" class="headerlink" title="性质 5.2 转置不变"></a>性质 5.2 转置不变</h3><p>方阵 $A$ 与方阵 $A^T$ 有相同的特征多项式以及相同的特征值.</p>
-<h3 id="性质-5-3-特征值的性质"><a href="#性质-5-3-特征值的性质" class="headerlink" title="性质 5.3 特征值的性质"></a>性质 5.3 特征值的性质</h3><p>设 $\lambda$ 为方阵 $A$ 的特征值，$\alpha$ 为对应于 $\lambda$ 的特征向量，则</p>
+<h2 id="性质-5-1"><a href="#性质-5-1" class="headerlink" title="性质 5.1"></a>性质 5.1</h2><script type="math/tex; mode=display">\sum_{j = 1}^{n} \lambda_j = \sum_{i = 1}^{n} a_{ii} = tr(A)</script><script type="math/tex; mode=display">\prod_{j = 1}^{n} \lambda_j = |A|</script><h2 id="性质-5-2-转置不变"><a href="#性质-5-2-转置不变" class="headerlink" title="性质 5.2 转置不变"></a>性质 5.2 转置不变</h2><p>方阵 $A$ 与方阵 $A^T$ 有相同的特征多项式以及相同的特征值.</p>
+<h2 id="性质-5-3-特征值的性质"><a href="#性质-5-3-特征值的性质" class="headerlink" title="性质 5.3 特征值的性质"></a>性质 5.3 特征值的性质</h2><p>设 $\lambda$ 为方阵 $A$ 的特征值，$\alpha$ 为对应于 $\lambda$ 的特征向量，则</p>
 <ol>
 <li><p>$k\lambda$ 是方阵 $kA$ 的特征值，$\alpha$ 也为 $kA$ 的对应与特征值 $kA$ 的特征向量，其中 $k$ 为任意常数；</p>
 </li>
@@ -838,35 +838,35 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 <li><p>$g(\lambda)$ 是 $g(A)$ 的特征值，$\alpha$ 也是 $g(A)$ 的对应于特征值 $g(\lambda)$ 的特征向量，其中 $g(x)$ 为多项式.</p>
 </li>
 </ol>
-<h3 id="性质-5-4-可逆条件"><a href="#性质-5-4-可逆条件" class="headerlink" title="性质 5.4 可逆条件"></a>性质 5.4 可逆条件</h3><p>$n$ 阶方阵 $A$ 可逆的充分必要条件为 $A$ 的 $n$ 个特征值全不为零.</p>
-<h3 id="性质-5-5-逆矩阵与伴随矩阵"><a href="#性质-5-5-逆矩阵与伴随矩阵" class="headerlink" title="性质 5.5 逆矩阵与伴随矩阵"></a>性质 5.5 逆矩阵与伴随矩阵</h3><ol>
+<h2 id="性质-5-4-可逆条件"><a href="#性质-5-4-可逆条件" class="headerlink" title="性质 5.4 可逆条件"></a>性质 5.4 可逆条件</h2><p>$n$ 阶方阵 $A$ 可逆的充分必要条件为 $A$ 的 $n$ 个特征值全不为零.</p>
+<h2 id="性质-5-5-逆矩阵与伴随矩阵"><a href="#性质-5-5-逆矩阵与伴随矩阵" class="headerlink" title="性质 5.5 逆矩阵与伴随矩阵"></a>性质 5.5 逆矩阵与伴随矩阵</h2><ol>
 <li><p>$\frac{1}{\lambda}$ 是逆矩阵 $A^{-1}$ 的特征值，且 $\alpha$ 是 $A^{-1}$ 的对应于特征值 $\frac{1}{\lambda}$ 的特征向量；</p>
 </li>
 <li><p>$\frac{1}{\lambda}|A|$ 为其伴随矩阵 $A^{\star}$ 的特征值，且 $\alpha$ 是 $A^{\star}$ 的对应于特征值 $\frac{1}{\lambda}|A|$ 的特征向量.</p>
 </li>
 </ol>
-<h3 id="性质-5-6"><a href="#性质-5-6" class="headerlink" title="性质 5.6"></a>性质 5.6</h3><p>几何重数 小于等于 代数重数</p>
-<h3 id="性质-5-7"><a href="#性质-5-7" class="headerlink" title="性质 5.7"></a>性质 5.7</h3><p>属于不同特征值的特征向量线性无关</p>
-<h3 id="定义-5-5-相似矩阵"><a href="#定义-5-5-相似矩阵" class="headerlink" title="定义 5.5 相似矩阵"></a>定义 5.5 相似矩阵</h3><p>$P$ 可逆</p>
+<h2 id="性质-5-6"><a href="#性质-5-6" class="headerlink" title="性质 5.6"></a>性质 5.6</h2><p>几何重数 小于等于 代数重数</p>
+<h2 id="性质-5-7"><a href="#性质-5-7" class="headerlink" title="性质 5.7"></a>性质 5.7</h2><p>属于不同特征值的特征向量线性无关</p>
+<h2 id="定义-5-5-相似矩阵"><a href="#定义-5-5-相似矩阵" class="headerlink" title="定义 5.5 相似矩阵"></a>定义 5.5 相似矩阵</h2><p>$P$ 可逆</p>
 <script type="math/tex; mode=display">P^{-1} A P = B</script><p>则称 $A$ 与 $B$ 相似</p>
-<h3 id="性质-5-8"><a href="#性质-5-8" class="headerlink" title="性质 5.8"></a>性质 5.8</h3><p>相似矩阵有相同的特征多项式，从而有相同的特征值、相同的行列式和相同的迹.</p>
-<h3 id="定理-5-1"><a href="#定理-5-1" class="headerlink" title="定理 5.1"></a>定理 5.1</h3><p>必有复数域上的<strong>上三角矩阵</strong>与矩阵A相似</p>
-<h3 id="定理-5-2-相似对角阵的条件"><a href="#定理-5-2-相似对角阵的条件" class="headerlink" title="定理 5.2 相似对角阵的条件"></a>定理 5.2 相似对角阵的条件</h3><p>A显示与对角阵的充分必要条件是A有n个线性无关的特征向量</p>
-<h3 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h3><p>若n阶方阵有n个不同的特征值，则A必可对角化</p>
-<h3 id="推论2"><a href="#推论2" class="headerlink" title="推论2"></a>推论2</h3><p>每个特征值的几何重数等于代数重数是方阵可相似对角化的充分必要条件</p>
-<h3 id="计算相似对角化"><a href="#计算相似对角化" class="headerlink" title="计算相似对角化"></a>计算相似对角化</h3><script type="math/tex; mode=display">|\lambda E-A|=0</script><p>求出每个特征值</p>
+<h2 id="性质-5-8"><a href="#性质-5-8" class="headerlink" title="性质 5.8"></a>性质 5.8</h2><p>相似矩阵有相同的特征多项式，从而有相同的特征值、相同的行列式和相同的迹.</p>
+<h2 id="定理-5-1"><a href="#定理-5-1" class="headerlink" title="定理 5.1"></a>定理 5.1</h2><p>必有复数域上的<strong>上三角矩阵</strong>与矩阵A相似</p>
+<h2 id="定理-5-2-相似对角阵的条件"><a href="#定理-5-2-相似对角阵的条件" class="headerlink" title="定理 5.2 相似对角阵的条件"></a>定理 5.2 相似对角阵的条件</h2><p>A显示与对角阵的充分必要条件是A有n个线性无关的特征向量</p>
+<h2 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h2><p>若n阶方阵有n个不同的特征值，则A必可对角化</p>
+<h2 id="推论2"><a href="#推论2" class="headerlink" title="推论2"></a>推论2</h2><p>每个特征值的几何重数等于代数重数是方阵可相似对角化的充分必要条件</p>
+<h2 id="计算相似对角化"><a href="#计算相似对角化" class="headerlink" title="计算相似对角化"></a>计算相似对角化</h2><script type="math/tex; mode=display">|\lambda E-A|=0</script><p>求出每个特征值</p>
 <ul>
 <li>若 $r(\lambda_j E - A) = n - n_j$ 则可对角化</li>
 </ul>
 <script type="math/tex; mode=display">(\lambda E-A)x=0</script><p>求出每个特征值对应的特征向量（特征空间）</p>
 <p>特征向量排排站，就是所求的变换矩阵P</p>
-<script type="math/tex; mode=display">P^{-1}AP = \Lambda</script><h3 id="性质-5-12-实对称矩阵"><a href="#性质-5-12-实对称矩阵" class="headerlink" title="性质 5.12 实对称矩阵"></a>性质 5.12 实对称矩阵</h3><p>实对称矩阵的特征值全是实数</p>
-<h3 id="性质-5-13"><a href="#性质-5-13" class="headerlink" title="性质 5.13"></a>性质 5.13</h3><p>实对称矩阵属于不同特征值的实特征向量正交</p>
-<h3 id="定理-5-3-正交相似对角阵"><a href="#定理-5-3-正交相似对角阵" class="headerlink" title="定理 5.3 正交相似对角阵"></a>定理 5.3 正交相似对角阵</h3><p>存在正交矩阵 $Q^T$ 使得</p>
-<script type="math/tex; mode=display">Q^{-1}AQ = Q^T A Q = \Lambda</script><h3 id="推论1"><a href="#推论1" class="headerlink" title="推论1"></a>推论1</h3><p>n阶实对称矩阵必有n个线性无关的特征<strong>向量</strong></p>
-<h3 id="推论2-1"><a href="#推论2-1" class="headerlink" title="推论2"></a>推论2</h3><p>n阶是对称矩阵的每个特征值的几何重数必等于它的代数重数</p>
-<h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><p>在求相似对角化的基础上把特征向量正交标准化就行</p>
-<h2 id="实二次型-and-合同变换"><a href="#实二次型-and-合同变换" class="headerlink" title="实二次型 and 合同变换"></a>实二次型 and 合同变换</h2><h3 id="定义-6-1-二次型机器矩阵表示"><a href="#定义-6-1-二次型机器矩阵表示" class="headerlink" title="定义 6.1 二次型机器矩阵表示"></a>定义 6.1 二次型机器矩阵表示</h3><ol>
+<script type="math/tex; mode=display">P^{-1}AP = \Lambda</script><h2 id="性质-5-12-实对称矩阵"><a href="#性质-5-12-实对称矩阵" class="headerlink" title="性质 5.12 实对称矩阵"></a>性质 5.12 实对称矩阵</h2><p>实对称矩阵的特征值全是实数</p>
+<h2 id="性质-5-13"><a href="#性质-5-13" class="headerlink" title="性质 5.13"></a>性质 5.13</h2><p>实对称矩阵属于不同特征值的实特征向量正交</p>
+<h2 id="定理-5-3-正交相似对角阵"><a href="#定理-5-3-正交相似对角阵" class="headerlink" title="定理 5.3 正交相似对角阵"></a>定理 5.3 正交相似对角阵</h2><p>存在正交矩阵 $Q^T$ 使得</p>
+<script type="math/tex; mode=display">Q^{-1}AQ = Q^T A Q = \Lambda</script><h2 id="推论1"><a href="#推论1" class="headerlink" title="推论1"></a>推论1</h2><p>n阶实对称矩阵必有n个线性无关的特征<strong>向量</strong></p>
+<h2 id="推论2-1"><a href="#推论2-1" class="headerlink" title="推论2"></a>推论2</h2><p>n阶是对称矩阵的每个特征值的几何重数必等于它的代数重数</p>
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>在求相似对角化的基础上把特征向量正交标准化就行</p>
+<h1 id="实二次型-and-合同变换"><a href="#实二次型-and-合同变换" class="headerlink" title="实二次型 and 合同变换"></a>实二次型 and 合同变换</h1><h2 id="定义-6-1-二次型机器矩阵表示"><a href="#定义-6-1-二次型机器矩阵表示" class="headerlink" title="定义 6.1 二次型机器矩阵表示"></a>定义 6.1 二次型机器矩阵表示</h2><ol>
 <li><p>二次型：$f(x_1, x_2, \dots, x_n)$</p>
 </li>
 <li><p>标准二次型：$f(x_1, x_2, \dots, x_n) = a_{11}x_1^2 + a_{22}x_2^2 + \cdots + a_{nn}x_n^2$</p>
@@ -878,9 +878,9 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 <li><p>$r(f) = r(A)$</p>
 </li>
 </ol>
-<h3 id="定义-6-2-线性替换"><a href="#定义-6-2-线性替换" class="headerlink" title="定义 6.2 线性替换"></a>定义 6.2 线性替换</h3><p>若 $P$ 可逆，称</p>
+<h2 id="定义-6-2-线性替换"><a href="#定义-6-2-线性替换" class="headerlink" title="定义 6.2 线性替换"></a>定义 6.2 线性替换</h2><p>若 $P$ 可逆，称</p>
 <script type="math/tex; mode=display">x = Py</script><p>为非奇异的线性替换</p>
-<h3 id="定义-6-3-合同"><a href="#定义-6-3-合同" class="headerlink" title="定义 6.3 合同"></a>定义 6.3 合同</h3><p>若 $P$ 可逆，$P^TAP = B$ 则称矩阵 $A$ 与 $B$ 合同.</p>
+<h2 id="定义-6-3-合同"><a href="#定义-6-3-合同" class="headerlink" title="定义 6.3 合同"></a>定义 6.3 合同</h2><p>若 $P$ 可逆，$P^TAP = B$ 则称矩阵 $A$ 与 $B$ 合同.</p>
 <p>满足</p>
 <ol>
 <li><p>反身性</p>
@@ -894,17 +894,17 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 <li><p>A对称则B对称</p>
 </li>
 </ol>
-<h3 id="定理-6-1"><a href="#定理-6-1" class="headerlink" title="定理 6.1"></a>定理 6.1</h3><p>二次型 $f=x^TAx$ 经非奇异线性替换 $x=Py$ 仍变为一个二次型 $f=y^T(P^AP)y=y^TBy$，且他们的矩阵合同</p>
-<h3 id="定理-6-2-标准化"><a href="#定理-6-2-标准化" class="headerlink" title="定理 6.2 标准化"></a>定理 6.2 标准化</h3><p>取 A 的正交变换矩阵，即可</p>
-<h3 id="定理-6-4-惯性定理"><a href="#定理-6-4-惯性定理" class="headerlink" title="定理 6.4 惯性定理"></a>定理 6.4 惯性定理</h3><p>任何实二次型必存在非奇异线性替换化二次型为规范标准型，且规范标准型是唯一的</p>
+<h2 id="定理-6-1"><a href="#定理-6-1" class="headerlink" title="定理 6.1"></a>定理 6.1</h2><p>二次型 $f=x^TAx$ 经非奇异线性替换 $x=Py$ 仍变为一个二次型 $f=y^T(P^AP)y=y^TBy$，且他们的矩阵合同</p>
+<h2 id="定理-6-2-标准化"><a href="#定理-6-2-标准化" class="headerlink" title="定理 6.2 标准化"></a>定理 6.2 标准化</h2><p>取 A 的正交变换矩阵，即可</p>
+<h2 id="定理-6-4-惯性定理"><a href="#定理-6-4-惯性定理" class="headerlink" title="定理 6.4 惯性定理"></a>定理 6.4 惯性定理</h2><p>任何实二次型必存在非奇异线性替换化二次型为规范标准型，且规范标准型是唯一的</p>
 <p>$p.s.$ 惯性定理的几何意义就是二次曲线（二次曲面）方程经非奇异线性替换化为标准方程时，标准方程的系数与所做的线性替换有关，但曲线（曲面）的类型（如椭圆、双曲线型）时不会因所做的线性替换不同而改变</p>
-<h3 id="定义-6-4"><a href="#定义-6-4" class="headerlink" title="定义 6.4"></a>定义 6.4</h3><p>正项的个数称为<strong>正惯性指数</strong></p>
+<h2 id="定义-6-4"><a href="#定义-6-4" class="headerlink" title="定义 6.4"></a>定义 6.4</h2><p>正项的个数称为<strong>正惯性指数</strong></p>
 <p>负项的个数称为<strong>负惯性指数</strong></p>
 <p>其中 $s = p - q$ 称为<strong>符号差</strong></p>
-<h3 id="定义-6-5-正定二次型"><a href="#定义-6-5-正定二次型" class="headerlink" title="定义 6.5 正定二次型"></a>定义 6.5 正定二次型</h3><p>若 $f=x^TAx$ 对任意非零向量 $x$ 都有 $f(x) = x^TAx &gt; 0$ 则称二次型 $f$ 为<strong>正定二次型</strong>，并称其矩阵 $A$ 为<strong>正定矩阵</strong></p>
-<h3 id="定理-6-5"><a href="#定理-6-5" class="headerlink" title="定理 6.5"></a>定理 6.5</h3><p>标准二次型正定的充分必要条件是其每个系数都大于零</p>
-<h3 id="定理-6-6"><a href="#定理-6-6" class="headerlink" title="定理 6.6"></a>定理 6.6</h3><p>实二次型 $f = x^TAx$ 经非奇异线性替换后其正定性不变。</p>
-<h3 id="定理-6-7"><a href="#定理-6-7" class="headerlink" title="定理 6.7"></a>定理 6.7</h3><p>设 $A$ 为 $n$ 阶是对称矩阵，则下述命题等价</p>
+<h2 id="定义-6-5-正定二次型"><a href="#定义-6-5-正定二次型" class="headerlink" title="定义 6.5 正定二次型"></a>定义 6.5 正定二次型</h2><p>若 $f=x^TAx$ 对任意非零向量 $x$ 都有 $f(x) = x^TAx &gt; 0$ 则称二次型 $f$ 为<strong>正定二次型</strong>，并称其矩阵 $A$ 为<strong>正定矩阵</strong></p>
+<h2 id="定理-6-5"><a href="#定理-6-5" class="headerlink" title="定理 6.5"></a>定理 6.5</h2><p>标准二次型正定的充分必要条件是其每个系数都大于零</p>
+<h2 id="定理-6-6"><a href="#定理-6-6" class="headerlink" title="定理 6.6"></a>定理 6.6</h2><p>实二次型 $f = x^TAx$ 经非奇异线性替换后其正定性不变。</p>
+<h2 id="定理-6-7"><a href="#定理-6-7" class="headerlink" title="定理 6.7"></a>定理 6.7</h2><p>设 $A$ 为 $n$ 阶是对称矩阵，则下述命题等价</p>
 <ol>
 <li><p>$A$ 为正定矩阵；</p>
 </li>
@@ -915,8 +915,8 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 <li><p>存在非奇异矩阵 $M$ 使得 $A = M^TM$；</p>
 </li>
 </ol>
-<h3 id="定理-6-8-正定的充要条件"><a href="#定理-6-8-正定的充要条件" class="headerlink" title="定理 6.8 正定的充要条件"></a>定理 6.8 正定的充要条件</h3><p>$A$ 的各阶顺序主子式全大于零.</p>
-<h3 id="定义-6-7"><a href="#定义-6-7" class="headerlink" title="定义 6.7"></a>定义 6.7</h3><p>若任意非零向量 $x$</p>
+<h2 id="定理-6-8-正定的充要条件"><a href="#定理-6-8-正定的充要条件" class="headerlink" title="定理 6.8 正定的充要条件"></a>定理 6.8 正定的充要条件</h2><p>$A$ 的各阶顺序主子式全大于零.</p>
+<h2 id="定义-6-7"><a href="#定义-6-7" class="headerlink" title="定义 6.7"></a>定义 6.7</h2><p>若任意非零向量 $x$</p>
 <ol>
 <li><p>$f = x^TAx &lt; 0$ ：负定二次型</p>
 </li>
@@ -1101,7 +1101,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性方程组与矩阵"><span class="nav-number">1.</span> <span class="nav-text">线性方程组与矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1-7-同型"><span class="nav-number">1.1.</span> <span class="nav-text">定义 1.7 同型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1-9-阶梯形矩阵"><span class="nav-number">1.2.</span> <span class="nav-text">定义 1.9 阶梯形矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1-10-最简形"><span class="nav-number">1.3.</span> <span class="nav-text">定义 1.10 最简形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-1-3-线性方程组解的判别"><span class="nav-number">1.4.</span> <span class="nav-text">定理 1.3 线性方程组解的判别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-4-可换矩阵"><span class="nav-number">1.5.</span> <span class="nav-text">定义 2.4 可换矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-7-矩阵的转置"><span class="nav-number">1.6.</span> <span class="nav-text">定义 2.7 矩阵的转置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-4-矩阵转置的性质"><span class="nav-number">1.7.</span> <span class="nav-text">性质 2.4 矩阵转置的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-8-方阵的迹"><span class="nav-number">1.8.</span> <span class="nav-text">定义 2.8 方阵的迹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-5-方阵的迹的性质"><span class="nav-number">1.9.</span> <span class="nav-text">性质 2.5 方阵的迹的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-11-余子式"><span class="nav-number">1.10.</span> <span class="nav-text">定义 2.11 余子式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行列式"><span class="nav-number">2.</span> <span class="nav-text">行列式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-6-转置不变"><span class="nav-number">2.1.</span> <span class="nav-text">性质 2.6 转置不变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-7-交换变号"><span class="nav-number">2.2.</span> <span class="nav-text">性质 2.7 交换变号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-8-数乘一行"><span class="nav-number">2.3.</span> <span class="nav-text">性质 2.8 数乘一行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-9-加和性"><span class="nav-number">2.4.</span> <span class="nav-text">性质 2.9 加和性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-10-行间加和不变性"><span class="nav-number">2.5.</span> <span class="nav-text">性质 2.10 行间加和不变性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-11-任意展开"><span class="nav-number">2.6.</span> <span class="nav-text">性质 2.11 任意展开</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例-2-22-范德蒙德行列式"><span class="nav-number">2.7.</span> <span class="nav-text">例 2.22 范德蒙德行列式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-12-同阶可拆"><span class="nav-number">2.8.</span> <span class="nav-text">性质 2.12 同阶可拆</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可逆矩阵"><span class="nav-number">3.</span> <span class="nav-text">可逆矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-14-逆矩阵的定义"><span class="nav-number">3.1.</span> <span class="nav-text">定义 2.14 逆矩阵的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-1-逆矩阵唯一"><span class="nav-number">3.2.</span> <span class="nav-text">定理 2.1 逆矩阵唯一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-15-伴随矩阵"><span class="nav-number">3.3.</span> <span class="nav-text">定义 2.15 伴随矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-2-1"><span class="nav-number">3.4.</span> <span class="nav-text">命题 2.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-2-可逆矩阵"><span class="nav-number">3.5.</span> <span class="nav-text">定理 2.2 可逆矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例-2-26"><span class="nav-number">3.6.</span> <span class="nav-text">例 2.26</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-3-克拉默法则"><span class="nav-number">3.7.</span> <span class="nav-text">定理 2.3 克拉默法则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-2-2"><span class="nav-number">3.8.</span> <span class="nav-text">命题 2.2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-13-可逆矩阵的运算性质"><span class="nav-number">3.9.</span> <span class="nav-text">性质 2.13 可逆矩阵的运算性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#秩"><span class="nav-number">4.</span> <span class="nav-text">秩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-18-等价"><span class="nav-number">4.1.</span> <span class="nav-text">定义 2.18 等价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-19-初等矩阵"><span class="nav-number">4.2.</span> <span class="nav-text">定义 2.19 初等矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-4-左行右列"><span class="nav-number">4.3.</span> <span class="nav-text">定理 2.4 左行右列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-5"><span class="nav-number">4.4.</span> <span class="nav-text">定理 2.5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-2-21-秩的定义"><span class="nav-number">4.5.</span> <span class="nav-text">定义 2.21 秩的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2-14-秩的性质"><span class="nav-number">4.6.</span> <span class="nav-text">性质 2.14 秩的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-6"><span class="nav-number">4.7.</span> <span class="nav-text">定理 2.6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-8-初等变换不改变方程的解"><span class="nav-number">4.8.</span> <span class="nav-text">定理 2.8 初等变换不改变方程的解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-2-9-解的判别"><span class="nav-number">4.9.</span> <span class="nav-text">定理 2.9 解的判别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初等变换求逆矩阵"><span class="nav-number">4.10.</span> <span class="nav-text">初等变换求逆矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#n维向量与线性方程组"><span class="nav-number">5.</span> <span class="nav-text">n维向量与线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性组合"><span class="nav-number">5.1.</span> <span class="nav-text">线性组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表出"><span class="nav-number">5.2.</span> <span class="nav-text">线性表出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-3-5-向量组的等价"><span class="nav-number">5.3.</span> <span class="nav-text">定义 3.5 向量组的等价</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-3-2-线性表示的传递性"><span class="nav-number">5.4.</span> <span class="nav-text">命题 3.2 线性表示的传递性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-3-2-等价的性质"><span class="nav-number">5.5.</span> <span class="nav-text">性质 3.2 等价的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-3-6-线性相关与线性无关"><span class="nav-number">5.6.</span> <span class="nav-text">定义 3.6 线性相关与线性无关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-3-2"><span class="nav-number">5.7.</span> <span class="nav-text">定理 3.2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-3-3"><span class="nav-number">5.8.</span> <span class="nav-text">定理 3.3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-3-4"><span class="nav-number">5.9.</span> <span class="nav-text">定理 3.4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-3-7-极大线性无关组"><span class="nav-number">5.10.</span> <span class="nav-text">定义 3.7 极大线性无关组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-3-6"><span class="nav-number">5.11.</span> <span class="nav-text">命题 3.6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-3-7"><span class="nav-number">5.12.</span> <span class="nav-text">命题 3.7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-3-8-向量组的秩"><span class="nav-number">5.13.</span> <span class="nav-text">定义 3.8 向量组的秩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-3-8"><span class="nav-number">5.14.</span> <span class="nav-text">命题 3.8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-3-9"><span class="nav-number">5.15.</span> <span class="nav-text">命题 3.9</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-3-10"><span class="nav-number">5.16.</span> <span class="nav-text">命题 3.10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-3-11"><span class="nav-number">5.17.</span> <span class="nav-text">命题 3.11</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性方程组解的结构"><span class="nav-number">6.</span> <span class="nav-text">线性方程组解的结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-3-9-基础解系"><span class="nav-number">6.1.</span> <span class="nav-text">定义 3.9 基础解系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-3-7-基础解系的大小"><span class="nav-number">6.2.</span> <span class="nav-text">定理 3.7 基础解系的大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非齐次线性方程组解的结构"><span class="nav-number">6.3.</span> <span class="nav-text">非齐次线性方程组解的结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性空间与线性变换"><span class="nav-number">7.</span> <span class="nav-text">线性空间与线性变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-1-线性空间的定义"><span class="nav-number">7.1.</span> <span class="nav-text">定义 4.1 线性空间的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-4-1-线性空间的简单性质"><span class="nav-number">7.2.</span> <span class="nav-text">性质 4.1 线性空间的简单性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-4-1-线性子空间的条件"><span class="nav-number">7.3.</span> <span class="nav-text">命题 4.1 线性子空间的条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-4-基"><span class="nav-number">7.4.</span> <span class="nav-text">定义 4.4 基</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-5-坐标"><span class="nav-number">7.5.</span> <span class="nav-text">定义 4.5 坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-6-同构"><span class="nav-number">7.6.</span> <span class="nav-text">定义 4.6 同构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-4-2"><span class="nav-number">7.7.</span> <span class="nav-text">命题 4.2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-7-过渡矩阵"><span class="nav-number">7.8.</span> <span class="nav-text">定义 4.7 过渡矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-4-1-基变换"><span class="nav-number">7.9.</span> <span class="nav-text">定理 4.1 基变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-8-内积与欧氏空间"><span class="nav-number">7.10.</span> <span class="nav-text">定义 4.8 内积与欧氏空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-9-向量长度"><span class="nav-number">7.11.</span> <span class="nav-text">定义 4.9 向量长度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-4-2-向量长度的性质"><span class="nav-number">7.12.</span> <span class="nav-text">定理 4.2 向量长度的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-10-向量夹角"><span class="nav-number">7.13.</span> <span class="nav-text">定义 4.10 向量夹角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-11-正交向量组"><span class="nav-number">7.14.</span> <span class="nav-text">定义 4.11 正交向量组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-12-向量距离"><span class="nav-number">7.15.</span> <span class="nav-text">定义 4.12 向量距离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命题-4-3"><span class="nav-number">7.16.</span> <span class="nav-text">命题 4.3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-13-标准正交基"><span class="nav-number">7.17.</span> <span class="nav-text">定义 4.13 标准正交基</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#施密特正交化"><span class="nav-number">7.18.</span> <span class="nav-text">施密特正交化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-14-正交矩阵"><span class="nav-number">7.19.</span> <span class="nav-text">定义 4.14 正交矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-4-3-正交矩阵的判定"><span class="nav-number">7.20.</span> <span class="nav-text">定理 4.3 正交矩阵的判定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-4-2-正交矩阵的性质"><span class="nav-number">7.21.</span> <span class="nav-text">性质 4.2 正交矩阵的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-15-线性变换"><span class="nav-number">7.22.</span> <span class="nav-text">定义 4.15 线性变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-16-核空间与像空间"><span class="nav-number">7.23.</span> <span class="nav-text">定义 4.16 核空间与像空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-17-线性变换的运算律"><span class="nav-number">7.24.</span> <span class="nav-text">定义 4.17 线性变换的运算律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-4-4"><span class="nav-number">7.25.</span> <span class="nav-text">定理 4.4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-4-3-线性变换的性质"><span class="nav-number">7.26.</span> <span class="nav-text">性质 4.3 线性变换的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-4-18-线性变换的矩阵"><span class="nav-number">7.27.</span> <span class="nav-text">定义 4.18 线性变换的矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-4-5-线性变换与矩阵对应"><span class="nav-number">7.28.</span> <span class="nav-text">定理 4.5 线性变换与矩阵对应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-4-6"><span class="nav-number">7.29.</span> <span class="nav-text">定理 4.6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-4-7-线性变换在不同基下矩阵间的关系"><span class="nav-number">7.30.</span> <span class="nav-text">定理 4.7 线性变换在不同基下矩阵间的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相似变换"><span class="nav-number">8.</span> <span class="nav-text">相似变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-5-1-特征值与特征向量"><span class="nav-number">8.1.</span> <span class="nav-text">定理 5.1 特征值与特征向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-5-2-几何重数"><span class="nav-number">8.2.</span> <span class="nav-text">定义 5.2 几何重数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-5-3-特征多项式"><span class="nav-number">8.3.</span> <span class="nav-text">定义 5.3 特征多项式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-5-4-代数重数"><span class="nav-number">8.4.</span> <span class="nav-text">定义 5.4 代数重数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-5-1"><span class="nav-number">8.5.</span> <span class="nav-text">性质 5.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-5-2-转置不变"><span class="nav-number">8.6.</span> <span class="nav-text">性质 5.2 转置不变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-5-3-特征值的性质"><span class="nav-number">8.7.</span> <span class="nav-text">性质 5.3 特征值的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-5-4-可逆条件"><span class="nav-number">8.8.</span> <span class="nav-text">性质 5.4 可逆条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-5-5-逆矩阵与伴随矩阵"><span class="nav-number">8.9.</span> <span class="nav-text">性质 5.5 逆矩阵与伴随矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-5-6"><span class="nav-number">8.10.</span> <span class="nav-text">性质 5.6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-5-7"><span class="nav-number">8.11.</span> <span class="nav-text">性质 5.7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-5-5-相似矩阵"><span class="nav-number">8.12.</span> <span class="nav-text">定义 5.5 相似矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-5-8"><span class="nav-number">8.13.</span> <span class="nav-text">性质 5.8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-5-1"><span class="nav-number">8.14.</span> <span class="nav-text">定理 5.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-5-2-相似对角阵的条件"><span class="nav-number">8.15.</span> <span class="nav-text">定理 5.2 相似对角阵的条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论"><span class="nav-number">8.16.</span> <span class="nav-text">推论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论2"><span class="nav-number">8.17.</span> <span class="nav-text">推论2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算相似对角化"><span class="nav-number">8.18.</span> <span class="nav-text">计算相似对角化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-5-12-实对称矩阵"><span class="nav-number">8.19.</span> <span class="nav-text">性质 5.12 实对称矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-5-13"><span class="nav-number">8.20.</span> <span class="nav-text">性质 5.13</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-5-3-正交相似对角阵"><span class="nav-number">8.21.</span> <span class="nav-text">定理 5.3 正交相似对角阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论1"><span class="nav-number">8.22.</span> <span class="nav-text">推论1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论2-1"><span class="nav-number">8.23.</span> <span class="nav-text">推论2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算"><span class="nav-number">8.24.</span> <span class="nav-text">计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实二次型-and-合同变换"><span class="nav-number">9.</span> <span class="nav-text">实二次型 and 合同变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-6-1-二次型机器矩阵表示"><span class="nav-number">9.1.</span> <span class="nav-text">定义 6.1 二次型机器矩阵表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-6-2-线性替换"><span class="nav-number">9.2.</span> <span class="nav-text">定义 6.2 线性替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-6-3-合同"><span class="nav-number">9.3.</span> <span class="nav-text">定义 6.3 合同</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-6-1"><span class="nav-number">9.4.</span> <span class="nav-text">定理 6.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-6-2-标准化"><span class="nav-number">9.5.</span> <span class="nav-text">定理 6.2 标准化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-6-4-惯性定理"><span class="nav-number">9.6.</span> <span class="nav-text">定理 6.4 惯性定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-6-4"><span class="nav-number">9.7.</span> <span class="nav-text">定义 6.4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-6-5-正定二次型"><span class="nav-number">9.8.</span> <span class="nav-text">定义 6.5 正定二次型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-6-5"><span class="nav-number">9.9.</span> <span class="nav-text">定理 6.5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-6-6"><span class="nav-number">9.10.</span> <span class="nav-text">定理 6.6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-6-7"><span class="nav-number">9.11.</span> <span class="nav-text">定理 6.7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理-6-8-正定的充要条件"><span class="nav-number">9.12.</span> <span class="nav-text">定理 6.8 正定的充要条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-6-7"><span class="nav-number">9.13.</span> <span class="nav-text">定义 6.7</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性方程组与矩阵"><span class="nav-number">1.</span> <span class="nav-text">线性方程组与矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-1-7-同型"><span class="nav-number">1.1.</span> <span class="nav-text">定义 1.7 同型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-1-9-阶梯形矩阵"><span class="nav-number">1.2.</span> <span class="nav-text">定义 1.9 阶梯形矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-1-10-最简形"><span class="nav-number">1.3.</span> <span class="nav-text">定义 1.10 最简形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-1-3-线性方程组解的判别"><span class="nav-number">1.4.</span> <span class="nav-text">定理 1.3 线性方程组解的判别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-2-4-可换矩阵"><span class="nav-number">1.5.</span> <span class="nav-text">定义 2.4 可换矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-2-7-矩阵的转置"><span class="nav-number">1.6.</span> <span class="nav-text">定义 2.7 矩阵的转置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-2-4-矩阵转置的性质"><span class="nav-number">1.7.</span> <span class="nav-text">性质 2.4 矩阵转置的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-2-8-方阵的迹"><span class="nav-number">1.8.</span> <span class="nav-text">定义 2.8 方阵的迹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-2-5-方阵的迹的性质"><span class="nav-number">1.9.</span> <span class="nav-text">性质 2.5 方阵的迹的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-2-11-余子式"><span class="nav-number">1.10.</span> <span class="nav-text">定义 2.11 余子式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#行列式"><span class="nav-number">2.</span> <span class="nav-text">行列式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-2-6-转置不变"><span class="nav-number">2.1.</span> <span class="nav-text">性质 2.6 转置不变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-2-7-交换变号"><span class="nav-number">2.2.</span> <span class="nav-text">性质 2.7 交换变号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-2-8-数乘一行"><span class="nav-number">2.3.</span> <span class="nav-text">性质 2.8 数乘一行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-2-9-加和性"><span class="nav-number">2.4.</span> <span class="nav-text">性质 2.9 加和性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-2-10-行间加和不变性"><span class="nav-number">2.5.</span> <span class="nav-text">性质 2.10 行间加和不变性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-2-11-任意展开"><span class="nav-number">2.6.</span> <span class="nav-text">性质 2.11 任意展开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例-2-22-范德蒙德行列式"><span class="nav-number">2.7.</span> <span class="nav-text">例 2.22 范德蒙德行列式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-2-12-同阶可拆"><span class="nav-number">2.8.</span> <span class="nav-text">性质 2.12 同阶可拆</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可逆矩阵"><span class="nav-number">3.</span> <span class="nav-text">可逆矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-2-14-逆矩阵的定义"><span class="nav-number">3.1.</span> <span class="nav-text">定义 2.14 逆矩阵的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-2-1-逆矩阵唯一"><span class="nav-number">3.2.</span> <span class="nav-text">定理 2.1 逆矩阵唯一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-2-15-伴随矩阵"><span class="nav-number">3.3.</span> <span class="nav-text">定义 2.15 伴随矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-2-1"><span class="nav-number">3.4.</span> <span class="nav-text">命题 2.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-2-2-可逆矩阵"><span class="nav-number">3.5.</span> <span class="nav-text">定理 2.2 可逆矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例-2-26"><span class="nav-number">3.6.</span> <span class="nav-text">例 2.26</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-2-3-克拉默法则"><span class="nav-number">3.7.</span> <span class="nav-text">定理 2.3 克拉默法则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-2-2"><span class="nav-number">3.8.</span> <span class="nav-text">命题 2.2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-2-13-可逆矩阵的运算性质"><span class="nav-number">3.9.</span> <span class="nav-text">性质 2.13 可逆矩阵的运算性质</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#秩"><span class="nav-number">4.</span> <span class="nav-text">秩</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-2-18-等价"><span class="nav-number">4.1.</span> <span class="nav-text">定义 2.18 等价</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-2-19-初等矩阵"><span class="nav-number">4.2.</span> <span class="nav-text">定义 2.19 初等矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-2-4-左行右列"><span class="nav-number">4.3.</span> <span class="nav-text">定理 2.4 左行右列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-2-5"><span class="nav-number">4.4.</span> <span class="nav-text">定理 2.5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-2-21-秩的定义"><span class="nav-number">4.5.</span> <span class="nav-text">定义 2.21 秩的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-2-14-秩的性质"><span class="nav-number">4.6.</span> <span class="nav-text">性质 2.14 秩的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-2-6"><span class="nav-number">4.7.</span> <span class="nav-text">定理 2.6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-2-8-初等变换不改变方程的解"><span class="nav-number">4.8.</span> <span class="nav-text">定理 2.8 初等变换不改变方程的解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-2-9-解的判别"><span class="nav-number">4.9.</span> <span class="nav-text">定理 2.9 解的判别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初等变换求逆矩阵"><span class="nav-number">4.10.</span> <span class="nav-text">初等变换求逆矩阵</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#n维向量与线性方程组"><span class="nav-number">5.</span> <span class="nav-text">n维向量与线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性组合"><span class="nav-number">5.1.</span> <span class="nav-text">线性组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性表出"><span class="nav-number">5.2.</span> <span class="nav-text">线性表出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-3-5-向量组的等价"><span class="nav-number">5.3.</span> <span class="nav-text">定义 3.5 向量组的等价</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-3-2-线性表示的传递性"><span class="nav-number">5.4.</span> <span class="nav-text">命题 3.2 线性表示的传递性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-3-2-等价的性质"><span class="nav-number">5.5.</span> <span class="nav-text">性质 3.2 等价的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-3-6-线性相关与线性无关"><span class="nav-number">5.6.</span> <span class="nav-text">定义 3.6 线性相关与线性无关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-3-2"><span class="nav-number">5.7.</span> <span class="nav-text">定理 3.2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-3-3"><span class="nav-number">5.8.</span> <span class="nav-text">定理 3.3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-3-4"><span class="nav-number">5.9.</span> <span class="nav-text">定理 3.4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-3-7-极大线性无关组"><span class="nav-number">5.10.</span> <span class="nav-text">定义 3.7 极大线性无关组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-3-6"><span class="nav-number">5.11.</span> <span class="nav-text">命题 3.6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-3-7"><span class="nav-number">5.12.</span> <span class="nav-text">命题 3.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-3-8-向量组的秩"><span class="nav-number">5.13.</span> <span class="nav-text">定义 3.8 向量组的秩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-3-8"><span class="nav-number">5.14.</span> <span class="nav-text">命题 3.8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-3-9"><span class="nav-number">5.15.</span> <span class="nav-text">命题 3.9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-3-10"><span class="nav-number">5.16.</span> <span class="nav-text">命题 3.10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-3-11"><span class="nav-number">5.17.</span> <span class="nav-text">命题 3.11</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线性方程组解的结构"><span class="nav-number">6.</span> <span class="nav-text">线性方程组解的结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-3-9-基础解系"><span class="nav-number">6.1.</span> <span class="nav-text">定义 3.9 基础解系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-3-7-基础解系的大小"><span class="nav-number">6.2.</span> <span class="nav-text">定理 3.7 基础解系的大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非齐次线性方程组解的结构"><span class="nav-number">6.3.</span> <span class="nav-text">非齐次线性方程组解的结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线性空间与线性变换"><span class="nav-number">7.</span> <span class="nav-text">线性空间与线性变换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-1-线性空间的定义"><span class="nav-number">7.1.</span> <span class="nav-text">定义 4.1 线性空间的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-4-1-线性空间的简单性质"><span class="nav-number">7.2.</span> <span class="nav-text">性质 4.1 线性空间的简单性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-4-1-线性子空间的条件"><span class="nav-number">7.3.</span> <span class="nav-text">命题 4.1 线性子空间的条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-4-基"><span class="nav-number">7.4.</span> <span class="nav-text">定义 4.4 基</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-5-坐标"><span class="nav-number">7.5.</span> <span class="nav-text">定义 4.5 坐标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-6-同构"><span class="nav-number">7.6.</span> <span class="nav-text">定义 4.6 同构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-4-2"><span class="nav-number">7.7.</span> <span class="nav-text">命题 4.2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-7-过渡矩阵"><span class="nav-number">7.8.</span> <span class="nav-text">定义 4.7 过渡矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-4-1-基变换"><span class="nav-number">7.9.</span> <span class="nav-text">定理 4.1 基变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-8-内积与欧氏空间"><span class="nav-number">7.10.</span> <span class="nav-text">定义 4.8 内积与欧氏空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-9-向量长度"><span class="nav-number">7.11.</span> <span class="nav-text">定义 4.9 向量长度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-4-2-向量长度的性质"><span class="nav-number">7.12.</span> <span class="nav-text">定理 4.2 向量长度的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-10-向量夹角"><span class="nav-number">7.13.</span> <span class="nav-text">定义 4.10 向量夹角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-11-正交向量组"><span class="nav-number">7.14.</span> <span class="nav-text">定义 4.11 正交向量组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-12-向量距离"><span class="nav-number">7.15.</span> <span class="nav-text">定义 4.12 向量距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命题-4-3"><span class="nav-number">7.16.</span> <span class="nav-text">命题 4.3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-13-标准正交基"><span class="nav-number">7.17.</span> <span class="nav-text">定义 4.13 标准正交基</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#施密特正交化"><span class="nav-number">7.18.</span> <span class="nav-text">施密特正交化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-14-正交矩阵"><span class="nav-number">7.19.</span> <span class="nav-text">定义 4.14 正交矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-4-3-正交矩阵的判定"><span class="nav-number">7.20.</span> <span class="nav-text">定理 4.3 正交矩阵的判定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-4-2-正交矩阵的性质"><span class="nav-number">7.21.</span> <span class="nav-text">性质 4.2 正交矩阵的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-15-线性变换"><span class="nav-number">7.22.</span> <span class="nav-text">定义 4.15 线性变换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-16-核空间与像空间"><span class="nav-number">7.23.</span> <span class="nav-text">定义 4.16 核空间与像空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-17-线性变换的运算律"><span class="nav-number">7.24.</span> <span class="nav-text">定义 4.17 线性变换的运算律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-4-4"><span class="nav-number">7.25.</span> <span class="nav-text">定理 4.4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-4-3-线性变换的性质"><span class="nav-number">7.26.</span> <span class="nav-text">性质 4.3 线性变换的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-4-18-线性变换的矩阵"><span class="nav-number">7.27.</span> <span class="nav-text">定义 4.18 线性变换的矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-4-5-线性变换与矩阵对应"><span class="nav-number">7.28.</span> <span class="nav-text">定理 4.5 线性变换与矩阵对应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-4-6"><span class="nav-number">7.29.</span> <span class="nav-text">定理 4.6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-4-7-线性变换在不同基下矩阵间的关系"><span class="nav-number">7.30.</span> <span class="nav-text">定理 4.7 线性变换在不同基下矩阵间的关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相似变换"><span class="nav-number">8.</span> <span class="nav-text">相似变换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-5-1-特征值与特征向量"><span class="nav-number">8.1.</span> <span class="nav-text">定理 5.1 特征值与特征向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-5-2-几何重数"><span class="nav-number">8.2.</span> <span class="nav-text">定义 5.2 几何重数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-5-3-特征多项式"><span class="nav-number">8.3.</span> <span class="nav-text">定义 5.3 特征多项式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-5-4-代数重数"><span class="nav-number">8.4.</span> <span class="nav-text">定义 5.4 代数重数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-5-1"><span class="nav-number">8.5.</span> <span class="nav-text">性质 5.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-5-2-转置不变"><span class="nav-number">8.6.</span> <span class="nav-text">性质 5.2 转置不变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-5-3-特征值的性质"><span class="nav-number">8.7.</span> <span class="nav-text">性质 5.3 特征值的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-5-4-可逆条件"><span class="nav-number">8.8.</span> <span class="nav-text">性质 5.4 可逆条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-5-5-逆矩阵与伴随矩阵"><span class="nav-number">8.9.</span> <span class="nav-text">性质 5.5 逆矩阵与伴随矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-5-6"><span class="nav-number">8.10.</span> <span class="nav-text">性质 5.6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-5-7"><span class="nav-number">8.11.</span> <span class="nav-text">性质 5.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-5-5-相似矩阵"><span class="nav-number">8.12.</span> <span class="nav-text">定义 5.5 相似矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-5-8"><span class="nav-number">8.13.</span> <span class="nav-text">性质 5.8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-5-1"><span class="nav-number">8.14.</span> <span class="nav-text">定理 5.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-5-2-相似对角阵的条件"><span class="nav-number">8.15.</span> <span class="nav-text">定理 5.2 相似对角阵的条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推论"><span class="nav-number">8.16.</span> <span class="nav-text">推论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推论2"><span class="nav-number">8.17.</span> <span class="nav-text">推论2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算相似对角化"><span class="nav-number">8.18.</span> <span class="nav-text">计算相似对角化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-5-12-实对称矩阵"><span class="nav-number">8.19.</span> <span class="nav-text">性质 5.12 实对称矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-5-13"><span class="nav-number">8.20.</span> <span class="nav-text">性质 5.13</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-5-3-正交相似对角阵"><span class="nav-number">8.21.</span> <span class="nav-text">定理 5.3 正交相似对角阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推论1"><span class="nav-number">8.22.</span> <span class="nav-text">推论1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推论2-1"><span class="nav-number">8.23.</span> <span class="nav-text">推论2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算"><span class="nav-number">8.24.</span> <span class="nav-text">计算</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实二次型-and-合同变换"><span class="nav-number">9.</span> <span class="nav-text">实二次型 and 合同变换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-6-1-二次型机器矩阵表示"><span class="nav-number">9.1.</span> <span class="nav-text">定义 6.1 二次型机器矩阵表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-6-2-线性替换"><span class="nav-number">9.2.</span> <span class="nav-text">定义 6.2 线性替换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-6-3-合同"><span class="nav-number">9.3.</span> <span class="nav-text">定义 6.3 合同</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-6-1"><span class="nav-number">9.4.</span> <span class="nav-text">定理 6.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-6-2-标准化"><span class="nav-number">9.5.</span> <span class="nav-text">定理 6.2 标准化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-6-4-惯性定理"><span class="nav-number">9.6.</span> <span class="nav-text">定理 6.4 惯性定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-6-4"><span class="nav-number">9.7.</span> <span class="nav-text">定义 6.4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-6-5-正定二次型"><span class="nav-number">9.8.</span> <span class="nav-text">定义 6.5 正定二次型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-6-5"><span class="nav-number">9.9.</span> <span class="nav-text">定理 6.5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-6-6"><span class="nav-number">9.10.</span> <span class="nav-text">定理 6.6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-6-7"><span class="nav-number">9.11.</span> <span class="nav-text">定理 6.7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理-6-8-正定的充要条件"><span class="nav-number">9.12.</span> <span class="nav-text">定理 6.8 正定的充要条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-6-7"><span class="nav-number">9.13.</span> <span class="nav-text">定义 6.7</span></a></li></ol></li></ol></div>
             
 
           </div>
